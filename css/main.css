@@ -20,6 +20,7 @@
 	left: 360px;
 	top: 0;
 	width: 1200px;
+	margin:0 auto;
 }
 .head_top a{
 	display: inline-block;
@@ -117,6 +118,17 @@
 	font-size: 30px;
 	color: #333;
 }
+
+.tonglan{
+	width: 100%;
+	height: 400px;
+	background-color: black;
+	margin-bottom: 50px;
+	color: white;
+}
+
+
+
 /*介绍结束*/
 .duanpian ul li{
 	display: inline-block;
