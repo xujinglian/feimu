@@ -24,12 +24,13 @@ body{
 	height: 60px;
 	background-color:transparent;
 	position:absolute;
-	left: 0px;
 	top: 0;
-	width: 100%;
-	/*
 	width: 1200px;
-<<<<<<< HEAD
+	left: 17%;
+	/*
+	right:17%;
+	width: 1200px;
+	width: 100%;
 	margin:0 auto;
 =======
 	margin:0 360px;
@@ -208,7 +209,7 @@ body{
 	background-color: white;
 }
 .tese_content{
-	width: 1450px;
+	width: 1200px;
 	margin:0 auto;
 	height: 350px;
 	padding-bottom: 100px;
@@ -216,10 +217,12 @@ body{
 }
 .tese_content ul li{
 	float: left;
-	width: 212px;
+	width: 210px;
 	height: 330px;
 	background-color: white;
-	margin-left: 50px;
+}
+.tese_right{
+	margin-right: 37px;
 }
 .tese_content ul li img{
 	display: inline-block;
