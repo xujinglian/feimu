@@ -12,8 +12,9 @@ body{
 #feimu{
 	background-color: #f9f9f9;
 	width:100%;
-    width:expression(document.body.clientWidth <= 960? "960px": "auto");
-    min-width:960px;
+    width:expression(document.body.clientWidth <= 1200? "1200px": "auto");
+    min-width:1200px;
+    overflow-x: hidden;
 }
 /*css reset结束*/
 #head{
@@ -26,7 +27,7 @@ body{
 	left: 0px;
 	top: 0;
 	width: 1200px;
-	margin:0 360px;
+	margin:0 auto;
 }
 .head_top a{
 	display: inline-block;
