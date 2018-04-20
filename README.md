@@ -1,6 +1,6 @@
 # 北京非幕文化科技
 <h1>非幕项目</h1>
-<h2>2018年4月19日</h2>
+<h2>时间：2018年4月19日</h2>
 <p>问题：</p>
 <p>
 	<ol>
@@ -13,16 +13,16 @@
 	</ol>
 </p>
 <hr/>
-<h2>2018年4月20日</h2>
+<h2>时间：2018年4月20日</h2>
 <p>问题：</p>
 <p>
 	<ol>
 		<li>[已解决]浏览器窗口缩小的时候页面的右边出现白色空白<br/>
 			解决思路：对最外层的div添加overflow-x:hidden<br/>
 			参考文章：<br/>
-			1.<a href="https://www.zhihu.com/question/36208082">知乎上查找网页留白</a><br/>
-			2.<a href="https://github.com/xujinglian/feimu/invitations">缩小窗口时CSS背景图出现右侧空白BUG的解决方法</a><br/>
-			3.<a href="https://blog.csdn.net/gyy93/article/details/70905405">缩小浏览器窗口右边出现空白</a>
+			1.1<a href="https://www.zhihu.com/question/36208082">知乎上查找网页留白</a><br/>
+			1.2<a href="https://github.com/xujinglian/feimu/invitations">缩小窗口时CSS背景图出现右侧空白BUG的解决方法</a><br/>
+			1.3<a href="https://blog.csdn.net/gyy93/article/details/70905405">缩小浏览器窗口右边出现空白</a>
 		</li>
 		<li>[已解决]产品特色板块在缩小窗口的时候左右不平等，与上面的动画板块出现排版问题<br/>
 			解决思路：整体特色板块的内容与动画板块的尺寸不对，下面是1450，重新调整特色板块的整体尺寸和每一个li板块的尺寸。
