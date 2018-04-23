@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bootstrap 附加导航（Affix）插件</title>
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+/* Custom Styles */
+    ul.nav-tabs{
+        width: 180px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        
+        border-bottom: 1px solid #ddd;
+        margin-left: -20px;
+        color: #666;
+        background-color: #eee;
+    }
+    ul.nav-tabs li{
+        margin-top: 40px;
+        margin-bottom: 20px;
+        border-top: 1px solid #ddd;
+    }
+    ul.nav-tabs li:first-child{
+        border-top: none;
+    }
+    ul.nav-tabs li a{
+       display: inline-block;
+        border-radius: 0;
+
+    }
+    ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+        background-image: url(fudao.png);
+        
+        width: 172px;
+    }
+    ul.nav-tabs.affix{
+        top: 150px; 
+    }
+    .beijing{
+            width: 1000px;
+            margin: 20px auto;
+            background-color: #eee;
+            padding: 30px;
+        }
+    tr,th{
+        border-color: #999;
+        }
+    .container{
+        width: 1200px;
+        background-color: #f9f9f9; 
+        margin-top: 100px; 
+    }
+    .strog{
+        font-family: "微软雅黑";
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+</style>
+<script>
+$(document).ready(function(){
+    $("#myNav").affix({
+        offset: { 
+            top: 650 
+      }
+    });
+});
+</script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" style="background-color: #f9f9f9;">
+<div class="container">
+   <div class="jumbotron" style="position: relative;background-color: #f9f9f9;margin-bottom: 170px;">
+        <h2 style="text-align: center;font-family: ;font-size: 36px;color: #333;">体验区</h2>
+        <p style="font-size: 20px;color: #333;margin-bottom: 30px;margin-left: -100px;">请输入一段想拆解剧本：随机示例</p>
+        <div style="width: 1200px;height: 300px;border:1px solid #999;margin-left: -100px;">
+            <p style="position: absolute;left: -10px;bottom: 50px;color: #999;font-size: 16px;">体验最多不超过200个字</p>
+        </div>
+        <button style="position: absolute;right: 20px;bottom: -10px;background-image: url(tijiao.png);width: 120px;height: 40px;color: white;padding-right: 10px;" class="btn blue"><span style="display: inline-block;margin-right: 10px;">提交文本</span></button>
+    </div>
+    <div class="row" style="margin-right: 30px;display: inline-block;font-size: 20px;margin-bottom: 60px;">拆解结果  </div>
+    <span style="display: inline-block;color: gray;">——————————————————————————————————————————————————————————————————————————</span>
+    <div class="row">
+        <div class="col-xs-2" id="myScrollspy" style="width: 180px;height: 360px;">
+            <ul class="nav nav-tabs nav-stacked" id="myNav">
+                <li class="active"><a href="#section-1"><span><img src="关键词.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>关键词抓取</a></li>
+                <li><a href="#section-2"><span><img src="统筹.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>统筹表</a></li>
+                <li><a href="#section-3"><span><img src="场景.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>分场景表</a></li>
+                <li><a href="#section-4"><span><img src="人物.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>任务戏量统计表</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-10">
+           
+            <div id="section-1" class="table-responsive beijing">
+                <p class="strog">关键词抓取：</p>
+                <div class="left" style="float: left;">
+                    <p>
+                        <span>1-3</span>
+                        <span>林怀夏家&nbsp;&nbsp;日内</span>
+                    </p>
+                    <p>余则成的手在调试监听设备的音量旋钮，</p>
+                </div>
+                <div class="right" style="float: right;">
+                    <p>词性类别图示</p>
+                </div>
+            </div>
+       
+            <div id="section-2" class="table-responsive beijing">
+                <p class="strog">统筹表：</p>
+                <table class="table table-bordered">
+                    
+                    <thead>
+                        <tr>
+                            <th>产品</th>
+                            <th>付款日期</th>
+                            <th>状态</th>
+                            <th>产品</th>
+                            <th>付款日期</th>
+                            <th>状态</th>
+                            <th>产品</th>
+                            <th>付款日期</th>
+                            <th>状态</th>
+                            <th>产品</th>
+                            <th>付款日期</th>
+                            <th>状态</th>
+                            <th>产品</th>
+                            <th>付款日期</th>
+                            <th>状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                        </tr>
+
+                        <tr>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                        </tr>
+
+                        <tr>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="section-3" class="table-responsive beijing">
+                <p class="strog">分场景表：</p>
+                <table class="table table-bordered">
+                    
+                    <thead>
+                        <tr>
+                            <th>产品</th>
+                            <th>付款日期</th>
+                            <th>状态</th>
+                            <th>产品</th>
+                            <th>付款日期</th>
+                            <th>状态</th>
+                            <th>产品</th>
+                            <th>付款日期</th>
+                            <th>状态</th>
+                            <th>产品</th>
+                            <th>付款日期</th>
+                            <th>状态</th>
+                            <th>产品</th>
+                            <th>付款日期</th>
+                            <th>状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                        </tr>
+
+                        <tr>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                        </tr>
+
+                        <tr>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品2</td>
+                            <td>10/11/2013</td>
+                            <td>发货中</td>
+                            <td>产品1</td>
+                            <td>23/11/2013</td>
+                            <td>待发货</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="section-4" class="table-responsive beijing">
+                <p class="strog">人物戏量统计表</p>
+                <div>
+                    <table class="table table-bordered table-responsive">   
+                        <thead>
+                            <tr>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                            </tr>
+
+                            <tr>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                            </tr>
+
+                            <tr>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                            </tr>
+
+                            <tr>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <caption>临近西宫30唱戏，也马良为1343页</caption>
+                </div>
+                <div>
+                    <table class="table table-bordered table-responsive">   
+                        <thead>
+                            <tr>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                                <th>产品</th>
+                                <th>付款日期</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                            </tr>
+
+                            <tr>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                            </tr>
+
+                            <tr>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                            </tr>
+
+                            <tr>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品1</td>
+                                <td>23/11/2013</td>
+                                <td>待发货</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                                <td>产品2</td>
+                                <td>10/11/2013</td>
+                                <td>发货中</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <caption>临近西宫30唱戏，也马良为1343页</caption>
+            </div>
+               
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+[
+	{
+		"incomeUnit": "重庆民生",
+		"firm": "福特",
+		"number": "10000",
+		"instructionType": "全程",
+		"dept": "重庆",
+		"totalPrice": "400000",
+		"child": [
+			{
+				"expendUnit": "重庆川浩",
+				"number": "500",
+				"price": "1900",
+				"type": "厂方短驳"
+			}, {
+				"expendUnit": "重庆陆乐",
+				"number": "630",
+				"price": "4300.50",
+				"type": "加固"
+			}, {
+				"expendUnit": "恺路物流",
+				"number": "10000",
+				"price": "2400",
+				"type": "装车"
+			}, {
+				"expendUnit": "途俊物流",
+				"number": "430",
+				"price": "5400",
+				"type": "配送"
+			}, {
+				"expendUnit": "禾宏物流",
+				"number": "120",
+				"price": "3800.3232",
+				"type": "卸车"
+			}, {
+				"expendUnit": "睿智储运",
+				"number": "700",
+				"price": "1200",
+				"type": "卸车短驳"
+			}
+		]
+	}, {
+		"incomeUnit": "重庆东风",
+		"firm": "小康",
+		"number": "20000",
+		"instructionType": "全程",
+		"dept": "重庆",
+		"totalPrice": "300000",
+		"child": [
+			
+		]
+	}, {
+		"incomeUnit": "重庆长安",
+		"firm": "长安",
+		"number": "50000",
+		"instructionType": "全程",
+		"dept": "重庆",
+		"totalPrice": "70000",
+		"child": [
+			{
+				"expendUnit": "重庆川浩",
+				"number": "500",
+				"price": "1900",
+				"type": "厂方短驳"
+			}, {
+				"expendUnit": "重庆陆乐",
+				"number": "630",
+				"price": "4300",
+				"type": "加固"
+			}, {
+				"expendUnit": "恺路物流",
+				"number": "10000",
+				"price": "2400",
+				"type": "装车"
+			}, {
+				"expendUnit": "途俊物流",
+				"number": "430",
+				"price": "5400",
+				"type": "配送"
+			}
+		]
+	}
+]
+
