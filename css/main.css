@@ -8,6 +8,7 @@
 }
 .footer_content ul li ul li a:hover,.jieshao ul li a:hover,.head_top a:hover{
 	text-decoration: none;
+	color: #3b85f5;
 }
 body{
 	overflow-x: hidden;
@@ -104,6 +105,13 @@ body{
 	background-color:white;
 	height: 100px;
 }
+
+
+
+
+
+
+
 
 /*切换结束*/
 .jieshao,.duanpian{
@@ -318,3 +326,4 @@ body{
 	font-size: 15px;
 }
 /*尾部结束*/
+.block{display: block;}

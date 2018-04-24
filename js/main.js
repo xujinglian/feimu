@@ -9,7 +9,7 @@ function $(id){
 window.onload=function(){
 	//获取鼠标滑过或点击的标签和要切换内容的元素
 	var feimutitles=$('qiehuantitle').getElementsByTagName('li'),
-		feimudivs=$('qiehuancontent').getElementsByTagName('span');
+		feimudivs=$('qiehuancontent').getElementsByTagName('div');
 	if(feimutitles.length!=feimudivs.length)
 		return;
 	//遍历titles下的所有li
@@ -29,6 +29,7 @@ window.onload=function(){
 	}
 	
 }
+
 
 /***
 当页面滚动一定高度之后介绍和演示通栏固定在页面顶部
