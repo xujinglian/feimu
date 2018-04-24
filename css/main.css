@@ -6,6 +6,9 @@
 	font-size: 24px;
 	list-style-type: none;
 }
+.footer_content ul li ul li a:hover,.jieshao ul li a:hover,.head_top a:hover{
+	text-decoration: none;
+}
 body{
 	overflow-x: hidden;
 }
@@ -23,10 +26,6 @@ body{
 .head_top{
 	height: 60px;
 	background-color:transparent;
-	position:absolute;
-	top: 0;
-	width: 1200px;
-	left: 17%;
 }
 .head_top a{
 	display: inline-block;
@@ -175,6 +174,7 @@ body{
 	text-align: center;
 	line-height: 250px;
 	font-size: 36px;
+	margin-left: -5px;
 }
 .demo{
 	display: inline-block;
@@ -202,8 +202,8 @@ body{
 	width: 1200px;
 	margin:0 auto;
 	height: 350px;
-	padding-bottom: 100px;
 	text-align: center;
+	margin-bottom: 100px;
 }
 .tese_content ul li{
 	float: left;
@@ -216,7 +216,7 @@ body{
 }
 .tese_content ul li img{
 	display: inline-block;
-	margin:46px 60px 80px 60px;
+	margin:46px 60px 80px 50px;
 	width: 92px;
 	height: 92px;
 }
