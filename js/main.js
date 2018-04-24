@@ -2,7 +2,6 @@ function $(id){
 	return typeof id==='string'?document.getElementById(id):id;
 
 }
-
 /***
 鼠标滑过介绍和演示菜单的时候发生内容切换脚本
 ***/
@@ -10,12 +9,13 @@ window.onload=function(){
 	//获取鼠标滑过或点击的标签和要切换内容的元素
 	var feimutitles=$('qiehuantitle').getElementsByTagName('li'),
 		feimudivs=$('qiehuancontent').getElementsByTagName('div');
+		alert(feimutitles.length);
 	if(feimutitles.length!=feimudivs.length)
 		return;
 	//遍历titles下的所有li
 	for(var i=0;i<feimutitles.length;i++){
 		feimutitles[i].id=i;
-		feimutitles[i].onmouseover=function(){
+		feimutitles[i].mouseover=function(){
 			//清除所有li上的class
 			for(var j=0;j<feimutitles.length;j++){
 				feimutitles[j].className=' ';
