@@ -77,7 +77,8 @@
 	<ol>
 		<li>首页介绍产品遮罩板块demo完成</li>
 		<li>产品遮罩板块加入首页</li>
-		<li></li>
+		<li>把演示页demo与首页融合，创建独立yanshi.html页面，原先的切换效果用锚点方式表现。</li>
+		<li><strong>[待解决]</strong>yanshi.html的细节。</li>
 	</ol>
 </p>
 
