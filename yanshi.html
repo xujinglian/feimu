@@ -1,30 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Bootstrap 附加导航（Affix）插件</title>
-<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="yanshi.css">
-<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
-/* Custom Styles */
+	<title>非幕科技</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="yanshi.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		    $("#myNav").affix({
+		        offset: { 
+		            top:440
+		      }
+		    });
+		});
+	</script>
 
-    
-</style>
-<script>
-$(document).ready(function(){
-    $("#myNav").affix({
-        offset: { 
-            top:440
-      }
-    });
-});
-</script>
 </head>
-<body data-spy="scroll" data-target="#myScrollspy" style="background-color: #f9f9f9;">
-<div class="container">
-   <div class="jumbotron" style="position: relative;background-color: #f9f9f9;margin-bottom: 100px;">
+<body>
+	<div id="feimu">
+		<div id="head" style="display: relative;" class="row">
+			<img src="img/tongchou1.png" style="overflow: hidden;"  class="img-responsive"/>
+			<div class="head_top row">
+				<div class="head_top_left col-xs-4" style="position: absolute;left: 20%;top: 0;">
+					<a href="#"><img src="img/logo.png" alt="非幕科技LOGO" style="width:70px;height:30px;vertical-align: middle;"></a>
+					<a href="#">统筹</a>
+				</div><!--头部左部分结束-->
+				<div class="col-xs-5"></div>
+				<div class="head_top_right col-xs-3" style="position: absolute;right: 5%;top: 0;">
+					<a href="#">注册</a>
+					<a href="#">登录</a>
+					<a href="#" class="head_btn"><img src="img/kongzhitai.png" style="vertical-align: middle;"></a>
+				</div>	
+			</div>
+		</div><!--头部结束-->
+		<div id="content" class="row">
+			<div id="daohang" class="daohang">
+				<div id="qiehuantitle" class="qiehuantitle">
+					<ul class="">
+						<li>
+			                <a href="index.html#jieshao" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" name="jieshao">介绍</a>
+			            </li>
+			          	<li class="select">
+			                <a href="yanshi.html#yanshi" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" name="yanshi">演示</a>
+			          	</li>
+					</ul>
+				</div>
+			</div>
+			<!--切换结束-->
+			<div id="qiehuancontent" class="qiehuancontent">
+				<div id="yanshi" class="yanshi" style="width: 1200px;margin:0 auto;display:block;" name="yanshi">
+					<!-- 演示主体内容开始 -->
+					<div class="jumbotron" style="position: relative;background-color: #f9f9f9;margin-bottom: 100px;">
         <h2 style="text-align: center;font-family: ;font-size: 36px;color: #333;">体验区</h2>
         <p style="font-size: 20px;color: #333;margin-bottom: 30px;margin-left: -100px;">请输入一段想拆解剧本：随机示例</p>
         <div style="width: 1200px;height:auto;border:1px solid #999;margin-left: -100px;padding-bottom: 50px;">
@@ -886,6 +919,49 @@ $(document).ready(function(){
                            </tr>-->
         </div>
     </div>
-</div>
+
+
+
+					<!-- 演示主体内容结束 -->
+				</div>
+				<!--演示结束-->
+			</div>
+		</div><!--中间切换结束-->
+		<div id="footer">
+			<div class="footer_content">
+				<ul>
+					<li class="col-xs-3">
+						<ul>
+							<p>快速入口</p>
+							<li><a href="#">管理控制台</a></li>
+							<li><a href="#">项目列表</a></li>
+							<li><a href="#">服务协议</a></li>
+						</ul>
+					</li>
+					<li class="col-xs-3">
+						<ul>
+							<p>产品</p>
+							<li><a href="#">什么是影视统筹</a></li>
+							<li><a href="#">影视统筹表如何使用</a></li>
+							<li><a href="#">如何调整剧本格式</a></li>
+							<li><a href="#">如何制定拍摄计划</a></li>
+						</ul>
+					</li>
+					<li class="col-xs-3">
+						<ul>
+							<p>关于</p>
+							<li><a href="#" style="text-decoration: none;">团队</a></li>
+							<li><a href="#">联系我们</a></li>
+						</ul>
+					</li>
+					<li class="col-xs-3">
+						<img src="img/erweima.jpg" alt="非幕科技公众号二维码"/>
+						<span>微信公众号</span>
+					</li>
+				</ul>
+			</div>
+		</div><!--版权信息-->
+	</div>
+	
 </body>
 </html>
