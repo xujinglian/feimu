@@ -12,3 +12,33 @@
 .changjing{
 	background-color: #32b16c;
 }
+.beijing{
+            width: 1000px;
+            margin: 20px auto;
+            background-color: #eee;
+            padding: 30px;
+        }
+.strog{
+        font-family: "微软雅黑";
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+/***表格细节样式**/
+
+#biaogemeihua{
+	min-width: 100px;
+	text-align: center;
+	line-height: 30px;
+	vertical-align: middle;
+}
+#zise{
+	color: #3b85f5;
+	vertical-align: middle;
+}
+#chuizhi tr th,#chuizhi tr td{
+	vertical-align: middle;
+	text-align: center;
+}

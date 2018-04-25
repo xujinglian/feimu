@@ -9,65 +9,31 @@
 <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 /* Custom Styles */
-    ul.nav-tabs{
-        width: 180px;
-        margin-top: 40px;
-        margin-bottom: 20px;
-        
-        border-bottom: 1px solid #ddd;
-        margin-left: -20px;
-        color: #666;
-        
-    }
-    ul.nav-tabs li{
-        margin-top: 40px;
-        margin-bottom: 20px;
-        border-top: 1px solid #ddd;
-    }
-    ul.nav-tabs li:first-child{
-        border-top: none;
-    }
-    ul.nav-tabs li a{
-       display: inline-block;
-        border-radius: 0;
 
-    }
     ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
-        background-image: url(fudao.jpg);
-        
+        background-image: url(fudao.png);
         width: 172px;
     }
     ul.nav-tabs.affix{
-        top: 150px; 
+        top: 300px; 
     }
-    .beijing{
-            width: 1000px;
-            margin: 20px auto;
-            background-color: #eee;
-            padding: 30px;
-        }
-    tr,th{
-        border-color: #999;
-        }
     .container{
         width: 1200px;
         background-color: #f9f9f9; 
         margin-top: 100px; 
     }
-    .strog{
-        font-family: "微软雅黑";
-        font-weight: bold;
-        font-size: 20px;
-        color: #333;
-        margin-bottom: 20px;
-        margin-top: 20px;
+    #myNav li{
+        border-bottom: 1px solid #999;
+        padding-bottom: 10px;
+        padding-top: 10px;
     }
+    #myNav li a{background-color: #eee;}
 </style>
 <script>
 $(document).ready(function(){
     $("#myNav").affix({
         offset: { 
-            top: 650 
+            top:440
       }
     });
 });
@@ -75,29 +41,29 @@ $(document).ready(function(){
 </head>
 <body data-spy="scroll" data-target="#myScrollspy" style="background-color: #f9f9f9;">
 <div class="container">
-   <div class="jumbotron" style="position: relative;background-color: #f9f9f9;margin-bottom: 170px;">
+   <div class="jumbotron" style="position: relative;background-color: #f9f9f9;margin-bottom: 100px;">
         <h2 style="text-align: center;font-family: ;font-size: 36px;color: #333;">体验区</h2>
         <p style="font-size: 20px;color: #333;margin-bottom: 30px;margin-left: -100px;">请输入一段想拆解剧本：随机示例</p>
-        <div style="width: 1200px;height: 300px;border:1px solid #999;margin-left: -100px;">
-            <div style="margin:30px 20px 20px 30px;color: gray;line-height: 25px;">余则成的手在调试监听设备的音量旋钮，耳机中出现了林怀复说话的声音。林怀复：据我所知，参加旧金山会议的代表，蒋介石早就内定了，有宋子文、顾维钧、王宠惠、胡适等8个人。多无赖的决定呀，怎么能没共产党的代表呢？别说这事国际事务了，就在袍哥帮会里做这种过河拆桥的事，也会有人骂娘的，不仗义嘛。余则成一边听一边记，窃听设备的连线，从设备后面顺着墙壁往上，然后进入顶层缝隙，在缝隙里延伸。</div>
+        <div style="width: 1200px;height:auto;border:1px solid #999;margin-left: -100px;padding-bottom: 50px;">
+            <div style="margin:30px 20px 20px 30px;color:#999;line-height: 25px;">余则成的手在调试监听设备的音量旋钮，耳机中出现了林怀复说话的声音。林怀复：据我所知，参加旧金山会议的代表，蒋介石早就内定了，有宋子文、顾维钧、王宠惠、胡适等8个人。多无赖的决定呀，怎么能没共产党的代表呢？别说这事国际事务了，就在袍哥帮会里做这种过河拆桥的事，也会有人骂娘的，不仗义嘛。余则成一边听一边记，窃听设备的连线，从设备后面顺着墙壁往上，然后进入顶层缝隙，在缝隙里延伸。</div>
             <p style="position: absolute;left: -10px;bottom: 50px;color: #999;font-size: 16px;">体验最多不超过200个字</p>
         </div>
         <button style="position: absolute;right: 20px;bottom: -10px;background-image: url(tijiao.png);width: 120px;height: 40px;color: white;padding-right: 10px;" class="btn blue"><span style="display: inline-block;margin-right: 10px;">提交文本</span></button>
     </div>
     <div class="row" style="margin-right: 30px;display: inline-block;font-size: 20px;margin-bottom: 60px;">拆解结果  </div>
     <span style="display: inline-block;color: gray;">——————————————————————————————————————————————————————————————————————————</span>
-    <div class="row">
-        <div class="col-xs-2" id="myScrollspy" style="width: 180px;height: 360px;">
-            <ul class="nav nav-tabs nav-stacked" id="myNav">
-                <li class="active"><a href="#section-1"><span><img src="关键词.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>关键词抓取</a></li>
-                <li><a href="#section-2"><span><img src="统筹.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>统筹表</a></li>
-                <li><a href="#section-3"><span><img src="场景.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>分场景表</a></li>
-                <li><a href="#section-4"><span><img src="人物.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>任务戏量统计表</a></li>
+    <div class="row" style="margin-left: -50px;">
+        <div class="col-xs-2" id="myScrollspy" style="margin-top: 20px;">
+            <ul class="nav nav-tabs nav-stacked" id="myNav" style="background-color:#eee;padding-top: 50px;padding-bottom: 50px;width: 172px;">
+                <li class="active"><a href="#section-1" style="color:#666;"><span><img src="关键词.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>关键词抓取</a></li>
+                <li><a href="#section-2"  style="color:#666;"><span><img src="统筹.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>统筹表</a></li>
+                <li><a href="#section-3"  style="color:#666;"><span><img src="场景.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>分场景表</a></li>
+                <li><a href="#section-4"  style="color:#666;"><span><img src="人物.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>任务戏量统计表</a></li>
             </ul>
         </div>
         <div class="col-xs-10">
            
-            <div id="section-1" class="table-responsive beijing" style="height: auto;">
+            <div id="section-1" class="table-responsive beijing" style="height: auto;margin-bottom: 70px;">
                 <p class="strog">关键词抓取：</p>
                 <div class="roe">
                     <div class="left col-xs-9">
@@ -114,614 +80,827 @@ $(document).ready(function(){
                 </div>
             </div>
        
-            <div id="section-2" class="table-responsive beijing">
+            <div id="section-2" class="table-responsive beijing" style="margin-bottom: 70px;">
                 <p class="strog">统筹表：</p>
-                <table class="table table-bordered">
-                    
+                <table class="table table-bordered" id="chuizhi">
                     <thead>
                         <tr>
-                            <th>产品</th>
-                            <th>付款日期</th>
-                            <th>状态</th>
-                            <th>产品</th>
-                            <th>付款日期</th>
-                            <th>状态</th>
-                            <th>产品</th>
-                            <th>付款日期</th>
-                            <th>状态</th>
-                            <th>产品</th>
-                            <th>付款日期</th>
-                            <th>状态</th>
-                            <th>产品</th>
-                            <th>付款日期</th>
-                            <th>状态</th>
+                            <th id="biaogemeihua">场次</th>
+                            <th id="biaogemeihua">场景名称</th>
+                            <th id="biaogemeihua">气氛</th>
+                            <th id="biaogemeihua">页码量</th>
+                            <th id="biaogemeihua" style="min-width: 150px;">内容提示</th>
+                            <th id="zise">主要角色</th>
+                            <th id="zise">林进喜</th>
+                            <th id="zise">邓涵志</th>
+                            <th id="zise">曲建国</th>
+                            <th id="zise">杜振邦</th>
+                            <th id="zise">孙士奇</th>
+                            <th id="zise">赵锦程</th>
+                            <th id="zise">老赖</th>
+                            <th id="zise">刘星</th>
+                            <th id="zise">刘琪主任</th>
+                            <th id="zise">赵佳</th>
+                            <th id="zise">俞夫人</th>
+                            <th id="zise">叶曼</th>
+                            <th id="zise">旺仔</th>
+                            <th id="zise">客串</th>
+                            <th id="zise">船长索尔</th>
+                            <th id="zise">船员卡尔</th>
+                            <th id="zise">大副</th>
+                            <th id="zise">囧处长</th>
+                            <th id="zise">炊事员</th>
+                            <th id="zise">基建科长</th>
+                            <th id="zise">肖科长</th>
+                            <th id="zise">胖妞</th>
+                            <th id="zise">张春凤</th>
+                            <th id="zise">晓渼</th>
+                            <th id="zise">菜贩</th>
+                            <th id="zise">买鸡蛋的</th>
+                            <th id="zise">老经理</th>
+                            <th id="zise">集团老总</th>
+                            <th id="zise">田程</th>
+                            <th id="zise">高狐狸</th>
+                            <th id="zise">乌贼</th>
+                            <th id="zise">肥佬</th>
+                            <th id="zise">烯烃厂长</th>
+                            <th id="zise">德国代表</th>
+                            <th id="zise">特邀</th>
+                            <th id="zise">少年林</th>
+                            <th id="zise">焦裕禄</th>
+                            <th id="biaogemeihua" style="min-width: 200px;">道具提示</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
-                            
+                            <td>1</td>
+                            <td>沙漠</td>
+                            <td>日外</td>
+                            <td>0.3</td>
+                            <td>阿巴斯凝析油</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td></td> 
                         </tr>
-
                         <tr>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
+                            <td>2</td>
+                            <td>国际游轮上</td>
+                            <td>日/夜<br>内/外</td>
+                            <td>0.2</td>
+                            <td>没吃的/生病</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise">索尔</td>
+                            <td id="zise">卡尔</td>
+                            <td id="zise">大副</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td></td> 
                         </tr>
-
                         <tr>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
+                            <td>3</td>
+                            <td>协和医院</td>
+                            <td>日内/外</td>
+                            <td>0.3</td>
+                            <td>俞给林染发</td>
+                            <td id="zise"></td>
+                            <td id="zise">林</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise">俞</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td>全景福、画外音</td> 
                         </tr>
-
                         <tr>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
+                            <td>4</td>
+                            <td>国际港口</td>
+                            <td>日内</td>
+                            <td>0.3</td>
+                            <td>损耗降到0</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise">囧</td>
+                            <td id="zise">炊</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td>粥桶、餐具、表格</td> 
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <div id="section-3" class="table-responsive beijing">
+            <div id="section-3" class="table-responsive beijing" style="margin-bottom: 70px;">
                 <p class="strog">分场景表：</p>
                 <table class="table table-bordered">
-                    
                     <thead>
                         <tr>
-                            <th>产品</th>
-                            <th>付款日期</th>
-                            <th>状态</th>
-                            <th>产品</th>
-                            <th>付款日期</th>
-                            <th>状态</th>
-                            <th>产品</th>
-                            <th>付款日期</th>
-                            <th>状态</th>
-                            <th>产品</th>
-                            <th>付款日期</th>
-                            <th>状态</th>
-                            <th>产品</th>
-                            <th>付款日期</th>
-                            <th>状态</th>
+                            <th id="biaogemeihua">场次</th>
+                            <th id="biaogemeihua" style="min-width: 150px;">场景名称</th>
+                            <th id="biaogemeihua">气氛</th>
+                            <th id="biaogemeihua">页码量</th>
+                            <th id="biaogemeihua" style="min-width: 150px;">内容提示</th>
+                            <th id="zise">主要角色</th>
+                            <th id="zise">林进喜</th>
+                            <th id="zise">邓涵志</th>
+                            <th id="zise">曲建国</th>
+                            <th id="zise">杜振邦</th>
+                            <th id="zise">孙士奇</th>
+                            <th id="zise">赵锦程</th>
+                            <th id="zise">老赖</th>
+                            <th id="zise">刘星</th>
+                            <th id="zise">刘琪主任</th>
+                            <th id="zise">赵佳</th>
+                            <th id="zise">俞夫人</th>
+                            <th id="zise">叶曼</th>
+                            <th id="zise">旺仔</th>
+                            <th id="zise">客串</th>
+                            <th id="zise">船长索尔</th>
+                            <th id="zise">船员卡尔</th>
+                            <th id="zise">大副</th>
+                            <th id="zise">囧处长</th>
+                            <th id="zise">炊事员</th>
+                            <th id="zise">基建科长</th>
+                            <th id="zise">肖科长</th>
+                            <th id="zise">胖妞</th>
+                            <th id="zise">张春凤</th>
+                            <th id="zise">晓渼</th>
+                            <th id="zise">菜贩</th>
+                            <th id="zise">买鸡蛋的</th>
+                            <th id="zise">老经理</th>
+                            <th id="zise">集团老总</th>
+                            <th id="zise">田程</th>
+                            <th id="zise">高狐狸</th>
+                            <th id="zise">乌贼</th>
+                            <th id="zise">肥佬</th>
+                            <th id="zise">烯烃厂长</th>
+                            <th id="zise">德国代表</th>
+                            <th id="zise">特邀</th>
+                            <th id="zise">少年林</th>
+                            <th id="zise">焦裕禄</th>
+                            <th id="biaogemeihua" style="min-width: 200px;">道具提示</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <tr><th style="background-color:#3b85f5;font-size: 20px;text-indent: 5em;line-height: 35px;" colspan="44">炼化厂内景</th></tr>
                         <tr>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
-                            
+                            <td id="biaogemeihua" id="biaogemeihua">68</td>
+                            <td id="biaogemeihua" id="biaogemeihua">邓涵志办公室</td>
+                            <td id="biaogemeihua" id="biaogemeihua">日内</td>
+                            <td id="biaogemeihua" id="biaogemeihua">0.4</td>
+                            <td id="biaogemeihua" id="biaogemeihua">职工庆涨工资</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise">邓</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise">奇</td>
+                            <td id="zise">程</td>
+                            <td id="zise">赖</td>
+                            <td id="zise">星</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise">叶</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="biaogemeihua" style="min-width: 200px;"></td>
                         </tr>
-
                         <tr>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
+                            <td id="biaogemeihua">71</td>
+                            <td id="biaogemeihua">炼油厂办公室</td>
+                            <td id="biaogemeihua">日内</td>
+                            <td id="biaogemeihua">0.4</td>
+                            <td id="biaogemeihua">经济危机亏损</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise">邓</td>
+                            <td id="zise">曲</td>
+                            <td id="zise">杜</td>
+                            <td id="zise">奇</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="biaogemeihua" style="min-width: 200px;"></td>
                         </tr>
-
                         <tr>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
-                        </tr>
-
-                        <tr>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品2</td>
-                            <td>10/11/2013</td>
-                            <td>发货中</td>
-                            <td>产品1</td>
-                            <td>23/11/2013</td>
-                            <td>待发货</td>
+                            <td id="biaogemeihua">42</td>
+                            <td id="biaogemeihua">炼油厂办公室</td>
+                            <td id="biaogemeihua">日内</td>
+                            <td id="biaogemeihua">0.3</td>
+                            <td id="biaogemeihua">工人们惭愧</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise">邓</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise">程</td>
+                            <td id="zise">赖</td>
+                            <td id="zise">星</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise">总</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise">烯烃</td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="zise"></td>
+                            <td id="biaogemeihua" style="min-width: 200px;"></td>
                         </tr>
                     </tbody>
                 </table>
+                <p style="font-size: 12px;margin-top:20px;color:#666;margin-bottom: 30px;">炼油厂日景内场15场戏，页码量共4.9页。</p>
             </div>
 
             <div id="section-4" class="table-responsive beijing">
-                <p class="strog">人物戏量统计表</p>
+                <p class="strog">人物戏量统计表：</p>
                 <div>
                     <table class="table table-bordered table-responsive">   
                         <thead>
                             <tr>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                            </tr>
+                            <th id="biaogemeihua">场次</th>
+                            <th id="biaogemeihua" style="min-width: 150px;">场景名称</th>
+                            <th id="biaogemeihua">气氛</th>
+                            <th id="biaogemeihua">页码量</th>
+                            <th id="biaogemeihua" style="min-width: 150px;">内容提示</th>
+                            <th id="zise">主要角色</th>
+                            <th id="zise">林进喜</th>
+                            <th id="zise">邓涵志</th>
+                            <th id="zise">曲建国</th>
+                            <th id="zise">杜振邦</th>
+                            <th id="zise">孙士奇</th>
+                            <th id="zise">赵锦程</th>
+                            <th id="zise">老赖</th>
+                            <th id="zise">刘星</th>
+                            <th id="zise">刘琪主任</th>
+                            <th id="zise">赵佳</th>
+                            <th id="zise">俞夫人</th>
+                            <th id="zise">叶曼</th>
+                            <th id="zise">旺仔</th>
+                            <th id="zise">客串</th>
+                            <th id="zise">船长索尔</th>
+                            <th id="zise">船员卡尔</th>
+                            <th id="zise">大副</th>
+                            <th id="zise">囧处长</th>
+                            <th id="zise">炊事员</th>
+                            <th id="zise">基建科长</th>
+                            <th id="zise">肖科长</th>
+                            <th id="zise">胖妞</th>
+                            <th id="zise">张春凤</th>
+                            <th id="zise">晓渼</th>
+                            <th id="zise">菜贩</th>
+                            <th id="zise">买鸡蛋的</th>
+                            <th id="zise">老经理</th>
+                            <th id="zise">集团老总</th>
+                            <th id="zise">田程</th>
+                            <th id="zise">高狐狸</th>
+                            <th id="zise">乌贼</th>
+                            <th id="zise">肥佬</th>
+                            <th id="zise">烯烃厂长</th>
+                            <th id="zise">德国代表</th>
+                            <th id="zise">特邀</th>
+                            <th id="zise">少年林</th>
+                            <th id="zise">焦裕禄</th>
+                            <th id="biaogemeihua" style="min-width: 200px;">道具提示</th>
+                        </tr>
                         </thead>
                         <tbody>
+                            <tr><th style="background-color:#3b85f5;font-size: 20px;text-indent: 5em;line-height: 35px;" colspan="44">林进喜</th></tr>
+                           <tr>
+                                <td id="biaogemeihua" id="biaogemeihua">3</td>
+                                <td id="biaogemeihua" id="biaogemeihua">林进喜家</td>
+                                <td id="biaogemeihua" id="biaogemeihua">日内</td>
+                                <td id="biaogemeihua" id="biaogemeihua">0.3</td>
+                                <td id="biaogemeihua" id="biaogemeihua">俞给林染发</td>
+                                <td id="zise"></td>
+                                <td id="zise">林</td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise">俞</td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="biaogemeihua" style="min-width: 200px;">全景福</td>
+                           </tr>
+                           <tr>
+                                <td id="biaogemeihua" id="biaogemeihua">6</td>
+                                <td id="biaogemeihua" id="biaogemeihua">炼油厂<br>大门附近</td>
+                                <td id="biaogemeihua" id="biaogemeihua">日外</td>
+                                <td id="biaogemeihua" id="biaogemeihua">0.5</td>
+                                <td id="biaogemeihua" id="biaogemeihua">要求3万吨</td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise">邓</td>
+                                <td id="zise">曲</td>
+                                <td id="zise">杜</td>
+                                <td id="zise"></td>
+                                <td id="zise">程</td>
+                                <td id="zise">赖</td>
+                                <td id="zise">星</td>
+                                <td id="zise">琪</td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="biaogemeihua" style="min-width: 200px;">条幅</td>
+                           </tr>
                             <tr>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                            </tr>
-
+                                <td id="biaogemeihua" id="biaogemeihua">7</td>
+                                <td id="biaogemeihua" id="biaogemeihua">协和医院</td>
+                                <td id="biaogemeihua" id="biaogemeihua">日内</td>
+                                <td id="biaogemeihua" id="biaogemeihua">0.2</td>
+                                <td id="biaogemeihua" id="biaogemeihua">安喜独自发愁</td>
+                                <td id="zise"></td>
+                                <td id="zise">林</td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="biaogemeihua" style="min-width: 200px;"></td>
+                           </tr>
+                           <tr><th style="margin-top:20px;margin-bottom: 30px;line-height: 50px;color:#666;font-size: 16px;" colspan="44">林进喜共30场戏，页码量共15.6页。</th></tr>
+                           <tr><th style="background-color:#3b85f5;font-size: 20px;text-indent: 5em;line-height: 35px;" colspan="44">邓涵志</th></tr>
                             <tr>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                            </tr>
-
-                            <tr>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                            </tr>
-
-                            <tr>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <caption>临近西宫30唱戏，也马良为1343页</caption>
-                </div>
-                <div>
-                    <table class="table table-bordered table-responsive">   
-                        <thead>
-                            <tr>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                                <th>产品</th>
-                                <th>付款日期</th>
-                                <th>状态</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                            </tr>
-
-                            <tr>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                            </tr>
-
-                            <tr>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                            </tr>
-
-                            <tr>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品1</td>
-                                <td>23/11/2013</td>
-                                <td>待发货</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                                <td>产品2</td>
-                                <td>10/11/2013</td>
-                                <td>发货中</td>
-                            </tr>
+                                <td id="biaogemeihua" id="biaogemeihua">6</td>
+                                <td id="biaogemeihua" id="biaogemeihua">炼油厂<br>大门附近</td>
+                                <td id="biaogemeihua" id="biaogemeihua">日外</td>
+                                <td id="biaogemeihua" id="biaogemeihua">0.5</td>
+                                <td id="biaogemeihua" id="biaogemeihua">要求3万吨</td>
+                                <td id="zise">林</td>
+                                <td id="zise">邓</td>
+                                <td id="zise">曲</td>
+                                <td id="zise">杜</td>
+                                <td id="zise"></td>
+                                <td id="zise">程</td>
+                                <td id="zise">赖</td>
+                                <td id="zise">星</td>
+                                <td id="zise">琪</td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="biaogemeihua" style="min-width: 200px;">条幅</td>
+                           </tr>
+                           <tr>
+                                <td id="biaogemeihua" id="biaogemeihua">8</td>
+                                <td id="biaogemeihua" id="biaogemeihua">炼油厂新装置管线区</td>
+                                <td id="biaogemeihua" id="biaogemeihua">日内</td>
+                                <td id="biaogemeihua" id="biaogemeihua">0.4</td>
+                                <td id="biaogemeihua" id="biaogemeihua">邓从高处掉下</td>
+                                <td id="zise"></td>
+                                <td id="zise">邓</td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise">程</td>
+                                <td id="zise">赖</td>
+                                <td id="zise">星</td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="biaogemeihua" style="min-width: 200px;"></td>
+                           </tr>
+                           <tr>
+                                <td id="biaogemeihua" id="biaogemeihua">13</td>
+                                <td id="biaogemeihua" id="biaogemeihua">中心医院</td>
+                                <td id="biaogemeihua" id="biaogemeihua">夜内</td>
+                                <td id="biaogemeihua" id="biaogemeihua">0.4</td>
+                                <td id="biaogemeihua" id="biaogemeihua">邓在医院遇见同事</td>
+                                <td id="zise"></td>
+                                <td id="zise">邓</td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise">程</td>
+                                <td id="zise">赖</td>
+                                <td id="zise">星</td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise">叶</td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="biaogemeihua" style="min-width: 200px;">电视</td>
+                           </tr>
+                           <tr><th style="margin-top:20px;margin-bottom: 30px;line-height: 50px;color:#666;font-size: 16px;" colspan="44">炼油厂日景内场15场戏，页码量共4.9页。</th></tr>
                         </tbody>
                     </table>
                 </div>
-                <caption>临近西宫30唱戏，也马良为1343页</caption>
             </div>
-               
+             
+                            <!-- 一行示例 
+                           <tr>
+                                <td id="biaogemeihua" id="biaogemeihua"></td>
+                                <td id="biaogemeihua" id="biaogemeihua"></td>
+                                <td id="biaogemeihua" id="biaogemeihua"></td>
+                                <td id="biaogemeihua" id="biaogemeihua"></td>
+                                <td id="biaogemeihua" id="biaogemeihua"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="zise"></td>
+                                <td id="biaogemeihua" style="min-width: 200px;"></td>
+                           </tr>-->
         </div>
     </div>
 </div>
