@@ -116,27 +116,10 @@ body{
 	margin:0 auto;
 	clear: both;
 }
-.jieshao ul li{
-	display: inline-block;
-	width: 400px;
-	height: auto;
-	padding-bottom: 20px;
-	margin-bottom: 0px;
-	float: left;
-	text-align: center;
-}
-.jieshao ul li p{
-	margin-top: 30px;
-	font-size: 30px;
-	color: #333;
-}
-
-.tonglan{
-	width: 100%;
-	height: 400px;
-	background-color: black;
-	margin-bottom: 50px;
-	color: white;
+#zhengti:hover .xia{
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 /*介绍结束*/
 .duanpian ul li{
