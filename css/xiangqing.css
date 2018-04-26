@@ -2,7 +2,7 @@ body{
 	padding-top: 60px;
 }
 .content_left li{
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #999;
 }
 .content_left ul li a{
 	text-align: center;
@@ -18,7 +18,7 @@ body{
 }
 .content_left ul li a:hover{
 	border-radius: 30px;
-	background-color: red;
-	border:1px solid red;
+	background-color: #f6ad3c;
+	border:1px solid #f6ad3c;
 	text-decoration: none;
 }
