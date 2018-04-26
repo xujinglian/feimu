@@ -84,7 +84,11 @@
 		<li>添加xiangqing.css文件</li>
 		<li>添加yanshi.css文件</li>
 		<li>添加UI详情页部分</li>
-		
+		<li>详情页完成</li>
+		<li>列表页完成</li>
+		<li>[待解决]列表页的功能板块（bootstrap可编辑表格）</li>
+		<li>[待解决]演示页的随机示例部分</li>
+		<li>[待解决]介绍演示导航部分上面的出现的空白区域</li>
 	</ol>
 </p>
 
