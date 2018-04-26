@@ -1,0 +1,78 @@
+body{
+	padding-top: 60px;
+}
+.content_center li{
+	border-bottom: 1px solid #999;
+}
+.content_center ul li a{
+	text-align: left;
+	font-family: "新宋体";
+	font-size: 18px;
+	color: #666;
+	display: inline-block;
+	width: 180px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 20px;
+}
+.content_center ul li a:hover{
+	border-radius: 30px;
+	background-color: #f6ad3c;
+	border:1px solid #f6ad3c;
+	text-decoration: none;
+}
+/*左边样式结束*/
+
+
+/*以下为统筹表部分*/
+.jieguomeihua{padding:5px;margin:5px;}
+.cixing_jieguomeihua{padding:5px;margin:4px;border:none;}
+.xingming{
+	background-color:#eb6feb;
+}
+.daoju{
+	background-color: #ff9899;
+}
+.changhao{
+	background-color: #3b85f5;
+}
+.changjing{
+	background-color: #32b16c;
+}
+.beijing{
+        background-color: #eee;
+}
+.strog{
+        font-family: "微软雅黑";
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+/***表格细节样式**/
+
+#biaogemeihua{
+	min-width: 100px;
+	text-align: center;
+	line-height: 30px;
+	vertical-align: middle;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #333;
+	font-weight: 100;
+}
+#zise{
+	color: #3b85f5;
+	vertical-align: middle;
+}
+#chuizhi tr th,#chuizhi tr td{
+	vertical-align: middle;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	font-weight: 100;
+}
+/*统筹表部分结束*/

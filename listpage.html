@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>列表页</title>
+	<meta charset="utf-8">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/list.css">
+</head>
+<body>
+	<!-- 页面整体开始 -->
+	<!-- 页面头部开始 -->
+	<div id="head" class="head navbar-fixed-top" style="height: 60px;background-color: #f9f9f9;">
+		<div id="head_content" class="head_content row" style="width: 1200px;margin:0 auto;">
+			<div id="head_left" class="head_left  col-xs-3"><img src="img/xiangqing_logo.png"></div>
+			<div class="col-xs-8" style="margin-top: 8px;"><img src="img/xiangqing_tongchou.png" style="vertical-align: middle;margin-top: 5px;display: inline-block;"></div>
+				<div id="head_right" class="head_right  col-xs-1" style="margin-top: 3px;"><img src="img/xiangqing_people.png"></div>
+		</div>
+	</div>
+	<!-- 页面头部结束 -->
+
+	<!-- 页面内容部分 -->
+	<div id="xiangqing" class="xiangqing" style="width: 1200px;margin:0 auto;">
+		<!-- 页面内容部分 -->
+		<div id="content" class="content" style="margin-top: 60px;">
+			<div id="content_left" class="content_left  col-xs-1" style="height: 500px;background-color:#ddd;width: 50px;">
+				<div class="" style="width: 30px;margin-top:30px;"><a href="#"><img src="img/list_left_liebiao.png"></a></div>
+				<div class="" style="width: 30px;margin-top:30px;"><a href="#"><img src="img/list_left_zhanghu.png"></a></div>
+				<div class="" style="width: 30px;margin-top:30px;"><a href="#"><img src="img/list_left_jilu.png"></a></div>
+				<div class="" style="width: 30px;margin-top:30px;"><a href="#"><img src="img/list_left_yonghu.png"></a></div>
+			</div>
+			<div id="content_center" class="content_center col-xs-2" style="height: 360px;border:1px solid #ddd;width: 200px;margin-left: 20px;">
+				<ul style="display: inline-block;margin:0px 0px 40px;">
+					<li><a href="#"><img src="img/list_fanhui.png" style="display: inline-block;margin-right: 10px;">返回上级</a></li>
+					<li><a href="#"><img src="img/list_tongchou.png" style="display: inline-block;margin-right: 10px;">统筹总表</a></li>
+					<li><a href="#"><img src="img/list_changjing.png" style="display: inline-block;margin-right: 10px;">分场景表</a></li>
+					<li><a href="#"><img src="img/list_people.png" style="display: inline-block;margin-right: 10px;">人物戏量统计表</a></li>
+				</ul>
+			</div>
+			<!-- 页面左边部分结束 -->
+			<div class="col-xs-1" style="width: 30px;"></div>
+			<div id="content_right" class="content_right col-xs-8" style="height:auto;">
+				<!-- 项目名称开始 -->
+				<div id="content_right_mingcheng" class="content_right_mingcheng row" style="height: 60px;background-color: #fff;border:1px solid #ddd;margin-right: -88px;">
+					<div id="mingcheng_icon" class="mingcheng_icon col-xs-2" style="height: 60px;padding-top: 10px;">
+						<img src="img/list_xiangmu.png"><span style="font-family: 微软雅黑;font-size: 18px;color: #333;display: inline-block;margin-left: 10px;">项目名称</span>
+					</div>
+					<div class="mingcheng_bianji col-xs-8" style="font-family: 新宋体;font-size: 12px;color: #999;height: 60px;line-height: 60px;">编辑</div>
+					<div id="mingcheng_yulan" class="mingcheng_yulan col-xs-2" style="padding-top: 10px;">
+						<a href=""><img src="img/list_yulan.png"></a>
+					</div>
+				</div>
+				<!-- 项目名称结束 -->
+				<!-- 项目功能开始 -->
+				<div id="content_right_gongneng" class="content_right_gongneng pull" style="height: 60px;margin-top: 20px;background-color: #fff;border:1px solid #ddd;margin-left: -14PX;padding-right: 8px;margin-right: -88px;margin-bottom: 60px;">
+					<div id="gongneng_baocun" class="gongneng_baocun col-xs-1">
+						<a href="#"><img src="img/list_baocun.png"/></a>
+						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">保存</p>
+					</div>
+					<div id="gongneng_chexiao" class="gongneng_chexiao col-xs-1">
+						<a href="#"><img src="img/list_chexiao_left.png"/></a>
+						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">撤销</p>
+					</div>
+					<div id="gongneng_chongzuo" class="gongneng_chongzuo col-xs-1">
+						<a href="#"><img src="img/list_chexiao_right.png"/></a>
+						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">重做</p>
+					</div>
+					<div id="gongneng_caozuo" class="gongneng_caozuo col-xs-1">
+						<a href="#"><img src="img/list_caozuo.png"/></a>
+						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">操作</p>
+					</div>
+					<div id="gongneng_suoding" class="gongneng_suoding col-xs-2">
+						<a href="#"><img src="img/list_suoding.png"/></a>
+						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">锁定</p>
+					</div>
+					<div id="gongneng_fangdasuoxiao" class="gongneng_fangdasuoxiao col-xs-3 text-center pull-left">
+						<a href="#"><img src="img/list_fangda.png"/></a>
+						<a href="#"><img src="img/list_suoxiao.png"/></a>
+						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">100%</p>
+					</div>
+					<div id="gongneng_fenxiang" class="gongneng_fenxiang col-xs-1">
+						<a href="#"><img src="img/list_fenxiang.png"/></a>
+						<p style="font-family: 微软雅黑;font-size: 14px;color: #666;">分享</p>
+					</div>
+					<div id="gongneng_xiazai" class="gongneng_xiazai col-xs-1" style="margin-top: 10px;margin-left: 8px;">
+						<a href="#"><img src="img/list_xiazai.png"></a>
+					</div>
+				</div>
+				<!-- 项目功能结束 -->
+				<!-- 项目表格开始 -->
+				<p style="text-align: center;margin-left: -10px;background-color: #eee;padding-top: 24px;margin-right: -90px;margin-bottom: -20px;height: 140px;">统筹表</p>
+				<div id="content_right_biaoge" class="content_right_biaoge table-responsive beijing" style="margin-left: -10px;margin-right: -90px;margin-bottom: 100px;padding-left: 50px;padding-right: 50px;">
+	                <table class="table table-bordered" id="chuizhi" style="margin-right: 50px;">
+	                    <thead>
+	                        <tr>
+	                            <th id="biaogemeihua">场次</th>
+	                            <th id="biaogemeihua">场景名称</th>
+	                            <th id="biaogemeihua">气氛</th>
+	                            <th id="biaogemeihua">页码量</th>
+	                            <th id="biaogemeihua" style="min-width: 150px;">内容提示</th>
+	                            <th id="zise">主要角色</th>
+	                            <th id="zise">林进喜</th>
+	                            <th id="zise">邓涵志</th>
+	                            <th id="zise">曲建国</th>
+	                            <th id="zise">杜振邦</th>
+	                            <th id="zise">孙士奇</th>
+	                            <th id="zise">赵锦程</th>
+	                            <th id="zise">老赖</th>
+	                            <th id="zise">刘星</th>
+	                            <th id="zise">刘琪主任</th>
+	                            <th id="zise">赵佳</th>
+	                            <th id="zise">俞夫人</th>
+	                            <th id="zise">叶曼</th>
+	                            <th id="zise">旺仔</th>
+	                            <th id="zise">客串</th>
+	                            <th id="zise">船长索尔</th>
+	                            <th id="zise">船员卡尔</th>
+	                            <th id="zise">大副</th>
+	                            <th id="zise">囧处长</th>
+	                            <th id="zise">炊事员</th>
+	                            <th id="zise">基建科长</th>
+	                            <th id="zise">肖科长</th>
+	                            <th id="zise">胖妞</th>
+	                            <th id="zise">张春凤</th>
+	                            <th id="zise">晓渼</th>
+	                            <th id="zise">菜贩</th>
+	                            <th id="zise">买鸡蛋的</th>
+	                            <th id="zise">老经理</th>
+	                            <th id="zise">集团老总</th>
+	                            <th id="zise">田程</th>
+	                            <th id="zise">高狐狸</th>
+	                            <th id="zise">乌贼</th>
+	                            <th id="zise">肥佬</th>
+	                            <th id="zise">烯烃厂长</th>
+	                            <th id="zise">德国代表</th>
+	                            <th id="zise">特邀</th>
+	                            <th id="zise">少年林</th>
+	                            <th id="zise">焦裕禄</th>
+	                            <th id="biaogemeihua" style="min-width: 200px;">道具提示</th>
+	                        </tr>
+	                    </thead>
+	                    <tbody>
+	                    	<tr>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise">演员</td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td></td> 
+	                        </tr>
+	                        <tr>
+	                            <td>1</td>
+	                            <td>沙漠</td>
+	                            <td>日外</td>
+	                            <td>0.3</td>
+	                            <td>阿巴斯凝析油</td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td></td> 
+	                        </tr>
+	                        <tr>
+	                            <td>2</td>
+	                            <td>国际游轮上</td>
+	                            <td>日/夜<br>内/外</td>
+	                            <td>0.2</td>
+	                            <td>没吃的/生病</td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise">索尔</td>
+	                            <td id="zise">卡尔</td>
+	                            <td id="zise">大副</td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td></td> 
+	                        </tr>
+	                        <tr>
+	                            <td>3</td>
+	                            <td>协和医院</td>
+	                            <td>日内/外</td>
+	                            <td>0.3</td>
+	                            <td>俞给林染发</td>
+	                            <td id="zise"></td>
+	                            <td id="zise">林</td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise">俞</td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td>全景福、画外音</td> 
+	                        </tr>
+	                        <tr>
+	                            <td>4</td>
+	                            <td>国际港口</td>
+	                            <td>日内</td>
+	                            <td>0.3</td>
+	                            <td>损耗降到0</td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise">囧</td>
+	                            <td id="zise">炊</td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td id="zise"></td>
+	                            <td>粥桶、餐具、表格</td> 
+	                        </tr>
+	                    </tbody>
+	                </table>
+				</div>
+				<!-- 项目表格结束 -->
+
+
+
+
+
+
+
+
+<!-- 
+				<div class="col-xs-1" style="width: 200px;height: 270px;background-color:#fff;border:1px solid #999;margin:30px 0px 50px 64px;">
+					<p style="text-align: right;font-family: 新宋体;font-size: 12px;color: #999;margin-top: 8px;">编辑</p>
+					<div>
+						<img src="img/xiangqing_1.png">
+						<h1 style="font-family: 微软雅黑;font-size: 18px;color: #333;margin-top: 10px;">片名:</h1>
+						<h2 style="font-family: 微软雅黑;font-size: 12px;color: #666;margin-top: 4px;">导演:</h2>
+						<h2 style="font-family: 微软雅黑;font-size: 12px;color: #666;margin-top: 4px;">电影:</h2>
+					</div>
+					<p style="font-family: 新宋体;font-size: 12px;color: #666;margin-top: 2px;text-align: center;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 10px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
+				</div> -->
+
+				<!-- 一个版块结束 -->
+<!-- 
+				<div class="col-xs-1" style="width: 200px;height: 270px;background-color:#fff;border:1px solid #999;margin:30px 0px 50px 64px;">
+					<p style="text-align: right;font-family: 新宋体;font-size: 12px;color: #999;margin-top: 8px;">编辑</p>
+					<div>
+						<img src="img/xiangqing_2.png">
+						<h1 style="font-family: 微软雅黑;font-size: 18px;color: #333;margin-top: 10px;">片名:</h1>
+						<h2 style="font-family: 微软雅黑;font-size: 12px;color: #666;margin-top: 4px;">导演:</h2>
+						<h2 style="font-family: 微软雅黑;font-size: 12px;color: #666;margin-top: 4px;">电影:</h2>
+					</div>
+					<p style="font-family: 新宋体;font-size: 12px;color: #666;margin-top: 2px;text-align: center;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 10px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
+				</div> -->
+
+				<!-- <div class="col-xs-1" style="width: 200px;height: 270px;margin:30px 0px 50px 64px;">
+					<img src="img/xiangqing_tianjia.png" style="margin-top: 50px;">
+				</div> -->
+
+			</div>
+			<!-- 页面右边部分结束 -->
+		</div>
+		<!-- 页面内容部分结束 -->
+	</div>
+	<!-- 页面内容部分结束 -->
+	<!-- 页面底部开始 -->
+	<!-- 页面footer -->
+	<div id="footer" class="footer" style="margin-top: 550px;">
+		<div class="footer_content">
+			<ul>
+				<li class="col-xs-3">
+					<ul>
+						<p>快速入口</p>
+						<li><a href="#">管理控制台</a></li>
+						<li><a href="#">项目列表</a></li>
+						<li><a href="#">服务协议</a></li>
+					</ul>
+				</li>
+				<li class="col-xs-3">
+					<ul>
+						<p>产品</p>
+						<li><a href="#">什么是影视统筹</a></li>
+						<li><a href="#">影视统筹表如何使用</a></li>
+						<li><a href="#">如何调整剧本格式</a></li>
+						<li><a href="#">如何制定拍摄计划</a></li>
+					</ul>
+				</li>
+				<li class="col-xs-3">
+					<ul>
+						<p>关于</p>
+						<li><a href="#" style="text-decoration: none;">团队</a></li>
+						<li><a href="#">联系我们</a></li>
+					</ul>
+				</li>
+				<li class="col-xs-3">
+					<img src="img/erweima.jpg" alt="非幕科技公众号二维码"/>
+					<span>微信公众号</span>
+				</li>
+			</ul>
+			</div>
+	</div><!--版权信息-->
+	<!-- 页面底部结束 -->
+	<!-- 页面整体结束 -->
+</body>
+</html>
