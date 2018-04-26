@@ -1,0 +1,24 @@
+body{
+	padding-top: 60px;
+}
+.content_left li{
+	border-bottom: 1px solid black;
+}
+.content_left ul li a{
+	text-align: center;
+	font-family: "新宋体";
+	font-size: 18px;
+	color: #666;
+	display: inline-block;
+	width: 150px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	height: 40px;
+	line-height: 40px;
+}
+.content_left ul li a:hover{
+	border-radius: 30px;
+	background-color: red;
+	border:1px solid red;
+	text-decoration: none;
+}

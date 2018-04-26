@@ -79,6 +79,12 @@
 		<li>产品遮罩板块加入首页</li>
 		<li>把演示页demo与首页融合，创建独立yanshi.html页面，原先的切换效果用锚点方式表现。</li>
 		<li><strong>[待解决]</strong>yanshi.html的细节。</li>
+		<li>把页面footer的css移出来创建footer.css,方便调用</li>
+		<li>把页面重置css的部分移出来创建reset.css,方便调用</li>
+		<li>添加xiangqing.css文件</li>
+		<li>添加yanshi.css文件</li>
+		<li>添加UI详情页部分</li>
+		
 	</ol>
 </p>
 
