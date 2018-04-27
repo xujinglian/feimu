@@ -1,0 +1,32 @@
+body{
+	padding-top: 60px;
+}
+.content_left li{
+	border-bottom: 1px solid #999;
+}
+.content_left ul li a{
+	text-align: left;
+	font-family: "新宋体";
+	font-size: 18px;
+	color: #666;
+	display: inline-block;
+	width: 180px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 20px;
+}
+.content_left ul li a:hover{
+	border-radius: 30px;
+	background-color: #f6ad3c;
+	border:1px solid #f6ad3c;
+	text-decoration: none;
+}
+/*左边样式结束*/
+.gerenshezhi_yonghushezhi a:hover{
+	text-decoration: none;
+}
+
+
+

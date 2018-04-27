@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>非幕科技——个人设置页</title>
+	<meta charset="utf-8">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<link rel="stylesheet" type="text/css" href="css/gerenshezhipage.css">
+	<style type="text/css">
+		#yonghutouxiang:hover .gerenshezhi_yonghushezhi{
+			display: block;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var yonghutouxiang=document.getElementById('yonghutouxiang'),
+				gerenshezhi_yonghushezhi=document.getElementById('gerenshezhi_yonghushezhi');
+				
+			yonghutouxiang.onclick=function(){
+				gerenshezhi_yonghushezhi.style.display='block';
+			}
+			document.onclick=function(){
+				gerenshezhi_yonghushezhi.style.display='none';
+			}
+		}
+	</script>
+</head>
+<body>
+	<!-- 页面整体开始 -->
+	<!-- 页面头部开始 -->
+	<div id="head" class="head navbar-fixed-top" style="height: 60px;background-color: #f9f9f9;">
+		<div id="head_content" class="head_content row" style="width: 1200px;margin:0 auto;">
+			<div id="head_left" class="head_left  col-xs-3"><img src="img/xiangqing_logo.png"></div>
+			<div class="col-xs-8" style="margin-top: 8px;"><img src="img/xiangqing_tongchou.png" style="vertical-align: middle;margin-top: 5px;display: inline-block;"></div>
+				<div id="head_right" class="head_right  col-xs-1" style="margin-top: 3px;">
+					<a href="#">
+						<img src="img/xiangqing_people.png" id="yonghutouxiang" class="yonghutouxiang" style="display: inline-block;">
+					</a>
+					
+				</div>
+				<div class="gerenshezhi_yonghushezhi" id="gerenshezhi_yonghushezhi" style="width: 100px;height: 200px;background-color: red;margin-left: -20px;margin-top: 10px;border:1px solid #ddd;display:none;position: absolute;right: 356px;top: 50px;">
+						<div style="text-align: center;font-size: 12px;color: #333;font-family: 微软雅黑;margin:24px auto;">我有一个小鸡蛋</div>
+						<div style="width: 70px;height: 30px;border:1px solid #ddd;margin-left: 15px;margin-bottom: 12px;margin-top:30px;text-align: center;"><a href="#" style="color: #666;font-size: 14px;font-family:微软雅黑;line-height: 15px;display: inline-block;">个人设置</a></div>
+						<div style="width: 70px;height: 30px;border:1px solid #ddd;color: #666;font-size: 12px;margin-left: 15px;line-height: 30px;margin-bottom: 12px;text-align: center;"><a href="#" style="font-family:微软雅黑;">密码安全</a></div>
+						<div style="width: 70px;height: 30px;border:1px solid #ddd;color: #666;font-size: 12px;margin-left: 15px;line-height: 30px;margin-bottom: 12px;text-align: center;"><a href="#" style="">退出</a></div>
+				</div>
+		</div>
+	</div>
+	<!-- 页面头部结束 -->
+
+	<!-- 页面内容部分 -->
+	<div id="xiangqing" class="xiangqing" style="width: 1200px;margin:0 auto;">
+		<!-- 页面内容部分 -->
+		<div id="content" class="content" style="margin-top: 60px;">
+			<div id="content_left" class="content_left col-xs-2" style="min-height: 360px;border:1px solid #ddd;width: 200px;margin-left: 20px;">
+				<ul style="display: inline-block;margin:0px 0px 40px;">
+					<div class="geren_touxiang" style="margin-top: 28px;margin-bottom: 10px;padding-left: 54px;"><img src="img/gerenshezhi_touxiang.png" style="width: 70px;height: 70px;"></div>
+					<div style="margin-top: 10px;"><a href="#" style="color: #459df5;font-size: 16px;font-family: 微软雅黑;padding-left: 48px;">上传新头像</a></div>
+					<li style="text-align: center;padding-bottom: 20px;padding-top: 30px;font-size: 18px;color: #333;font-family: 微软雅黑;">基本信息</li>
+					<li><a href="#"><img src="img/gerenshezhi_mingcheng.png" style="display: inline-block;margin-right: 10px;">我有一个小鸡蛋</a></li>
+					<li><a href="#"><img src="img/gerenshezhi_dianhua.png" style="display: inline-block;margin-right: 10px;">15512345678</a></li>
+					<li><a href="#"><img src="img/gerenshezhi_youxiang.png" style="display: inline-block;margin-right: 10px;">mayun@qq.com</a></li>
+				</ul>
+			</div>
+			<!-- 页面左边部分结束 -->
+			<div class="col-xs-1" style="width: 10px;"></div>
+			<div id="content_right" class="content_right col-xs-7" style="height:auto;">
+				<!-- 项目设置和密码开始 -->
+				<div id="content_right_mingcheng" class="content_right_mingcheng row" style="height: 60px;background-color: #fff;border:1px solid #ddd;margin-right: -88px;margin-bottom: 50px;">
+					<div id="mingcheng_icon" class="mingcheng_icon col-xs-3" style="height: 60px;padding-top: 10px;">
+						<a href="#"><img src="img/gerenshezhi_gerenshezhi.png"><span style="font-family: 微软雅黑;font-size: 18px;color: #333;display: inline-block;margin-left: 10px;">个人设置</span></a>
+					</div>
+					<div class="mingcheng_bianji col-xs-5" style="font-family: 新宋体;font-size: 12px;color: #999;height: 60px;line-height: 60px;">
+						<a href="#"><img src="img/gerenshezhi_mima.png" style="display: inline-block;margin-top: -8px;"><span style="font-family: 微软雅黑;font-size: 18px;color: #333;display: inline-block;margin-left: 10px;">密码安全</span></a>
+					</div>
+				</div>
+				<!-- 项目设置和密码结束 -->
+				<!-- 项目表格开始 -->
+				
+
+
+				<div  id="content_right_biaoge" class="content_right_biaoge table-responsive" style="margin-left:-64px;margin-bottom: 100px;padding-left: 50px;margin-right: -88px;">
+					<form role="form">
+						  <div class="form-group" style="border:1px solid #ddd;height: 56px;">
+							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">名称</label>
+							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
+						  </div>
+						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
+							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">工作岗位</label>
+							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
+						  </div>
+						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
+							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">个人简介</label>
+							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
+						  </div>
+						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
+							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">绑定手机</label>
+							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
+						  </div>
+						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
+							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">绑定邮箱</label>
+							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
+						  </div>
+						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
+							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">公司/学校</label>
+							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
+						  </div>
+						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
+							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">生日</label>
+							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
+						  </div>
+						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
+							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">所在城市</label>
+							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
+						  </div>
+						  <button type="submit" class="btn btn-lg" style="margin:60px 320px 100px;display: inline-block;height: 40px;"><span style="width: 240px;height: 40px;background-color: #459df5;margin:-90px -20px;padding:10px 20px;border-radius: 10px;color: white;">保存设置</span></button>
+					</form>
+				</div>
+				<!-- 项目表格结束 -->
+
+			</div>
+			<!-- 页面右边部分结束 -->
+		</div>
+		<!-- 页面内容部分结束 -->
+	</div>
+	<!-- 页面内容部分结束 -->
+	<!-- 页面底部开始 -->
+	<!-- 页面footer -->
+	<div id="footer" class="footer" style="margin-top: 550px;">
+		<div class="footer_content">
+			<ul>
+				<li class="col-xs-3">
+					<ul>
+						<p>快速入口</p>
+						<li><a href="#">管理控制台</a></li>
+						<li><a href="#">项目列表</a></li>
+						<li><a href="#">服务协议</a></li>
+					</ul>
+				</li>
+				<li class="col-xs-3">
+					<ul>
+						<p>产品</p>
+						<li><a href="#">什么是影视统筹</a></li>
+						<li><a href="#">影视统筹表如何使用</a></li>
+						<li><a href="#">如何调整剧本格式</a></li>
+						<li><a href="#">如何制定拍摄计划</a></li>
+					</ul>
+				</li>
+				<li class="col-xs-3">
+					<ul>
+						<p>关于</p>
+						<li><a href="#" style="text-decoration: none;">团队</a></li>
+						<li><a href="#">联系我们</a></li>
+					</ul>
+				</li>
+				<li class="col-xs-3">
+					<img src="img/erweima.jpg" alt="非幕科技公众号二维码"/>
+					<span>微信公众号</span>
+				</li>
+			</ul>
+			</div>
+	</div><!--版权信息-->
+	<!-- 页面底部结束 -->
+	<!-- 页面整体结束 -->
+</body>
+</html>
