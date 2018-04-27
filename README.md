@@ -105,6 +105,7 @@
 		<li>[待解决]对目前阶段项目程序做复盘</li>
 		<li>[待解决]列表页功能板块需要做修改<img src="img_folder/wancheng.png" width="50px;" height="50px;"></li>
 		<li>现有页面之间的跳转关系搭建完成</li>
+		<li>个人设置页做了一部分，剩余点击用户头像显示卡片部分</li>
 	</ol>
 </p>
 
