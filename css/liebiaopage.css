@@ -22,3 +22,6 @@ body{
 	border:1px solid #f6ad3c;
 	text-decoration: none;
 }
+.content_right a:hover{
+	text-decoration: none;
+}
