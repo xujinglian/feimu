@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>MODEL PAGE</title>
+<style type="text/css">
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+td,th {
+	border: 1px solid black;
+}
+</style>
+<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+<script type="text/javascript">
+	var datanav = [
+			{
+                "name" : "张三fgdg",
+                "position" : "1",
+                "powerrate" : "2",
+                "waterrate" : "",
+                "healthcosts" : "",
+                "watermeter" : "",
+                "ammeter" : "",
+                "linkman" : "",
+                "phone" : "",
+                "rental" : "9",
+                "tenancy" : "10",
+                "remark" : "11"
+            },
+            {
+                "name" : "张三fgdg",
+                "position" : "1",
+                "powerrate" : "2",
+                "waterrate" : "3",
+                "healthcosts" : "4",
+                "watermeter" : "5",
+                "ammeter" : "6",
+                "linkman" : "7",
+                "phone" : "8",
+                "rental" : "9",
+                "tenancy" : "10",
+                "remark" : "11"
+            },
+            {
+                "name" : "李四",
+                "position" : "11",
+                "powerrate" : "10",
+                "waterrate" : "9",
+                "healthcosts" : "8",
+                "watermeter" : "7",
+                "ammeter" : "6",
+                "linkman" : "5",
+                "phone" : "4",
+                "rental" : "3gdfgfd",
+                "tenancy" : "2",
+                "remark" : "1"
+            }
+    ];
+    window.onload = function ()
+    {
+	   var table = document.getElementsByTagName ('table')[1];
+	   for ( var i = 0; i < datanav.length; i++)
+	   {
+		   var tr = table.insertRow (table.rows.length);
+		   var obj = datanav[i];
+		   for ( var p in obj)
+		   {
+			   if (p == 'tenancy')
+			   {
+				   break;
+			   }
+			   var td = tr.insertCell (tr.cells.length);
+			   td.innerText = obj[p];
+		   }
+	   }
+    }
+</script>
+</head>
+<body>
+	<table>
+		<tr>
+			gdfg
+		</tr>
+	</table>
+
+	<table>
+		<tr>
+			<td>123</td>
+			<td>123</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+
+		</tr>
+	</table>
+</body>

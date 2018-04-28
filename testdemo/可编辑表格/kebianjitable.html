@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>可编辑表格</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		td{
+			border:1px solid red;
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div style="width: 1200px;margin:100px auto;background-color: #ddd;height: 500px;padding:20px 40px;">
+		<table align="center">
+			 <tr>
+				 <td>学号</td>
+				 <td>姓名</td>
+			 </tr>
+			 <tr>
+			 	<form action="/kebianjitable.json" method="post">
+			 	 	<td><input type="text" name="xeuhao" value="001"></td>
+				 	<td><input type="text" name="xeuhao" value="防守打法"></td>
+				 	<input type="submit" value="提交">
+				</form>
+			 </tr>
+			 <tr>
+				 <td>002</td>
+				 <td>cat</td>
+			 </tr>
+			 <tr>
+				 <td>003</td>
+				 <td>pig</td>
+			 </tr>
+		</table>
+	</div>
+
+
+	<!-- js读取json数据 -->
+	<div style="width: 1200px;margin:100px auto;background-color: #ddd;height: 500px;padding:20px 40px;">
+		<div id="jsondate" style="width: 200px;height: 200px;background-color: red;"></div>
+		<script>
+			$("jsondate").click(function){
+				$.ajax({
+					type:"get",
+					url:"jsondate.json",
+					dataType:"json",
+					success:funciton(window){alert('成功了');}
+				});
+			}
+		</script>
+	</div>
+	<!-- <script>
+		window.onload=function(){
+		$(function(){
+			 $("td").click(function(event){
+			  //td中已经有了input,则不需要响应点击事件
+			  if($(this).children("input").length > 0)
+			   return false;
+			  var tdObj = $(this);
+			  var preText = tdObj.html();
+			  //得到当前文本内容
+			  var inputObj = $("<input type='text' />");
+			  //创建一个文本框元素
+			  tdObj.html(""); //清空td中的所有元素
+			  inputObj
+			   .width(tdObj.width())
+			   //设置文本框宽度与td相同
+			   .height(tdObj.height())
+			   .css({border:"0px",fontSize:"17px",font:"宋体"})
+			   .val(preText)
+			   .appendTo(tdObj)
+			   //把创建的文本框插入到tdObj子节点的最后
+			   .trigger("focus")
+			   //用trigger方法触发事件
+			   .trigger("select");
+			  inputObj.keyup(function(event){
+			   if(13 == event.which)
+			   //用户按下回车
+			   {
+			    var text = $(this).val();
+			    tdObj.html(text);
+			   }
+			   else if(27 == event.which)
+			   //ESC键
+			   {
+			    tdObj.html(preText);
+			   }
+			  });
+			  //已进入编辑状态后，不再处理click事件
+			  inputObj.click(function(){
+			   return false;
+			  });
+			 });
+			});
+		}
+	</script> -->
+
+
+
+	<div style="width: 1200px;margin:100px auto;background-color: #ddd;height: 500px;padding:20px 40px;">
+		<table border="0" style="text-align: center;" width="100%" id="myTable">
+			 <tr>
+				  <td width="150px;">表头1</td>
+				  <td width="150px;">表头2</td>
+				  <td width="150px;">表头3</td>
+				  <td width="150px;">表头4</td>
+				  <td width="150px;">表头5</td>
+				  <td width="150px;">操作</td>
+			 </tr>
+		</table>
+	</div>
+	<script>
+		  window.onload=function(){
+		  	var num = 0;
+		    function addTable(){
+		    var tableHtml ="";
+		    tableHtml += '<tr id="tr'+num+'">'
+		         +'<td><input class="addtd" id="cnashu1'+num+'" style="width:150px;" type="text" name="cnashu1" /></td>'
+		         +'<td><input class="addtd" id="cnashu2'+num+'" style="width:150px;" type="text" name="cnashu2"/></td>'
+		         +'<td><input class="addtd" id="cnashu3'+num+'" style="width:150px;" type="text" name="cnashu3"/></td>'
+		         +'<td><input class="addtd" id="cnashu4'+num+'" style="width:150px;" type="text" name="cnashu4"/></td>'
+		         +'<td><input class="addtd" id="cnashu5'+num+'" style="width:150px;" type="text" name="cnashu5"/></td>'
+		         +'<td><a style="cursor: pointer; color: blue;" onclick="removeTr('+num+')">删除</a>'
+		           +'<a id="edit'+num+'" class="edit" style="cursor: pointer; color: blue;" onclick="editDataByOne('+num+')">修改</a>'
+		           +'<a id="save'+num+'" class="hide" style="cursor: pointer; color: blue;" onclick="saveByOne('+num+')">保存</a>'
+		         +'</td>'
+		         +'</tr>';
+		     
+		    var elements = $("#myTable").children().length;  //表示id为“mtTable”的标签下的子标签的个数
+		     
+		    $("#myTable").children().eq(elements - 1).after(tableHtml); //在表头之后添加空白行
+		    num++;  
+		  }
+		  }
+		  function removeTr(trNum){
+			  $("#tr"+trNum).remove();
+			}
+			//编辑行
+			function editDataByOne(trNum){
+			  $this = $("#tr"+trNum);
+			  $(".addtd",$this).removeAttr("readonly");
+			}
+			//保存行
+			function saveByOne(trNum){
+			  $this = $("#tr"+trNum);
+			  $(".addtd",$this).attr("readonly","readonly");
+			}
+	</script>
+</body>
+</html>
