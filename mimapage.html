@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>非幕科技——个人设置页</title>
+	<title>非幕科技——密码安全页</title>
 	<meta charset="utf-8">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
@@ -16,7 +15,6 @@
 		#yonghutouxiang:hover .gerenshezhi_yonghushezhi{
 			display: block;
 		}
-		#head_right ul li:hover ul{display: inline-block;}
 	</style>
 	<!-- <script>
 		window.onload=function(){
@@ -40,14 +38,14 @@
 			<div id="head_left" class="head_left  col-xs-3"><img src="img/xiangqing_logo.png"></div>
 			<div class="col-xs-8" style="margin-top: 8px;"><img src="img/xiangqing_tongchou.png" style="vertical-align: middle;margin-top: 5px;display: inline-block;"></div>
 			<div id="head_right" class="head_right col-xs-1" style="margin-top: 3px;">
-				<ul>
-					<li><img src="img/xiangqing_people.png" id="yonghutouxiang" class="yonghutouxiang dropdown-toggle" style="display: inline-block;" data-toggle="dropdown">
-						<ul class="dropdown-menu" role="menu">
-							<div style="display: inline-block;width: 100px;height: 200px;background-color: black;margin-top: -10px;">
-								gc
-							</div>
-						</ul>
-					</li>
+				<div class="btn-group">
+				<a href=""><img src="img/xiangqing_people.png" id="yonghutouxiang" class="yonghutouxiang dropdown-toggle" style="display: inline-block;" data-toggle="dropdown"></a>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">功能</a></li>
+					<li><a href="#">另一个功能</a></li>
+					<li><a href="#">其他</a></li>
+					<li class="divider"></li>
+					<li><a href="#">分离的链接</a></li>
 				</ul>
 				<!-- <a href="#">
 					<img src="img/xiangqing_people.png" id="yonghutouxiang" class="yonghutouxiang  dropdown-toggle" style="display: inline-block;"  data-toggle="dropdown">
@@ -58,6 +56,7 @@
 						<div style="width: 70px;height: 30px;border:1px solid #ddd;color: #666;font-size: 12px;margin-left: 15px;line-height: 30px;margin-bottom: 12px;text-align: center;"><a href="#" style="font-family:微软雅黑;">密码安全</a></div>
 						<div style="width: 70px;height: 30px;border:1px solid #ddd;color: #666;font-size: 12px;margin-left: 15px;line-height: 30px;margin-bottom: 12px;text-align: center;"><a href="#" style="">退出</a></div>
 					</div> -->
+				</div>
 			</div>
 			<!-- 点击头像弹出下拉 -->
 				
@@ -85,10 +84,10 @@
 				<!-- 项目设置和密码开始 -->
 				<div id="content_right_mingcheng" class="content_right_mingcheng row" style="height: 60px;background-color: #fff;border:1px solid #ddd;margin-right: -88px;margin-bottom: 50px;">
 					<div id="mingcheng_icon" class="mingcheng_icon col-xs-3" style="height: 60px;padding-top: 10px;">
-						<a href="gerenshezhipage.html"><img src="img/gerenshezhi_gerenshezhi1.png"><span style="font-family: 微软雅黑;font-size: 18px;color: #459df5;display: inline-block;margin-left: 10px;">个人设置</span></a>
+						<a href="gerenshezhipage.html"><img src="img/gerenshezhi_gerenshezhi1.png"><span style="font-family: 微软雅黑;font-size: 18px;color: #333;display: inline-block;margin-left: 10px;">个人设置</span></a>
 					</div>
 					<div class="mingcheng_bianji col-xs-5" style="font-family: 新宋体;font-size: 12px;color: #999;height: 60px;line-height: 60px;">
-						<a href="mimapage.html"><img src="img/gerenshezhi_mima.png" style="display: inline-block;margin-top: -8px;"><span style="font-family: 微软雅黑;font-size: 18px;color: #333;display: inline-block;margin-left: 10px;">密码安全</span></a>
+						<a href="mimapage.html"><img src="img/gerenshezhi_mima.png" style="display: inline-block;margin-top: -8px;"><span style="font-family: 微软雅黑;font-size: 18px;color: #459df5;display: inline-block;margin-left: 10px;">密码安全</span></a>
 					</div>
 				</div>
 				<!-- 项目设置和密码结束 -->
@@ -99,35 +98,19 @@
 				<div  id="content_right_biaoge" class="content_right_biaoge table-responsive" style="margin-left:-64px;margin-bottom: 100px;padding-left: 50px;margin-right: -88px;">
 					<form role="form">
 						  <div class="form-group" style="border:1px solid #ddd;height: 56px;">
-							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">名称</label>
+							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">修改密码</label>
 							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
 						  </div>
 						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
-							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">工作岗位</label>
+							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">初始密码</label>
 							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
 						  </div>
 						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
-							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">个人简介</label>
+							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">新密码</label>
 							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
 						  </div>
 						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
-							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">绑定手机</label>
-							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
-						  </div>
-						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
-							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">绑定邮箱</label>
-							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
-						  </div>
-						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
-							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">公司/学校</label>
-							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
-						  </div>
-						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
-							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">生日</label>
-							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
-						  </div>
-						  <div class="form-group" style="border:1px solid #ddd;height: 56px;margin-top: -16px;">
-							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">所在城市</label>
+							    <label for="name" style="display: inline-block;width: 132px;font-size: 14px;color: #666;font-family: 新宋体;height: 56px;padding-left: 30px;">再次确认</label>
 							    <input type="text" class="form-control" id="name" style="display: inline-block;width: 630px;border-left:1px solid #ddd;border-right:none;border-top:none;border-bottom:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;" placeholder="">
 						  </div>
 						  <button type="submit" class="btn btn-lg" style="margin:60px 320px 100px;display: inline-block;height: 40px;"><span style="width: 240px;height: 40px;background-color: #459df5;margin:-90px -20px;padding:10px 20px;border-radius: 10px;color: white;">保存设置</span></button>

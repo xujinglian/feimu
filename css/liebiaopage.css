@@ -22,6 +22,9 @@ body{
 	border:1px solid #f6ad3c;
 	text-decoration: none;
 }
+.content_left ul li a:active,.content_left ul li a:visited{
+	text-decoration: none;
+}
 .content_right a:hover{
 	text-decoration: none;
 }

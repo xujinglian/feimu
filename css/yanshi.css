@@ -53,3 +53,12 @@
     padding-top: 10px;
 }
 #myNav li a{background-color: #eee;}*/
+#shili a{
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+}
+#shili a:hover{
+    color:#666;
+    text-decoration: none;
+}

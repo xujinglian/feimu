@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 弹出框（Popover）插件</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- 这是bs的弹出框 -->
+<!-- <div class="container" style="padding: 100px 50px 10px;" >
+
+	<button type="button" class="btn btn-default" title="Popover title"  
+			data-container="body" data-toggle="popover" data-placement="left" 
+			data-content="左侧的 Popover 中的一些内容">
+		左侧的 Popover
+	</button>
+	<button type="button" class="btn btn-primary" title="Popover title"  
+			data-container="body" data-toggle="popover" data-placement="top" 
+			data-content="顶部的 Popover 中的一些内容">
+		顶部的 Popover
+	</button>
+	<button type="button" class="btn btn-warning" title="Popover title"  
+			data-container="body" data-toggle="popover" data-placement="right" 
+			data-content="右侧的 Popover 中的一些内容">
+		右侧的 Popover
+	</button>
+
+	<button type="button" class="btn btn-success" title="Popover title"  
+			data-container="body" data-toggle="popover" data-placement="bottom" 
+			data-content="底部的 Popover 中的一些内容">
+		底部的 Popover
+	</button>
+
+	<button type="button" class="btn btn-success" data-toggle="popover" data-placement="bottom" >
+		染发独守空房
+		<div style="width: 200px;height: 400px;display: none;">
+			<div></div>
+		</div>
+	</button>
+	
+</div> -->
+<!-- 弹出框demo结束，结果不行 -->
+<!-- <script>
+$(function () { 
+	$("[data-toggle='popover']").popover();
+});
+</script> -->
+
+<!-- 以上是弹出框demo，和效果不同 -->
+
+
+
+<!-- 以下是下拉菜单部分 -->
+<div class="btn-group">
+	<button type="button" class="btn btn-default dropdown-toggle" 
+			data-toggle="dropdown">
+		默认 <span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="#">功能</a></li>
+		<li><a href="#">另一个功能</a></li>
+		<li><a href="#">其他</a></li>
+		<li class="divider"></li>
+		<li><a href="#">分离的链接</a></li>
+	</ul>
+</div>
+<div class="btn-group">
+	<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">原始 
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="#">功能</a></li>
+		<li><a href="#">另一个功能</a></li>
+		<li><a href="#">其他</a></li>
+		<li class="divider"></li>
+		<li><a href="#">分离的链接</a></li>
+	</ul>
+</div>
+
+<br><br>
+<!-- 自己的下拉菜单demo -->
+<div class="btn-group">
+	<img src="gerenshezhi_touxiang.png" id="yonghutouxiang" class="yonghutouxiang  dropdown-toggle" style="display: inline-block;"  data-toggle="dropdown">
+	
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="#">功能</a></li>
+		<li><a href="#">另一个功能</a></li>
+		<li><a href="#">其他</a></li>
+		<li class="divider"></li>
+		<li><a href="#">分离的链接</a></li>
+	</ul>
+</div>
+
+
+
+			<div id="head_right" class="head_right col-xs-1 btn-group" style="margin-top: 3px;">
+				<img src="gerenshezhi_touxiang.png" id="yonghutouxiang" class="yonghutouxiang  dropdown-toggle" style="display: inline-block;"  data-toggle="dropdown">
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">功能</a></li>
+					<li><a href="#">另一个功能</a></li>
+					<li><a href="#">其他</a></li>
+					<li class="divider"></li>
+					<li><a href="#">分离的链接</a></li>
+				</ul>
+			</div>
+
+
+
+
+<div style="width: 1200px;margin:100px auto;background-color: gray;height: 1000px;">
+	<div>
+		<img src="gerenshezhi_touxiang.png" style="display: inline-block;" class="touxiang" id="touxiang">
+		<div class="xiala" id="xiala" style="width: 200px;height: 400px;background-color: red;">
+			
+		</div>
+	</div>
+</div>
+</body>
+</html>
