@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+		<script>
+			$(function() {
+				
+				var k = 0;
+				$.getJSON("revenue.json", function(data) {
+					$.each(data, function(mainIndex, mainTable) {
+						/*收入单位*/
+						var mainTrObj = "<tr><td>" + mainTable.incomeUnit + "</td><td>" + mainTable.firm + "</td><td>" + mainTable.number + "</td><td>" + mainTable.instructionType + "</td><td>" + mainTable.dept + "</td><td>" + mainTable.totalPrice + "</td></tr>";
+						$("#mainTable").append(mainTrObj);
+						/*支出单位表头*/
+						var haveChild = data[k].child.length;
+						if(haveChild == 0) {
+							var nullHead = "<tr><td colspan='5' align='center'>暂无数据</td></tr>";
+							$("#mainTable").append(nullHead);
+						} else {
+							var smallTit = "<tr><td colspan='6'><table id='smallTable" + k + "' class='table-condensed table smallTable'><tr id='smallTr" + k + "' ><td></td><td></td><td></td><td></td></tr></table></td></tr>";
+							$("#mainTable").append(smallTit);
+						}
+						/*支出单位遍历*/
+						var numnerSum = 0;
+						var priceSum = 0;
+						var unsettled = 0;
+						var child = data[k].child;
+						for(var j = 0; j < haveChild; j++) {
+							numnerSum = numnerSum + parseInt(child[j].number);
+							priceSum = priceSum + parseFloat(child[j].price);
+							priceSum = Math.round(priceSum * 100) / 100;
+							unsettled = parseFloat(mainTable.totalPrice) - priceSum;
+							unsettled = Math.round(unsettled * 100) / 100;
+							var smallTrObj = "<tr><td>" + child[j].expendUnit + "</td><td>" + child[j].number + "</td><td>" + child[j].price + "</td><td>" + child[j].type + "</td><td>" + child[j].expendUnit1 + "</td><td>" + child[j].number1 + "</td><td>" + child[j].price1 + "</td><td colspan='2'>" + child[j].type1 + "</td><td>"  + child[j].expendUnit2 + "</td><td>" + child[j].number2 + "</td><td>" + child[j].price2 + "</td><td>" + child[j].type2 + "</td><td>" + child[j].expendUnit3 + "</td><td>" + child[j].number3 + "</td><td>" + child[j].price3 + "</td><td>" + child[j].type3 +"</td></tr>";
+							$("#smallTr" + k).after(smallTrObj);
+							/*计算数量、价格、未结费*/
+						}
+						/*小计行*/
+						
+						k++;
+					});
+				});
+				
+			})
+		</script>
+		<style type="text/css">
+			table{border:1px solid black;border-collapse: collapse;}
+			td,th{border:1px solid black;}
+		</style>
+		
+	</head>
+<body>
+<div style="width: 1200px;margin:100px auto;">
+	<table id="mainTable" class="table" style="width: 1000px;overflow-x: scroll;">
+		
+	</table>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jsondemo</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<style type="text/css">
+			table{border:1px solid black;border-collapse: collapse;}
+			td,th{border:1px solid black;}
+		</style>
+		
+	<script>
+		$(function(){
+			$.getJSON(main.json,function(data)){
+
+			}
+		})
+	</script>
+</head>
+<body>
+	<div style="width: 1200px;margin:100px auto;">
+		<table id="maintable" class="table" style="width: 1000px;overflow-x: scroll;">
+		
+		</table>
+	</div>
+
+
+
+	<div>
+		<table id="shui">
+			<tr>
+				<th>租户</th>
+				<th>水费</th>
+				<th>电费</th>
+				<th>卫生费</th>
+				<th>表笔位置</th>
+				<th>联系人</th>
+				
+				
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript">
+			var datanav=[
+				{
+					"name":"小三",
+					"position":"12",
+					"power":"123",
+					"weather":"1234",
+					"num":"5456",
+					"phone":"54435435",
+					
+				},
+				{
+					"name":"小三tret",
+					"position":"1trt2",
+					"power":"12fd3",
+					"weather":"1gdf234",
+					"num":"54gfdg56",
+					"phone":"5443gdfgdf5435",
+				}
+			];
+			window.onload=function(){
+				var shui =document.getElementById('shui');
+				for(var i=0;i<datanav.length;i++){
+					var tr=table.insertRow(table.rows.length);
+					var obj=datanav[i];
+					for( var p in obj){
+						var td = tr.insertCell(tr.cells.length);
+						td.innerText=obj[p];
+					}
+				}
+			}
+		</script>
+</body>
+</html>
