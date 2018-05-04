@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>javascript控制图片缩小或者放大</title>
+</head>
+<body>
+<script type="text/javascript">
+var oTime;
+function changeSize(id,action){
+	var obj=document.getElementById("headImg");
+	obj.style.zoom=parseInt(obj.style.zoom)+(action=='+'?+10:-10)+'%';
+	oTime=window.setTimeout('changeSize(\''+id+'\',\''+action+'\')',100);
+}
+document.onmouseup=function(){
+	window.clearTimeout(oTime);
+}
+</script>
+<div id="headImg" style="width: 300px;height: 400px;background-color: red;zoom: 100%;">
+<img src="http://www.baidu.com/img/bd_logo1.png" width="270" height="129" style=""></div>
+<button onmousedown="changeSize('headImg','+');" onmouseup="window.clearTimeout(oTime);">放大</button>
+<button onmousedown="changeSize('headImg','-');" onmouseup="window.clearTimeout(oTime);">缩小</button>
+
+
+
+
+<script type="text/javascript">
+            function copyUrl2() {
+                var Url2 = document.getElementById("biao1");
+                Url2.select(); // 选择对象 
+                document.execCommand("Copy"); // 执行浏览器复制命令 
+                alert("已复制好，可贴粘。");
+            }
+        </script>用户定义的代码区域
+        <textarea cols="20" rows="10" id="biao1">用户定义的代码区域</textarea>
+        <input type="button" onClick="copyUrl2()" value="点击复制代码" />
+
+
+
+
+
+</body>
+</html>
