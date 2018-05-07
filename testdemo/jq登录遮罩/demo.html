@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>弹出层登录页面</title>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<link rel="Stylesheet" type="text/css" href="style/loginDialog.css" />
+
+</head>
+<body style="height: 2000px;">
+
+    <a href="#" id="example">登录/注册</a>
+	
+    <div id="LoginBox" style="padding-bottom: 46px;padding-top: 30px;">
+        <div class="row1" style="margin:10px 40px;border-bottom: 1px #ddd solid;padding-bottom: 10px;">
+            <span style="font-size: 14px;color: #333;font-family: 微软雅黑;text-decoration: none;margin-right: 30px;">密码登录</span>
+            <span style="font-size: 14px;color: #459df5;font-family: 微软雅黑;text-decoration: none;">注册</span>
+            <a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn"><img src="img/zhuce_guanbi.png"></a>
+        </div>
+        <div style="width: 320px;height: 40px;margin:30px 40px 20px;border:1px solid #ddd;background-color: white;border-radius: 5px;">
+            <img src="img/zhuce_yonghu.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+            <span class="inputBox">
+                <input type="text" id="txtName" placeholder="请输入注册邮箱/手机号码" style="height: 38px;border:none;line-height: 40px;font-family: 新宋体;font-size: 12px;color: #999;width: 250px;" />
+            </span>
+            
+        </div>
+        <div style="width: 320px;height: 40px;margin:30px 40px 20px;border:1px solid #ddd;background-color: white;border-radius: 5px;">
+        	<img src="img/zhuce_mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+            <span class="inputBox">
+                <input type="text" id="txtPwd" placeholder="密码" style="height: 35px;border:none;line-height: 40px;font-family: 新宋体;font-size: 12px;color: #999;width: 170px;" />
+                <a href="#" style="height: 38px;border-left:1px dotted #999;margin-right:-30px;font-family: 新宋体;font-size: 12px;line-height: 40px;color: #459df5;text-decoration: none;display: inline-block;padding-left: 20px;">发送验证码</a>
+            </span>
+            
+        </div>
+        <div style="margin-left: 40px;margin-bottom: 40px;height: 12px;">
+        	<input type="checkbox" name="单选框">
+        	<span style="font-size: 12px;color: #666;font-family: 新宋体;line-height: 12px;display: inline-block;">同意<a href="#" style="color: #459df5;text-decoration: none;">非幕科技注册协议</a></span>
+        </div>
+        
+            <button id="loginbtn" style="background-image: url(img/zhuce_zhuce.png);width: 320px;height: 40px;border:none;background-color: #f9f9f9;margin-left: 40px;"><a href="" style="text-decoration: none;font-size: 14px;color:#fff;font-family: 微软雅黑;;">注册</a></button>
+        
+    </div>
+	<script type="text/javascript">
+	$(function ($) {
+		//弹出登录
+		$("#example").hover(function () {
+			$(this).stop().animate({
+				opacity: '1'
+			}, 600);
+		}, function () {
+			$(this).stop().animate({
+				opacity: '0.6'
+			}, 1000);
+		}).on('click', function () {
+			$("body").append("<div id='zhezhaoceng'></div>");
+			$("#zhezhaoceng").addClass("zhezhaoceng").fadeIn("slow");
+			$("#LoginBox").fadeIn("slow");
+		});
+		//
+		//按钮的透明度
+		$("#loginbtn").hover(function () {
+			$(this).stop().animate({
+				opacity: '1'
+			}, 600);
+		}, function () {
+			$(this).stop().animate({
+				opacity: '0.8'
+			}, 1000);
+		});
+		//文本框不允许为空---按钮触发
+		$("#loginbtn").on('click', function () {
+			var txtName = $("#txtName").val();
+			var txtPwd = $("#txtPwd").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					$(".warning").css({ display: 'block' });
+				}
+				else {
+					$("#warn").css({ display: 'block' });
+					$("#warn2").css({ display: 'none' });
+				}
+			}
+			else {
+				if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					$("#warn").css({ display: 'none' });
+					$(".warn2").css({ display: 'block' });
+				}
+				else {
+					$(".warning").css({ display: 'none' });
+				}
+			}
+		});
+		//文本框不允许为空---单个文本触发
+		$("#txtName").on('blur', function () {
+			var txtName = $("#txtName").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				$("#warn").css({ display: 'block' });
+			}
+			else {
+				$("#warn").css({ display: 'none' });
+			}
+		});
+		$("#txtName").on('focus', function () {
+			$("#warn").css({ display: 'none' });
+		});
+		//
+		$("#txtPwd").on('blur', function () {
+			var txtName = $("#txtPwd").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				$("#warn2").css({ display: 'block' });
+			}
+			else {
+				$("#warn2").css({ display: 'none' });
+			}
+		});
+		$("#txtPwd").on('focus', function () {
+			$("#warn2").css({ display: 'none' });
+		});
+		//关闭
+		$(".close_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#999' }) }).on('click', function () {
+			$("#LoginBox").fadeOut("fast");
+			$("#zhezhaoceng").css({ display: 'none' });
+		});
+	});
+	</script>	
+	
+</body>
+</html>
