@@ -9,19 +9,65 @@
 	<style type="text/css">
 		.beijing{
 			width: 1200px;
-			margin: 100px auto;
+			margin: 30px auto;
 			background-color: #f9f9f9;
 			padding: 30px;
 		}
 		tr,th{
 			border-color: #999;
 		}
+		table,tr,td{
+			contenteditable:true;
+			disabled:true;
+		}
 	</style>
+	
 </head>
 <body>
+<script>
+		
+		// 编辑demo
+		function editer()
+		  {
+		  document.getElementById("table1").contentEditable=true ;
+		  }
+		 // 冻结demo
+		function disabl()
+		  {
+		  document.getElementById("table1").contentEditable=false;
+		  } 
+		// 下载为excel
+		// function doit(type, fn, dl) {
+		// 	var elt = document.getElementById('table1');
+		// 	var wb = XLSX.utils.table_to_book(elt, {sheet:"Sheet JS"});
+		// 	return dl ?
+		// 		XLSX.write(wb, {bookType:type, bookSST:true, type: 'base64'}) :
+		// 		XLSX.writeFile(wb, fn || ('test.' + (type || 'xlsx')));
+		// }
+		// 改变背景色
+		function bgcolor()
+		  {
+		  document.getElementById("table1").style.color="red";
 
+		  }
+		function fangda(){
+			var mubiao=document.getElementById("table1");
+			mubiao.style.width="red";
+			alert(1234);
+		}
+</script>
+<div style="margin:30px auto;width: 1200px;padding-bottom: -150px;background-color:blue;padding:5px;">
+	<button id="edit" onclick="editer()" style="border-radius: 30px;display: inline-block;margin-left: 20px;height: 30px;">编辑</button>
+	<button id="edit" onclick="disabl()" style="border-radius: 30px;display: inline-block;margin-left: 20px;height: 30px;">冻结</button>
+	<button id="xiazai" onclick="doit()" style="border-radius: 30px;display: inline-block;margin-left: 20px;height: 30px;">下载</button>
+	<button id="bgcolor" onclick="bgcolor()" style="border-radius: 30px;display: inline-block;margin-left: 20px;height: 30px;">字色</button>
+
+	<button id="fangda" onclick="fangda()" style="border-radius: 30px;display: inline-block;margin-left: 20px;height: 30px;">放大</button>
+	<button id="suoxiao" onclick="suoxiao()" style="border-radius: 30px;display: inline-block;margin-left: 20px;height: 30px;">缩小</button>
+</div>
 <div class="table-responsive beijing">
-	<table class="table table-bordered">
+	
+	<table class="table table-bordered" id="table1">
 		<caption>响应式表格布局</caption>
 		<thead>
 			<tr>

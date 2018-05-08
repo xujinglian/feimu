@@ -166,9 +166,9 @@
 <p>解决bug和完成任务：</p>
 <p>
 	<ol>
-		<li></li>
-		<li></li>
-		<li></li>
+		<li>编辑属性contentEditable=true，实现表格的可编辑，值为flase不可编辑<img src="img_folder/3.jpg"><img src="img_folder/4.jpg"></li>
+		<li>【阅读文章】<a href="https://blog.csdn.net/woshimaijunjinzhen/article/details/8497964">html contentEditable属性</a></li>
+		<li>【阅读文章】<a href="https://blog.csdn.net/u014516981/article/details/51824607">浅谈 css的zoom属性（只有IE支持）</a>——用于放大缩小特效</li>
 	</ol>
 </p>
 
