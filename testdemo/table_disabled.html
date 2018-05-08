@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表格禁用</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload=function(){
+			var dis=document.getElementById('dis'),
+				btn=document.getElementById('btn');
+			 function dongjie(){
+			 
+			 	document.getElementById("dis").disabled=true
+			 	
+			}
+		}
+	</script>
+</head>
+<body>
+	<button id="btn" onclick="dongjie()">冻结</button>
+	<div id="dis">
+		<table>
+			<tr>
+				<th>第一行第一列</th>
+				<th>第一行第二列</th>
+			</tr>
+			<tr>
+				<th>第二行第一列</th>
+				<th>第二行第二列</th>
+			</tr>
+			<tr>
+				<input type="text" name="">
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
