@@ -46,11 +46,6 @@
 /*头部结束*/
 .qiehuantitle{
 	text-align: center;
-	height: 100px;
-	font-size: 30px;
-	background-color: white;
-	margin: 0 auto;
-	width: 1200px;
 }
 .qiehuantitle ul{
 	display: block;
@@ -60,11 +55,12 @@
 .qiehuantitle ul li{
 	display: inline-block;
 	width: 100px;
-	height: 96px;
+	height: 100px;
+	/*这里的高度可以调整下边框的位置*/
 }
 .qiehuantitle li a{
 	display: block; 
-	width: 100px;
+	width: 98px;
 	float: left; 
 	margin-right: 50px;
 	text-align: center;
@@ -75,7 +71,7 @@
 .select{
 	color:#3b85f5;
 	font-weight: bolder;
-	border-bottom: 4px solid #3b85f5;
+	border-bottom: 4px solid #4b9df5;
 }
 .daohang{
 	width: 100%; 
