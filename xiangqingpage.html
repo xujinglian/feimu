@@ -19,6 +19,7 @@
   	<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
   	<style type="text/css">
   		#head_right ul li ul li a:hover{background-color: #f9f9f9;}
+  		#bianji:hover{background-color: red;}
   	</style>
 </head>
 <body>
@@ -78,57 +79,35 @@
 				</div>
 				<!-- 项目名称结束 -->
 				<!-- 项目功能开始 -->
-				<div id="content_right_gongneng" class="content_right_gongneng pull" style="height: 60px;margin-top: 30px;background-color: #fff;border:1px solid #ddd;margin-left: -14PX;padding-right: 8px;padding-top:10px;margin-right: -88px;margin-bottom: 60px;">
-					<div id="gongneng_baocun" class="gongneng_baocun col-xs-1">
-						<a href="#"><img src="img/list_baocun.png"/></a>
-						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">保存</p>
+				<div id="content_right_gongneng" class="content_right_gongneng pull" style="height: 60px;margin-top: 30px;margin-left: -14PX;padding-right: 8px;padding-top:10px;margin-right: -88px;">
+					<div id="bianji" onclick="editer()" style="display: inline-block;">
+						<a href="#"><img src="img/xiangqing_bianji.png"></a>
 					</div>
-					<div id="gongneng_chexiao" class="gongneng_chexiao col-xs-1">
-						<a href="#"><img src="img/list_chexiao_left.png"/></a>
-						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">撤销</p>
+					<div id="dongjie" onclick="disab()" style="display: inline-block;margin-left: 20px;">
+						<a href="#"><img src="img/xiangqing_dongjie.png"></a>
 					</div>
-					<div id="gongneng_chongzuo" class="gongneng_chongzuo col-xs-1">
-						<a href="#"><img src="img/list_chexiao_right.png"/></a>
-						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">重做</p>
-					</div>
+					<script>
+						// 编辑demo
+						function editer()
+						  {
+						  document.getElementById("chuizhi").contentEditable=true;
+						  }
+						 // 冻结demo
+						function disab()
+						  {
+						  document.getElementById("chuizhi").contentEditable=false;
+						  } 
+						function bgcolor()
+						  {
+						  document.getElementById("table").style.color="red";
 
-
-					<div id="gongneng_caozuo" class="gongneng_caozuo col-xs-1">
-						<a href="#"><img src="img/list_fuzhi.png"/></a>
-						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">复制</p>
-					</div>
-					<div id="gongneng_caozuo" class="gongneng_caozuo col-xs-1">
-						<a href="#"><img src="img/list_jianqie.png"/></a>
-						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">剪切</p>
-					</div>
-					<div id="gongneng_caozuo" class="gongneng_caozuo col-xs-1">
-						<a href="#"><img src="img/list_zhantie.png"/></a>
-						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">粘贴</p>
-					</div>
-
-
-
-					<div id="gongneng_suoding" class="gongneng_suoding col-xs-1">
-						<a href="#"><img src="img/list_suoding.png"/></a>
-						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">锁定</p>
-					</div>
-					<div id="gongneng_fangdasuoxiao" class="gongneng_fangdasuoxiao col-xs-2 text-center pull-left">
-						<a href="#"><img src="img/list_fangda.png"/></a>
-						<a href="#"><img src="img/list_suoxiao.png"/></a>
-						<p style="font-family: 微软雅黑;font-size: 14px;color: #999;">100%</p>
-					</div>
-					<div id="gongneng_fenxiang" class="gongneng_fenxiang col-xs-1">
-						<a href="#"><img src="img/list_fenxiang.png"/></a>
-						<p style="font-family: 微软雅黑;font-size: 14px;color: #666;">分享</p>
-					</div>
-					<div id="gongneng_xiazai" class="gongneng_xiazai col-xs-1" style="margin-top: 10px;margin-left: 6px;">
-						<a href="#"><img src="img/list_xiazai.png"></a>
-					</div>
+						  }
+				</script>
 				</div>
 				<!-- 项目功能结束 -->
 				<!-- 项目表格开始 -->
-				<p style="text-align: center;margin-left: -10px;background-color: #eee;padding-top: 24px;margin-right: -90px;margin-bottom: -60px;height: 140px;">总（顺）场景表</p>
-				<div id="content_right_biaoge" class="content_right_biaoge table-responsive beijing" style="margin-left: -10px;margin-right: -90px;margin-bottom: 100px;padding-left: 50px;padding-right: 50px;">
+				<p style="text-align: center;margin-left: -14px;background-color: #eee;padding-top: 24px;margin-right: -90px;margin-bottom: -60px;height: 140px;">总（顺）场景表</p>
+				<div id="content_right_biaoge" class="content_right_biaoge table-responsive beijing" style="margin-left: -14px;margin-right: -90px;margin-bottom: 50px;padding-left: 50px;padding-right: 50px;">
 	                <table class="table table-bordered" id="chuizhi" style="margin-right: 20px;margin-left: -20px;">
 	                    <thead>
 	                        <tr>
@@ -413,43 +392,8 @@
 	                </table>
 				</div>
 				<!-- 项目表格结束 -->
-
-
-
-
-
-
-
-
-<!-- 
-				<div class="col-xs-1" style="width: 200px;height: 270px;background-color:#fff;border:1px solid #999;margin:30px 0px 50px 64px;">
-					<p style="text-align: right;font-family: 新宋体;font-size: 12px;color: #999;margin-top: 8px;">编辑</p>
-					<div>
-						<img src="img/xiangqing_1.png">
-						<h1 style="font-family: 微软雅黑;font-size: 18px;color: #333;margin-top: 10px;">片名:</h1>
-						<h2 style="font-family: 微软雅黑;font-size: 12px;color: #666;margin-top: 4px;">导演:</h2>
-						<h2 style="font-family: 微软雅黑;font-size: 12px;color: #666;margin-top: 4px;">电影:</h2>
-					</div>
-					<p style="font-family: 新宋体;font-size: 12px;color: #666;margin-top: 2px;text-align: center;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 10px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
-				</div> -->
-
-				<!-- 一个版块结束 -->
-<!-- 
-				<div class="col-xs-1" style="width: 200px;height: 270px;background-color:#fff;border:1px solid #999;margin:30px 0px 50px 64px;">
-					<p style="text-align: right;font-family: 新宋体;font-size: 12px;color: #999;margin-top: 8px;">编辑</p>
-					<div>
-						<img src="img/xiangqing_2.png">
-						<h1 style="font-family: 微软雅黑;font-size: 18px;color: #333;margin-top: 10px;">片名:</h1>
-						<h2 style="font-family: 微软雅黑;font-size: 12px;color: #666;margin-top: 4px;">导演:</h2>
-						<h2 style="font-family: 微软雅黑;font-size: 12px;color: #666;margin-top: 4px;">电影:</h2>
-					</div>
-					<p style="font-family: 新宋体;font-size: 12px;color: #666;margin-top: 2px;text-align: center;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 10px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
-				</div> -->
-
-				<!-- <div class="col-xs-1" style="width: 200px;height: 270px;margin:30px 0px 50px 64px;">
-					<img src="img/xiangqing_tianjia.png" style="margin-top: 50px;">
-				</div> -->
-
+				<button style="display: inline-block;margin-left: 30%;margin-right: 10%;border:none;"><a href="#"><img src="img/xiangqing_baocun.png"></a></button>
+				<button style="border:none;"><a href="#" id="xiazai"><img src="img/xiangqing_xiazai.png"></a></button>
 			</div>
 			<!-- 页面右边部分结束 -->
 		</div>
