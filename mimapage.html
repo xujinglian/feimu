@@ -11,24 +11,18 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
 	<link rel="stylesheet" type="text/css" href="css/gerenshezhipage.css">
+
+	<link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+  	<script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+  	<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
 	<style type="text/css">
 		#yonghutouxiang:hover .gerenshezhi_yonghushezhi{
 			display: block;
 		}
+
+  		#head_right ul li ul li a:hover{background-color: #f9f9f9;}
+  	
 	</style>
-	<!-- <script>
-		window.onload=function(){
-			var yonghutouxiang=document.getElementById('yonghutouxiang'),
-				gerenshezhi_yonghushezhi=document.getElementById('gerenshezhi_yonghushezhi');
-				
-			gerenshezhi_yonghushezhi.onclick=function(){
-				gerenshezhi_yonghushezhi.style.display='block';
-			}
-			document.onclick=function(){
-				gerenshezhi_yonghushezhi.style.display='none';
-			}
-		}
-	</script> -->
 </head>
 <body>
 	<!-- 页面整体开始 -->
@@ -38,25 +32,16 @@
 			<div id="head_left" class="head_left  col-xs-3"><img src="img/xiangqing_logo.png"></div>
 			<div class="col-xs-8" style="margin-top: 8px;"><img src="img/xiangqing_tongchou.png" style="vertical-align: middle;margin-top: 5px;display: inline-block;"></div>
 			<div id="head_right" class="head_right col-xs-1" style="margin-top: 3px;">
-				<div class="btn-group">
-				<a href=""><img src="img/xiangqing_people.png" id="yonghutouxiang" class="yonghutouxiang dropdown-toggle" style="display: inline-block;" data-toggle="dropdown"></a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="#">功能</a></li>
-					<li><a href="#">另一个功能</a></li>
-					<li><a href="#">其他</a></li>
-					<li class="divider"></li>
-					<li><a href="#">分离的链接</a></li>
-				</ul>
-				<!-- <a href="#">
-					<img src="img/xiangqing_people.png" id="yonghutouxiang" class="yonghutouxiang  dropdown-toggle" style="display: inline-block;"  data-toggle="dropdown">
-				</a>
-				<div class="gerenshezhi_yonghushezhi dropdown-menu" role="menu" id="gerenshezhi_yonghushezhi" style="width: 100px;height: 200px;background-color: red;margin-left: -20px;margin-top: 10px;border:1px solid #ddd;position: absolute;right: 356px;top: 50px;">
-						<div style="text-align: center;font-size: 12px;color: #333;font-family: 微软雅黑;margin:24px auto;">我有一个小鸡蛋</div>
-						<div style="width: 70px;height: 30px;border:1px solid #ddd;margin-left: 15px;margin-bottom: 12px;margin-top:30px;text-align: center;"><a href="#" style="color: #666;font-size: 14px;font-family:微软雅黑;line-height: 15px;display: inline-block;">个人设置</a></div>
-						<div style="width: 70px;height: 30px;border:1px solid #ddd;color: #666;font-size: 12px;margin-left: 15px;line-height: 30px;margin-bottom: 12px;text-align: center;"><a href="#" style="font-family:微软雅黑;">密码安全</a></div>
-						<div style="width: 70px;height: 30px;border:1px solid #ddd;color: #666;font-size: 12px;margin-left: 15px;line-height: 30px;margin-bottom: 12px;text-align: center;"><a href="#" style="">退出</a></div>
-					</div> -->
-				</div>
+				<ul>
+				  <li class="sui-dropdown"><a href="#" data-toggle="dropdown"><img src="img/xiangqing_people.png" style="display: inline-block;border:none;"></a>
+				    <ul role="menu" class="sui-dropdown-menu" style="width: 100px;height: 190px;margin-left: -20px;margin-top: 5px;">
+				      <li style="font-size: 12px;color: #333;text-align: center;margin: 24px auto;">我有一个小鸡蛋</li>
+				      <li role="presentation" style="width: 70px;height: 30px;line-height:30px;margin-bottom: 12px;display: inline-block;border:1px solid #ddd;margin-left: 15px;"><a role="menuitem" tabindex="-1" href="gerenshezhipage.html" style="color: #333;font-size: 12px;text-align: center;">个人设置</a></li>
+				      <li role="presentation" style="width: 70px;height: 30px;line-height:30px;margin-bottom: 12px;display: inline-block;border:1px solid #ddd;margin-left: 15px;"><a role="menuitem" tabindex="-1" href="mimapage.html" style="color: #333;font-size: 12px;text-align: center;">密码安全</a></li>
+				      <li role="presentation" style="width: 70px;height: 30px;line-height:30px;margin-bottom: 12px;display: inline-block;border:1px solid #ddd;margin-left: 15px;"><a role="menuitem" tabindex="-1" href="#" style="color: #333;font-size: 12px;text-align: center;">退出</a></li>
+				    </ul>
+				  </li>
+				</ul>	
 			</div>
 			<!-- 点击头像弹出下拉 -->
 				
@@ -83,7 +68,7 @@
 			<div id="content_right" class="content_right col-xs-8" style="height:auto;margin-left: 50px;">
 				<!-- 项目设置和密码开始 -->
 				<div id="content_right_mingcheng" class="content_right_mingcheng row" style="height: 60px;background-color: #fff;border:1px solid #ddd;margin-right: -88px;margin-bottom: 50px;">
-					<div id="mingcheng_icon" class="mingcheng_icon col-xs-3" style="height: 60px;padding-top: 13px;">
+					<div id="mingcheng_icon" class="mingcheng_icon col-xs-3" style="height: 60px;padding-top: 20px;">
 						<a href="gerenshezhipage.html"><img src="img/gerenshezhi_gerenshezhi1.png"><span style="font-family: 微软雅黑;font-size: 18px;color: #333;display: inline-block;margin-left: 10px;">个人设置</span></a>
 					</div>
 					<div class="mingcheng_bianji col-xs-5" style="font-family: 新宋体;font-size: 12px;color: #999;height: 60px;line-height: 60px;">
