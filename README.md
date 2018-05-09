@@ -191,6 +191,8 @@
 		<li>首页——（2）新手引导添加；<img src="img_folder/7.jpg"><img src="img_folder/6.jpg"></li>
 		<li>详情页——（1）功能区域改版调整；</li>
 		<li>列表页样式调整<img src="img_folder/8.jpg"></li>
+		<li>个人设置——头像设置退出浮框</li>
+		<li>详情页——（3）中间导航栏细节调整</li>
 	</ol>
 </p>
 <!-- <h2>时间：</h2>

@@ -10,12 +10,13 @@ body{
 	font-size: 18px;
 	color: #666;
 	display: inline-block;
-	width: 180px;
+	width: 170px;
 	margin-top: 30px;
+
 	margin-bottom: 10px;
 	height: 40px;
 	line-height: 40px;
-	padding-left: 20px;
+	padding-left: 10px;
 }
 .content_center ul li a:hover{
 	border-radius: 30px;
