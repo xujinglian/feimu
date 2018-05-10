@@ -20,6 +20,7 @@
   	<style type="text/css">
   		#head_right ul li ul li a:hover{background-color: #f9f9f9;}
   		#bianji:hover{background-color: red;}
+  		.liebiao:hover{background-color:#f6ad3c;}
   	</style>
 </head>
 <body>
@@ -50,10 +51,18 @@
 		<!-- 页面内容部分 -->
 		<div id="content" class="content" style="margin-top: 60px;">
 			<div id="content_left" class="content_left  col-xs-1" style="height: 500px;background-color:#ddd;width: 50px;">
-				<div class="" style="width: 30px;margin-top:30px;"><a href="#"><img src="img/list_left_liebiao.png" width="16px" height="16px" id="liebiao_icon"></a></div>
-				<div class="" style="width: 30px;margin-top:30px;"><a href="#"><img src="img/list_left_zhanghu.png" width="16px" height="16px"  id="zhanghu_icon"></a></div>
-				<div class="" style="width: 30px;margin-top:30px;"><a href="#"><img src="img/list_left_jilu.png" width="16px" height="16px"  id="jilu_icon"></a></div>
-				<div class="" style="width: 30px;margin-top:30px;"><a href="#"><img src="img/list_left_yonghu.png" width="16px" height="16px"  id="yonghu_icon"></a></div>
+				<a href="#" class="liebiao" style="display: inline-block;width: 26px;height: 27px;margin-top: 20px;border-radius: 5px;padding-left: 5px;padding-top: 3px;margin-left: -2px;">
+					<div style="display:inline-block;width: 16px;height:16px;background-image: url(img/list_left_liebiao.png);"></div>
+				</a>
+				<a href="#" class="liebiao" style="display: inline-block;width: 26px;height: 27px;margin-top: 20px;border-radius: 5px;padding-left: 5px;padding-top: 3px;margin-left: -2px;">
+					<div style="display:inline-block;width: 16px;height:14px;background-image: url(img/list_left_zhanghu.png);"></div>
+				</a>
+				<a href="#" class="liebiao" style="display: inline-block;width: 26px;height: 27px;margin-top: 20px;border-radius: 5px;padding-left: 5px;padding-top: 3px;margin-left: -2px;">
+					<div style="display:inline-block;width: 16px;height:16px;background-image: url(img/list_left_jilu.png);"></div>
+				</a>
+				<a href="#" class="liebiao" style="display: inline-block;width: 26px;height: 27px;margin-top: 20px;border-radius: 5px;padding-left: 5px;padding-top: 3px;margin-left: -2px;">
+					<div style="display:inline-block;width: 16px;height:16px;background-image: url(img/list_left_yonghu.png);"></div>
+				</a>
 			</div>
 			
 			<div id="content_center" class="content_center col-xs-2" style="height: 360px;border:1px solid #ddd;width: 200px;margin-left: 20px;">
@@ -83,7 +92,7 @@
 					<div id="bianji" onclick="editer()" style="display: inline-block;">
 						<a href="#"><img src="img/xiangqing_bianji.png"></a>
 					</div>
-					<div id="dongjie" onclick="disab()" style="display: inline-block;margin-left: 20px;">
+					<div id="dongjie" onclick="disab()" style="display: inline-block;margin-left: 10px;">
 						<a href="#"><img src="img/xiangqing_dongjie.png"></a>
 					</div>
 					<script>
@@ -402,7 +411,7 @@
 	<!-- 页面内容部分结束 -->
 	<!-- 页面底部开始 -->
 	<!-- 页面footer -->
-	<div id="footer" class="footer" style="margin-top: 935px;">
+	<div id="footer" class="footer" style="margin-top: 935px;padding-left: 150px;">
 		<div class="footer_content">
 			<ul>
 				<li class="col-xs-3">

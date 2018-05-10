@@ -7,9 +7,11 @@
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 附加导航文件 -->
 	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
@@ -18,17 +20,24 @@
 		$(document).ready(function(){
 		    $("#myNav").affix({
 		        offset: { 
-		            top:440
+		            top:540
 		      }
 		    });
 		});
 	</script>
-
+    <style type="text/css">
+        #yindao:hover{
+            background-color:#4b9df5;
+        }
+    </style>
 </head>
-<body>
+<body data-spy="scroll" data-target="#myScrollspy">
 	<div id="feimu">
 		<div id="head" style="display: relative;" class="row">
-			<img src="img/tongchou2.jpg" style="overflow: hidden;"  class="img-responsive"/>
+			<div style="position: relative;" id="yindaokuang">
+                <img src="img/tongchou3.jpg" style="overflow: hidden;"  class="img-responsive"/>
+                <span style="display: inline-block;position: absolute;left: 19%;bottom:18%;width: 220px;height: 70px;line-height:68px;border:1px solid #fff;padding-left:24px;" id="yindao"><a href="#" style="text-decoration: none;color:#fff;font-size: 36px;">新手引导</a><img src="img/yindao_jiantou.png" style="display: inline-block;margin-top: -12px;margin-left: 10px;"></span>
+            </div>
 			<div class="head_top row">
 				<div class="head_top_left col-xs-4" style="position: absolute;left: 20%;top: 0;">
 					<a href="#"><img src="img/feimu_white.png" alt="非幕科技LOGO" style="vertical-align: middle;display: inline-block;margin-right: 50px;"></a>
@@ -75,7 +84,7 @@
                 <div class="row" style="margin-right: 30px;display: inline-block;font-size: 20px;margin-bottom: 60px;height: 30px;line-height: 30px;">拆解结果<hr style="width: 1000px;margin-left: 50px;display: inline-block;" /></div>
                 
                 <div class="row">
-                    <div class="col-xs-2" id="myScrollspy" style="margin-top: 20px;height: 300px;">
+                    <div class="col-xs-2" id="myScrollspy" style="margin-top: 20px;height: 300px;background-color: red;">
                         <ul class="nav nav-tabs nav-stacked" id="myNav" style="background-color:#eee;padding-top: 50px;padding-bottom: 50px;width: 172px;color: red;">
                             <li class="active"><a href="#section-1" style="color:#666;"><span><img src="img/yanshi_guanjianci.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>关键词抓取</a></li>
                             <li><a href="#section-2"  style="color:#666;"><span><img src="img/yanshi_tongchou.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>总（顺）场景表</a></li>
@@ -875,54 +884,6 @@
                                 </table>
                             </div>
                         </div>
-                         
-                                        <!-- 一行示例 
-                                       <tr>
-                                            <td id="biaogemeihua" id="biaogemeihua"></td>
-                                            <td id="biaogemeihua" id="biaogemeihua"></td>
-                                            <td id="biaogemeihua" id="biaogemeihua"></td>
-                                            <td id="biaogemeihua" id="biaogemeihua"></td>
-                                            <td id="biaogemeihua" id="biaogemeihua"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="zise"></td>
-                                            <td id="biaogemeihua" style="min-width: 200px;"></td>
-                                       </tr>-->
                     </div>
                 </div>
 
@@ -933,7 +894,7 @@
 				<!--演示结束-->
 			</div>
 		</div><!--中间切换结束-->
-		<div id="footer" style="margin-top: 100px;">
+		<div id="footer" style="margin-top: 100px;padding-left: 150px;">
 			<div class="footer_content">
 				<ul>
 					<li class="col-xs-3">
@@ -953,14 +914,14 @@
 							<li><a href="#">如何制定拍摄计划</a></li>
 						</ul>
 					</li>
-					<li class="col-xs-3">
+					<li class="col-xs-2">
 						<ul>
 							<p>关于</p>
 							<li><a href="#" style="text-decoration: none;">团队</a></li>
 							<li><a href="#">联系我们</a></li>
 						</ul>
 					</li>
-					<li class="col-xs-3">
+					<li class="col-xs-2">
 						<img src="img/erweima.jpg" alt="非幕科技公众号二维码"/>
 						<span>微信公众号</span>
 					</li>
