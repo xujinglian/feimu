@@ -1,0 +1,3 @@
+
+String　pianming＝request．getParameter（＂xinjian_pianming＂）；
+String　password＝request．getParameter（＂password＂）；

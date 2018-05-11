@@ -215,6 +215,8 @@
 		<li>新建项目页</li>
 		<li>优化代码</li>
 		<li>附着导航demo</li>
+		<li>异步提交表单</li>
+		<li>json数据接口demo</li>
 	</ol>
 </p>
 
