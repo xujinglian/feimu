@@ -3,34 +3,90 @@
 <head>
 	<title>表格禁用</title>
 	<meta charset="utf-8">
-	<script type="text/javascript">
-		window.onload=function(){
-			var dis=document.getElementById('dis'),
-				btn=document.getElementById('btn');
-			 function dongjie(){
-			 
-			 	document.getElementById("dis").disabled=true
-			 	
-			}
-		}
-	</script>
+	<link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+  	<script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+  	<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
 </head>
 <body>
-	<button id="btn" onclick="dongjie()">冻结</button>
-	<div id="dis">
-		<table>
-			<tr>
-				<th>第一行第一列</th>
-				<th>第一行第二列</th>
-			</tr>
-			<tr>
-				<th>第二行第一列</th>
-				<th>第二行第二列</th>
-			</tr>
-			<tr>
-				<input type="text" name="">
-			</tr>
-		</table>
-	</div>
+	<form class="sui-form form-horizontal sui-validate">
+	  <div class="control-group">
+	    <label for="name" class="control-label">姓名：</label>
+	    <div class="controls">
+	      <input type="text" id="name" placeholder="required" data-rules="required" name="name">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label for="email" class="control-label">邮箱：</label>
+	    <div class="controls">
+	      <input type="text" id="email" placeholder="email" data-rules="required|email" name="email">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label for="password" class="control-label">密码：</label>
+	    <div class="controls">
+	      <input type="password" id="password" placeholder="required" data-rules="required|minlength=8|maxlength=16" name="password">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label for="repassword" class="control-label">重复密码：</label>
+	    <div class="controls">
+	      <input type="password" id="repassword" placeholder="match" data-rules="required|match=password" name="repassword">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label for="tel" class="control-label">座机号码：</label>
+	    <div class="controls">
+	      <input type="text" id="tel" placeholder="tel" data-rules="required|tel" name="tel">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label for="mobile" class="control-label">手机号码：</label>
+	    <div class="controls">
+	      <input type="text" id="mobile" placeholder="mobild" data-rules="required|mobile" name="mobile">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label for="zip" class="control-label">邮编：</label>
+	    <div class="controls">
+	      <input type="text" id="zip" placeholder="zip" data-rules="required|zip" name="zip">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label for="date" class="control-label">出生年月日：</label>
+	    <div class="controls">
+	      <input type="text" id="date" placeholder="date" data-rules="required|date" name="date" data-toggle="datepicker">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label for="time" class="control-label">睡觉时间：</label>
+	    <div class="controls">
+	      <input type="text" id="time" placeholder="time" data-rules="required|time" name="time" data-toggle="timepicker">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label for="datetime" class="control-label">日期加时间：</label>
+	    <div class="controls">
+	      <input type="text" id="datetime" placeholder="datetime" data-rules="required|datetime" name="datetime" data-toggle="datepicker" data-date-timepicker="true">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label for="age" class="control-label">年龄：</label>
+	    <div class="controls">
+	      <input type="text" id="age" placeholder="digits" data-rules="required|digits" name="age">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label for="url" class="control-label">个人网址(选填)：</label>
+	    <div class="controls">
+	      <input type="text" id="url" placeholder="url" data-rules="url" name="url">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label class="control-label"></label>
+	    <div class="controls">
+	      <button type="submit" class="sui-btn btn-primary btn-large">注册</button>
+	    </div>
+	  </div>
+	</form>
 </body>
 </html>
