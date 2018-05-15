@@ -44,38 +44,24 @@
 					<a href="#">登录</a>
 					<a href="liebiaopage.html" class="head_btn" style="display: inline-block;margin-top: -15px;margin-left: 50px;margin-right: -50px;"><img src="img/kongzhitai.png" style="vertical-align: middle;margin-top: -4px;padding-bottom: 2px;background-color:#3b85f5;"></a>
 					<!-- 注册框板块开始 -->
-					<div id="LoginBox" style="padding-bottom: 66px;padding-top: 30px;">
-				        <div class="row1" style="margin:10px 40px;border-bottom: 1px #ddd solid;padding-bottom: 10px;">
-				            <span style="font-size: 14px;color: #333;font-family: 微软雅黑;text-decoration: none;margin-right: 30px;">密码登录</span>
-				            <span style="font-size: 14px;color: #459df5;font-family: 微软雅黑;text-decoration: none;">注册</span>
-				            <a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn"><img src="img/zhuce_guanbi.png" style="display: inline-block;margin-bottom: 20px;"></a>
+					<div id="LoginBox" style="padding-bottom: 66px;padding-top: -30px;">
+				        <div class="row1" style="margin:10px 40px;border-bottom: 1px #ddd solid;height: 50px;">
+				            <a href="#" style="font-size: 14px;color: #333;font-family: 微软雅黑;text-decoration: none;margin-right: 30px;margin-right: -10px;margin-left: 0px;">密码登录</a>
+				            <a href="#" style="font-size: 14px;color: #459df5;font-family: 微软雅黑;text-decoration: none;">注册</a>
+				            <a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn"><img src="img/zhuce_guanbi.png" style="display: inline-block;margin-bottom: 20px;margin-top: 20px;"></a>
 				        </div>
-				        <div style="width: 320px;height: 40px;margin:30px 40px 20px;border:1px solid #ddd;background-color: white;border-radius: 5px;">
-				            <img src="img/zhuce_yonghu.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
-				            <span class="inputBox">
-				                <input type="text" id="txtName" placeholder="请输入注册邮箱/手机号码" style="height: 35px;border:none;line-height: 40px;font-family: 新宋体;font-size: 12px;color: #999;width: 250px;" />
-				            </span>
-				            
-				        </div>
-				        <div style="width: 320px;height: 40px;margin:30px 40px 20px;border:1px solid #ddd;background-color: white;border-radius: 5px;">
-				        	<img src="img/zhuce_mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
-				            <span class="inputBox">
-				                <input type="text" id="txtPwd" placeholder="密码" style="height: 35px;border:none;line-height: 40px;font-family: 新宋体;font-size: 12px;color: #999;width: 170px;" />
-				                <a href="#" style="height: 38px;border-left:1px dotted #999;margin-right:-30px;font-family: 新宋体;font-size: 12px;line-height: 40px;color: #459df5;text-decoration: none;display: inline-block;padding-left: 20px;">发送验证码</a>
-				            </span>
-				            
-				        </div>
+				        <input type="text" name="" style="background: url(img/zhuce_yonghu.png) no-repeat 20px 12px;border:1px solid #ddd;padding:10px 40px 10px 50px;width: 320px;margin:20px 40px 14px;line-height: 20px;height: 40px;color: #999;font-size: 14px;font-family: 新宋体;background-color: #fff;border-radius: 5px;" placeholder="请输入手机号码"/>
+				        <input type="password" name="" style="background: url(img/zhuce_mima.png) no-repeat 20px 12px;border:1px solid #ddd;padding:10px 40px 10px 50px;width: 212px;margin:10px 0px 14px 40px;line-height: 20px;height: 40px;color: #999;font-size: 14px;font-family: 新宋体;background-color: #fff;display: inline-block;border-top-left-radius: 5px;border-bottom-left-radius: 5px;" placeholder="请输入密码"/>
+				        <button style="width: 108px;display: inline-block;height: 40px;border:1px solid #ddd;background-color: #fff;margin-left: -8px;font-size: 13px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;color: #459df5">发送验证码</button>
 				        <div style="margin-left: 40px;margin-bottom: 40px;height: 12px;">
-				        	<input type="checkbox" name="单选框">
-				        	<span style="font-size: 12px;color: #666;font-family: 新宋体;line-height: 12px;display: inline-block;">同意<a href="#" style="color: #459df5;text-decoration: none;">非幕科技注册协议</a></span>
+				        	<label style="font-size: 11px;margin-left: 2px;"><input type="checkbox" name="单选框"><span style="font-size: 11px;margin-top: -5px;margin-left: 10px;padding-bottom: 30px;">我已认真阅读并接受<a href="#" style="color: #459df5;text-decoration: none;font-size: 11px;font-family: 微软雅黑;line-height: 13px;margin-left: -2px;">《非幕科技注册协议》</a></span></label>
 				        </div>
-				        
-				            <button id="loginbtn" style="background-image: url(img/zhuce_zhuce.png);width: 320px;height: 40px;border:none;background-color: #f9f9f9;margin-left: 40px;"><a href="" style="text-decoration: none;font-size: 14px;color:#fff;font-family: 微软雅黑;;">注册</a></button>
-				        
+				        <button id="loginbtn" style="background-image: url(img/zhuce_zhuce.png);width: 320px;height: 40px;border:none;background-color: #f9f9f9;margin-left: 40px;margin-top: 10px;"><a href="" style="text-decoration: none;font-size: 14px;color:#fff;font-family: 微软雅黑;line-height: 40px;">注册</a></button>
+				        <div style="margin:50px auto;">其他登录<img src="img/weixin.png"></div>
 				    </div>
 					<script type="text/javascript">
 					$(function ($) {
-						//弹出登录
+						// 弹出登录
 						$("#example").hover(function () {
 							$(this).stop().animate({
 								opacity: '1'
@@ -89,40 +75,40 @@
 							$("#zhezhaoceng").addClass("zhezhaoceng").fadeIn("slow");
 							$("#LoginBox").fadeIn("slow");
 						});
-						//
+						
 						//按钮的透明度
-						$("#loginbtn").hover(function () {
-							$(this).stop().animate({
-								opacity: '1'
-							}, 600);
-						}, function () {
-							$(this).stop().animate({
-								opacity: '0.8'
-							}, 1000);
-						});
+						// $("#loginbtn").hover(function () {
+						// 	$(this).stop().animate({
+						// 		opacity: '1'
+						// 	}, 600);
+						// }, function () {
+						// 	$(this).stop().animate({
+						// 		opacity: '0.8'
+						// 	}, 1000);
+						// });
 						//文本框不允许为空---按钮触发
-						$("#loginbtn").on('click', function () {
-							var txtName = $("#txtName").val();
-							var txtPwd = $("#txtPwd").val();
-							if (txtName == "" || txtName == undefined || txtName == null) {
-								if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
-									$(".warning").css({ display: 'block' });
-								}
-								else {
-									$("#warn").css({ display: 'block' });
-									$("#warn2").css({ display: 'none' });
-								}
-							}
-							else {
-								if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
-									$("#warn").css({ display: 'none' });
-									$(".warn2").css({ display: 'block' });
-								}
-								else {
-									$(".warning").css({ display: 'none' });
-								}
-							}
-						});
+					// 	$("#loginbtn").on('click', function () {
+					// 		var txtName = $("#txtName").val();
+					// 		var txtPwd = $("#txtPwd").val();
+					// 		if (txtName == "" || txtName == undefined || txtName == null) {
+					// 			if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					// 				$(".warning").css({ display: 'block' });
+					// 			}
+					// 			else {
+					// 				$("#warn").css({ display: 'block' });
+					// 				$("#warn2").css({ display: 'none' });
+					// 			}
+					// 		}
+					// 		else {
+					// 			if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					// 				$("#warn").css({ display: 'none' });
+					// 				$(".warn2").css({ display: 'block' });
+					// 			}
+					// 			else {
+					// 				$(".warning").css({ display: 'none' });
+					// 			}
+					// 		}
+					// 	});
 						$(".close_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#999' }) }).on('click', function () {
 							$("#LoginBox").fadeOut("fast");
 							$("#zhezhaoceng").css({ display: 'none' });

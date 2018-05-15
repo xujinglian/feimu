@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>随机示例代码</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<button onclick="showRadomDiv()">随机示例</button>
+	<input type="radio" name="RadioGroup1" value="ok1" id="ok1" checked="checked" onclick="aCheck1()" /> A
+	<input type="radio" name="RadioGroup1" value="ok2" id="ok2" onclick="bCheck2()" /> B
+	<span id="span1" style="display:block">我是A</span>
+	<span id="span2" style="display:none">我是B</span>
+
+	<script type="text/javascript">
+		function aCheck1(){
+			document.getElementById("span1").style.display="block";
+			document.getElementById("span2").style.display="none";
+		}
+		function bCheck2(){ 
+			document.getElementById("span1").style.display="none";  
+			document.getElementById("span2").style.display="block";
+		}
+	</script>
+
+</body>
+</html>
