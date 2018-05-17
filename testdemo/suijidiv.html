@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>颜色随机测试</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+window.onload=setInterval("changecolor()",1000);
+function changecolor()
+{
+var color = parseInt(Math.random()*9999999).toString(16);  //取随机颜色6位16进制！
+var dc=document.getElementById("div1");
+if(color.length==6)
+{color=color;}
+else
+{
+color="ff"+color;
+color=color.substr(0,6);
+}
+dc.style.background=color;
+}
+</script>
+</head>
+<body>
+<div id="div1" style="width:300px;,height:300px;" >颜色随机</div>
+</body>
+</html>
