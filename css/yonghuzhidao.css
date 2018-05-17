@@ -1,0 +1,13 @@
+#yonghuzhidao h3,#yonghuzhidao span{
+	font-size: 20px;
+	font-family: "微软雅黑";
+	color: #333;
+	font-weight: 300;
+}
+#yonghuzhidao p,#yonghuzhidao ol li{
+	color: #333;
+	font-family: "新宋体";
+	font-size: 16px;
+	line-height: 30px;
+}
+#yonghuzhidao p{margin-top: -20px;}
