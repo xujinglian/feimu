@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI 对话框（Dialog） - 动画</title>
+  <link rel="stylesheet" href="jquery-ui.min.css">
+  <script src="jquery.js"></script>
+  <script src="jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="jqueryui/style.css">
+  <script>
+  $(function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( "#opener" ).click(function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+	  
+	  
+	  
+	  
+	  $( "#dialog1" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( "#opener1" ).click(function() {
+      $( "#dialog1" ).dialog( "open" );
+    });
+  });
+  </script>
+</head>
+<body>
+ 
+<div id="dialog" title="Basic dialog">
+  <p>这是一个动画显示的对话框，用于显示信息。对话框窗口可以移动，调整尺寸，默认可通过 'x' 图标关闭。</p>
+</div>
+ 
+<button id="opener">打开对话框</button>
+ 
+	
+
+<div id="dialog1" title="Basic dialog1">
+  <p>密码登录 注册</p>
+  <label><input type="text" name=""></label>
+  <label><input type="password" name=""></label>
+</div>
+ 
+<button id="opener1">打开对话框</button>
+ 
+</body>
+</html>
