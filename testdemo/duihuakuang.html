@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="jqueryui/style.css">
   <script>
   $(function() {
-    $( "#dialog" ).dialog({
+    // 登录框
+    $( "#denglu" ).dialog({
       autoOpen: false,
       show: {
         effect: "blind",
@@ -22,12 +23,9 @@
     });
  
     $( "#opener" ).click(function() {
-      $( "#dialog" ).dialog( "open" );
+      $( "#denglu" ).dialog( "open" );
     });
-	  
-	  
-	  
-	  
+    //注册框 
 	  $( "#dialog1" ).dialog({
       autoOpen: false,
       show: {
@@ -47,12 +45,13 @@
   </script>
 </head>
 <body>
- 
-<div id="dialog" title="Basic dialog">
+<!-- 登录板块 -->
+<div id="denglu" title="登录">
   <p>这是一个动画显示的对话框，用于显示信息。对话框窗口可以移动，调整尺寸，默认可通过 'x' 图标关闭。</p>
+  <a href="javascript:void(0)" class="close_btn" id="closeBtn"><img src="img/zhuce_guanbi.png" style="display: inline-block;margin-bottom: 20px;margin-top: 20px;"></a>
 </div>
  
-<button id="opener">打开对话框</button>
+<a href="#" id="opener">打开对话框</a>
  
 	
 
