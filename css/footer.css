@@ -26,6 +26,7 @@
 }
 .footer_content ul li ul li a:link,a:visited{
 	color:#999;
+	text-decoration: none;
 }
 .footer_content ul li ul li a:hover,a:active{
 	color:#3b85f5;
