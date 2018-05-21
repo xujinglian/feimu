@@ -1,0 +1,69 @@
+<!-- 这是一个图片上传预览插件 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Fileinput Demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-fileinput.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h3>图片上传</h3>
+        <form id="haibao" action="47.95.115.143/upload" enctype="multipart/form-data">
+            <div class="form-group" id="uploadForm">
+                <div class="fileinput fileinput-new" data-provides="fileinput"  id="exampleInputUpload">
+                    <!-- 海报图片的位置 -->
+                    <div class="fileinput-preview fileinput-exists thumbnail" style="width: 204px;height: 274px;max-height:250px;max-width: 200px;display: inline-block;"></div>
+                    <div style="display: inline-block;vertical-align: bottom;">
+                        <span class="btn btn-primary btn-file">
+                            <span class="fileinput-new">选择图片</span>
+                            <span class="fileinput-exists">重新上传</span>
+                            <input type="file" name="pic1" id="picID" accept="image/gif,image/jpeg,image/x-png"/>
+                        </span>
+                        <!-- <a href="javascript:;" class="btn btn-warning fileinput-exists" data-dismiss="fileinput">移除</a> -->
+                    </div>
+                    <!-- 图片功能的位置 -->
+                </div>
+            </div>
+            <button type="button" id="uploadSubmit" class="btn btn-info">提交</button>
+        </form>
+    </div>
+</div>
+<!-- $('#uploadSubmit') -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap-fileinput.js"></script>
+<script type="text/javascript">
+    $(function () {
+        new FormData(document.getElementById('#uploadSubmit')).click(function () {
+            var data = new FormData($('#uploadForm')[0]);
+            $.ajax({
+                url: '47.95.115.143/upload',
+                type: 'POST',
+                // user_id:49888356825436160,
+                data: data,
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    console.log(data);
+                    if(data.status){
+                        console.log('上传成功');
+                    }else{
+                        console.log(data.message);
+                    }
+                },
+                error: function (data) {
+                    console.log(data.status);
+                }
+            });
+        });
+
+    })
+</script>
+</body>
+</html>

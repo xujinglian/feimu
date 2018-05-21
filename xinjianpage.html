@@ -16,6 +16,12 @@
 	<link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
   	<script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
   	<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+
+  	<!-- 海报上传部分 -->
+  	<link href="css/海报上传css/bootstrap.min.css" rel="stylesheet">
+  	<link href="css/海报上传css/bootstrap-fileinput.css" rel="stylesheet">
+  	<script src="js/海报上传js/jquery.min.js"></script>
+<script src="js/海报上传js/bootstrap-fileinput.js"></script>
   	<style type="text/css">
   		#head_right ul li ul li a:hover{background-color: #f9f9f9;}
 	</style>
@@ -46,24 +52,43 @@
 		<!-- 页面内容部分 -->
 		<div id="content" class="content" style="margin-top: 60px;">
 			<div id="content_left" class="content_left col-xs-2" style="height: 300px;border:1px solid #ddd;width: 180px;margin-left: 20px;">
-				<ul style="display: inline-block;margin:0px 0px 40px;">
-					<li><a href="#"><img src="img/xiangqing_liebiao.png" style="display: inline-block;margin-right: 10px;margin-top: -5px;">项目列表</a></li>
-					<li><a href="#"><img src="img/list_xinjian.png" style="display: inline-block;margin-right: 10px;margin-top: -5px;">新建项目</a></li>
+				<ul style="display: inline-block;margin:0px 0px 40px -4px;">
+					<li><a href="liebiaopage.html"><img src="img/xiangqing_liebiao.png" style="display: inline-block;margin-right: 10px;margin-top: -5px;">项目列表</a></li>
+					<li><a href="xinjianpage.html"><img src="img/list_xinjian.png" style="display: inline-block;margin-right: 10px;margin-top: -5px;">新建项目</a></li>
 					<li><a href="yonghuzhidaopage.html"><img src="img/xiangqing_yonghu.png" style="display: inline-block;margin-right: 10px;margin-top: -5px;">用户指南</a></li>
 				</ul>
 			</div>
 			<!-- 页面左边部分结束 -->
-			<div id="content_right" class="content_right col-xs-8" style="width: 870px;margin-left: 12px;">
-				<form action="xinjian.txt" method="post" enctype="application/json">
+			<div id="content_right" class="content_right col-xs-8" style="width: 867px;margin-left: 14px;">
+				<form action="47.95.115.143/upload" method="post" enctype="application/json">
 					<div style="height:auto;border:1px solid #ddd;">
 						<div style="margin-left: 20px;margin-top: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">片名</span>
-							<input type="text" name="xinjian[pianming]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 30em;"></div>
+							<input type="text" name="xinjian[pianming]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 30em;">
+						</div>
 						<div style="margin-left: 20px;margin-top: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">导演</span>
-							<input type="text" name="xinjian[daoyan]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 30em;"></div>
-						<div style="margin-left: 20px;margin-top: 30px;">
-							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;margin-bottom: 300px;">海报</span><span><img src="img/xinjian_haibao.png" width="200px;" height="400px;"></span><button>修改</button></div>
+							<input type="text" name="xinjian[daoyan]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 30em;">
+						</div>
+						<!-- 海报上传开始位置 -->
+						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;" id="haibao">
+							<div class="fileinput fileinput-new" data-provides="fileinput"  id="exampleInputUpload">
+			                    <span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;margin-bottom: 300px;vertical-align: top;">海报</span>
+			                    <!-- 海报图片的位置 -->
+			                    <div class="fileinput-preview fileinput-exists thumbnail" style="width: 180px;height: 130px;max-height:130px;max-width: 180px;display: inline-block;padding: 0px -10px;"><span style="font-family: 微软雅黑;font-size: 14px;margin-top: 30px;display: inline-block;color: #ddd;">请上传一张剧本海报<br/>尺寸：170px * 128px</span></div>
+
+			                    <div style="display: inline-block;vertical-align: bottom;margin-bottom: 6px;font-size: 18px;color: #333;font-family: 微软雅黑;">
+			                        <span class="btn btn-primary btn-file" style="background-color: #4b9df5;border-color:#4b9df5;">
+			                            <span class="fileinput-new" style="font-size: 14px;font-family: 微软雅黑;">上传海报</span>
+			                            <span class="fileinput-exists" style="font-size: 14px;font-family: 微软雅黑;">重新选择</span>
+			                            <input type="file" name="pic1" id="picID" accept="image/gif,image/jpeg,image/x-png"/>
+			                        </span>
+			                       <!--  <a href="javascript:;" class="btn btn-warning fileinput-exists" data-dismiss="fileinput">移除</a> -->
+			                    </div>
+			                    <!-- 图片功能的位置 -->
+			                </div>
+						</div>
+						<!-- 海报上传结束位置 -->
 					</div>
 					<div style="margin-top: 60px;margin-bottom:20px;">
 						<label style="color: #333;font-size: 16px;font-weight:100;font-family: 新宋体;"><input style="margin-left: 10px;margin-right: 5px;margin-top: -5px;" type="radio" name="leixing">电影</label>
@@ -74,26 +99,25 @@
 					</div>
 					<div>
 						<span style="font-size: 18px;font-family: 微软雅黑;color: #999;"><img src="img/xinjian_juji.png" style="display: inline-block;margin-right: 12px;margin-top: -4px;">剧集选择</span>
-						<span style="display: inline-block;height: 50px;width: 30em;border:1px solid #ddd;margin-left: 20px;">
-							<input type="text" name="xinjian[juji]" style="width: 26em;display: inline-block;border:none;height: 48px;">
+						<span style="display: inline-block;height: 50px;width: 700px;border:1px solid #ddd;margin-left: 20px;">
+							<input type="text" name="xinjian[juji]" style="width: 600px;display: inline-block;border:none;height: 48px;padding-left: 30px;font-size: 14px;font-family: 微软雅黑;color: #999;">
 							<button type="submit" style="background-image: url(img/xinjian_xiala.png);width: 20px;height: 12px;margin:10px 30px;border:none;background-color: white;"></button>
 						</span>
 					</div>
 					<div style="margin-top: 20px;">
 						<span style="font-size: 18px;font-family: 微软雅黑;color: #999;margin-left: 36px;"><img src="img/xinjian_juben.png" style="display: inline-block;margin-right: 12px;margin-top: -4px;">剧本</span>
-						<span style="display: inline-block;height: 50px;width: 30em;border:1px solid #ddd;margin-left: 20px;">
-							<input type="text" name="xinjian[juben]" style="width: 26em;display: inline-block;border:none;height: 48px;">
+						<span style="display: inline-block;height: 50px;width: 700px;border:1px solid #ddd;margin-left: 20px;">
+							<input type="text" name="xinjian[juben]" style="width: 600px;display: inline-block;border:none;height: 48px;padding-left: 30px;font-size: 14px;font-family: 微软雅黑;color: #999;" placeholder="选择上传的剧本">
 							<button type="submit" style="background-image: url(img/xinjian_shangchuan.png);width: 80px;height: 30px;border:none;"></button>
 						</span>
 					</div>
-					<div style="margin-top: 20px;">
+					<!-- <div style="margin-top: 20px;">
 						<span style="font-size: 18px;font-family: 微软雅黑;color: #999;"><img src="img/xinjian_yixuanjuben.png" style="display: inline-block;margin-right: 12px;margin-top: -4px;">已选剧本</span>
-						<input type="text" name="xinjian[yixuanjuben]" style="width: 30em;height: 50px;border:1px solid #ddd;margin-left: 20px;display: inline-block;">
-					</div>
+						<input type="text" name="xinjian[yixuanjuben]" style="width: 700px;height: 50px;border:1px solid #ddd;margin-left: 20px;display: inline-block;background: url(img/xinjian_word.png) no-repeat 20px;padding-left: 50px;font-size: 14px;font-family: 微软雅黑;color: #999;padding-right: 30px;">
+					</div> -->
 					<button type="submit" style="background-image: url(img/xinjian_queding.png);width: 120px;height: 40px;margin: 60px 300px 100px;border:none;"></button>
 				</form>
 			</div>
-			
 			<!-- 页面右边部分结束 -->
 		</div>
 		<!-- 页面内容部分结束 -->
