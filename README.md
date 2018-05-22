@@ -308,15 +308,16 @@
 <span>地址</span><a href="https://www.eolinker.com/#/home/project/inside/api/detail?groupID=-1&apiID=561361&projectName=%E9%9D%9E%E5%B9%95%E7%A7%91%E6%8A%80&projectHashKey=F952usFac3c08d2c7b11ab6ff3cdc9a63b6647581b0eb52">链接地址</a>
 
 
-<!-- <h2>时间：</h2>
+<h2>时间：2018年5月22日</h2>
 <p>解决bug和完成任务：</p>
 <p>
 	<ol>
-		<li></li>
-		<li></li>
-		<li></li>
+		<li>注册登录接口</li>
+		<li>个人设置页</li>
+		<li>联系我们页</li>
+		<li>页面跳转补充完善</li>
 	</ol>
-</p> -->
+</p>
 
 <!-- <h2>时间：</h2>
 <p>解决bug和完成任务：</p>
