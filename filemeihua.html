@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传文件</title>
+    <style>
+        label {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        /*隐藏默认样式*/
+        input[id=file] {
+            margin-left: -2000px;
+            height: 0;
+        }
+    </style>
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <form method="post" action="http://47.95.115.143/upload" enctype="multipart/form-data">
+    <div style="display: inline-block;border:1px solid red;width: 400px;height: 50px;position: relative;">
+        <p id="fileName" style="display: inline-block;"></p>
+        <!--<img src="" id="fileImg">-->
+        <div style="display: inline-block;position: absolute;right: 0;">
+	        <label for="file" id="upFile">上传文件</label>
+	        <input type="file" id="file" name="play">
+	        <!-- <input type="hidden" name="user_id" value="49888356825436160" style="width: 500px;height: 50px;background-color: red;" /> -->
+    	</div>
+    	
+    </div>
+    <button type="submit">提交</button>
+    </form>
+    <script>
+        $("#file").on("change", function () {
+            //截取路径，获取上传文件名
+            var urlArr = this.value.split("\\");
+            if (this && this.files && this.files[0]) {
+                document.getElementById("fileName").innerHTML = urlArr[urlArr.length - 1];
+                var fileUrl = URL.createObjectURL(this.files[0]);
+                //document.getElementById("fileImg").src = fileUrl;
+            } else {
+                //兼容IE9以下
+                document.getElementById("fileName").innerHTML = urlArr[urlArr.length - 1];
+                //document.getElementById("fileImg").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                //document.getElementById("fileImg").filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = this.value;
+            }
+        });
+    </script>
+</body>
+</html>
