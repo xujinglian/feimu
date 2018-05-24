@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Document</title>
+ <link rel="stylesheet" href="./css/bootstrap.min.css">
+ <script src="./js/jquery.min.js"></script>
+ <script src="./js/bootstrap.min.js"></script>
+ <style>
+  .modal-dialog {
+   width: 20%;
+  }
+ 
+  .modal-footer, .modal-header {
+   text-align: center;
+  }
+ 
+  input {
+   width: 80%;
+  }
+ 
+ </style>
+</head>
+<body>
+ <!-- LOGIN MODULE -->
+ <div id="loginModal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal">
+      <span>×</span>
+     </button>
+     <h4 class="modal-title">会员登录</h4>
+    </div>
+    <div class="modal-body">
+     <label for="log_uname">
+      <span>帐号:</span>
+      <input id="log_uname" name="log_uname" type="text" placeholder="input your account">
+     </label>
+     <br>
+     <label for="log_passwd">
+      <span>密码:</span>
+      <input id="log_passwd" name="log_passwd" type="password" placeholder="input your password">
+     </label>
+    </div>
+    <div class="modal-footer">
+     <button type="button" class="btn btn-primary">登录</button>
+     <button type="button" class="btn btn-warning" data-dismiss="modal">退出</button>
+    </div>
+   </div>
+  </div>
+ </div>
+ 
+ <!-- LOGIN MODULE -->
+ <div id="registerModal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal">
+      <span>×</span>
+     </button>
+     <h4 class="modal-title">注册会员</h4>
+    </div>
+    <div class="modal-body">
+     <label for="uname">
+      <span>帐号:</span>
+      <input id="reg_uname" name="reg_uname" type="text" placeholder="input your account">
+     </label>
+     <br>
+     <label for="reg_passwd">
+      <span>密码:</span>
+      <input id="reg_passwd" name="reg_passwd" type="password" placeholder="input your password">
+     </label>
+     <label for="reg_confirm_passwd">
+      <span>确认:</span>
+      <input id="reg_confirm_passwd" name="reg_confirm_passwd" type="password" placeholder="confirm your password">
+     </label>
+    </div>
+    <div class="modal-footer">
+     <button type="button" class="btn btn-primary">注册</button>
+     <button type="button" class="btn btn-warning" data-dismiss="modal">退出</button>
+    </div>
+   </div>
+  </div>
+ </div>
+ 
+ <button class="btn btn-primary" data-toggle="modal" data-target="#loginModal">登陆</button>
+ <button class="btn btn-warning" data-toggle="modal" data-target="#registerModal">注册</button>
+</body>
+</html>
+
