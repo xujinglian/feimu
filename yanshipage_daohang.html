@@ -12,23 +12,23 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/yanshi.css">
+	<script>
+		$(document).ready(function(){
+		    $("#myNav").affix({
+		        offset: { 
+		            top:540
+		      }
+		    });
+		});
+	</script>
     <style type="text/css">
-        .nav-height{ height: auto;}
-        .nav-wrap {height: auto;}
-        .nav-wrap.navFix{position: fixed;top:0px;left: 350px;z-index: 99999;width: 0px;} 
-        .nav-wrap ul { display: block;}
-        .nav-wrap.navFix ul{ }
-        .nav-wrap li { display: inline-block; text-align: left;height: 40px; line-height: 40px;height: 50px;}
-        .nav-wrap li a {display: block;font-size:18px; color: #666; text-decoration: none;font-family: 新宋体;margin-left: 16px;width: 170px;padding-left: 10px;padding-right: 5px;}
-        .nav-wrap li a:hover{color: #4680d1;background-color: #f6ad3c;border-radius: 25px;}
-        .nav-wrap li a.active {}
-        .nav-mobile {display: none;font-weight: bold;width: 100%;}
-        .click-me {width: 150px;height: 30px; background: #4680d1;color: white; text-align: center;line-height: 30px;}
-        .click-me a {display: block;color: white;}
-        #yindao:hover{background-color:#4b9df5;}
+        #yindao:hover{
+            background-color:#4b9df5;
+        }
+        .daohang ul.nav-tabs.affix{
+        top: 30px; /* Set the top position of pinned element */
+    }
     </style>
-    <script type="text/javascript" src="js/jquery-1.js"></script>
-    <script src='js/nav.js'></script>
 </head>
 <body data-spy="scroll" data-target="#myScrollspy">
 	<div id="feimu">
@@ -78,50 +78,17 @@
                 <div class="row" style="position:relative;margin-right: 30px;display: inline-block;font-size: 20px;margin-bottom: 60px;height: 30px;line-height: 30px;">拆解结果<span style="display: inline-block;border-bottom:1px solid #ddd;width: 1100px;margin-left: 30px;margin-top: -40px;position: absolute;top:56px;"></span></div>
                 
                 <div class="row">
-                    <script>
-                        //内容信息导航吸顶
-                            $(document).ready(function(){ 
-                            var navHeight= $("#navHeight").offset().top; 
-                            var navFix=$("#nav-wrap"); 
-                            $(window).scroll(function(){ 
-                                if($(this).scrollTop()>navHeight){ 
-                                    navFix.addClass("navFix"); 
-                                } 
-                                else{ 
-                                    navFix.removeClass("navFix"); 
-                                } 
-                                }) 
-                            })
-                        //内容信息导航锚点
-                           $('.nav-wrap').navScroll({
-                              mobileDropdown: true,
-                              mobileBreakpoint: 5668,
-                              scrollSpy: true
-                            });
-                        
-                            $('.click-me').navScroll({
-                              navHeight: 4000
-                            });
-                        
-                            $('.nav-wrap').on('click', '.nav-mobile', function (e) {
-                              e.preventDefault();
-                              $('.nav-wrap ul').slideToggle('fast');
-                            });
-                    </script>
-                    <div class="col-xs-2 nav-height" id="navHeight">
-                        <nav class="nav-wrap" id="nav-wrap" style="width: 200px;">
-                            <div class="nav-mobile">Click</div>
-                            <ul class="clearfix" style="padding-top: 70px;color: red;height: 360px;border:1px solid #ddd;">
-                                <li class="active"><a href="#section1" style="color:#666;"><span><img src="img/yanshi_guanjianci.png" width="13" height="17" style="display: inline-block;margin-right: 10px;"></span>关键词抓取</a></li>
-                                <li><a href="#section2"  style="color:#666;margin-top: 40px;"><span><img src="img/yanshi_tongchou.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>总（顺）场景表</a></li>
-                                <li><a href="#section3"  style="color:#666;margin-top: 40px;"><span><img src="img/yanshi_changjing.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>分场景表</a></li>
-                                <li><a href="#section4"  style="color:#666;margin-top: 40px;"><span><img src="img/yanshi_renwu.png" width="17" height="17" style="display: inline-block;margin-right: 10px;"></span>人物戏量统计表</a></li>
-                            </ul>
-                        </nav>
+                    <div class="col-xs-2" id="myScrollspy" style="background-color: red;">
+                        <ul class="nav nav-tabs nav-stacked" id="myNav" style="background-color:#eee;padding-top: 50px;padding-bottom: 50px;width: 180px;color: red;height: 360px;border:1px solid #ddd;">
+                            <li class="active"><a href="#section-1" style="color:#666;"><span><img src="img/yanshi_guanjianci.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>关键词抓取</a></li>
+                            <li><a href="#section-2"  style="color:#666;"><span><img src="img/yanshi_tongchou.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>总（顺）场景表</a></li>
+                            <li><a href="#section-3"  style="color:#666;"><span><img src="img/yanshi_changjing.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>分场景表</a></li>
+                            <li><a href="#section-4"  style="color:#666;"><span><img src="img/yanshi_renwu.png" width="15" height="17" style="display: inline-block;margin-right: 10px;"></span>任务戏量统计表</a></li>
+                        </ul>
                     </div>
-                    <div class="col-xs-10" style="margin-top: -20px;">
+                    <div class="col-xs-10">
                        
-                        <div id="section1" class="table-responsive beijing" style="height: auto;margin-bottom: 70px;">
+                        <div id="section-1" class="table-responsive beijing" style="height: auto;margin-bottom: 70px;">
                             <p class="strog">关键词抓取：</p>
                             <div class="roe">
                                 <div class="left col-xs-9" style="margin-left: -20px;">
@@ -138,7 +105,7 @@
                             </div>
                         </div>
                    
-                        <div id="section2" class="table-responsive beijing" style="margin-bottom: 70px;margin-right: 50px;">
+                        <div id="section-2" class="table-responsive beijing" style="margin-bottom: 70px;margin-right: 50px;">
                             <p class="strog">总（顺）场景表：</p>
                             <table class="table table-bordered" id="chuizhi">
                                 <thead>
@@ -378,7 +345,7 @@
                             </table>
                         </div>
 
-                        <div id="section3" class="table-responsive beijing" style="margin-bottom: 70px;">
+                        <div id="section-3" class="table-responsive beijing" style="margin-bottom: 70px;">
                             <p class="strog">分场景表：</p>
                             <table class="table table-bordered"  id="chuizhi">
                                 <thead>
@@ -574,7 +541,7 @@
                             <p style="font-size: 12px;margin-top:20px;color:#666;margin-bottom: 30px;"><span style="display: inline-block;width: 30px;"></span>炼油厂日景内场15场戏，页码量共4.9页。</p>
                         </div>
 
-                        <div id="section4" class="table-responsive beijing">
+                        <div id="section-4" class="table-responsive beijing">
                             <p class="strog">人物戏量统计表：</p>
                             <div>
                                 <table class="table table-bordered table-responsive"  id="chuizhi">   
@@ -914,7 +881,7 @@
                     </div>
                 </div>
 
-
+                
 
 					<!-- 演示主体内容结束 -->
 				</div>
