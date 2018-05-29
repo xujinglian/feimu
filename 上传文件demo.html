@@ -3,13 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="easyui.css">
+
+
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.easyui.min.js"></script>
+
+	<style type="text/css">
+		.form {padding:15px;border: #FFE1D3 2px solid; background-color:#FFF0E7;border-radius: 3px;}
+		.section {position: relative;border-bottom: #FFE1D3 1px solid;}
+		.section .save {position: absolute; left:196px; top: 0;color: #2473CF;text-decoration: none;}
+	</style>
 </head>
 <body>
-<form method="post" action="http://47.95.115.143/upload" enctype="multipart/form-data">
-    <input type="file" name="play" style="width: 200px;display: inline-block;position: absolute;right: 0;" />
-    <input type="hidden" name="user_id" value="49888356825436160" style="width: 500px;height: 50px;background-color: red;" />
+	<h1>上传文件表单接口</h1>
+	<form method="post" action="http://47.95.115.143/upload" enctype="multipart/form-data">
+	    <input type="file" name="play"/>
+	    <input type="hidden" name="user_id" value="49888356825436160"/>
 
-    <input type="submit" value="提交">
+	    <input type="submit" value="提交">
+	</form>
+	<h1>创建项目接口</h1>
+	<form method="post" action="http://47.95.115.143/play/create" enctype="multipart/form-data">
+		<label>片名：<input type="text" name="name"></label>
+		<label>导演：<input type="text" name="director"></label>
+
+		<label>海报：<input type="text" name="poster_path"></label>
+		<label>类型：<input type="text" name="type"></label>
+		<label>剧本：<input type="file" name="play_path"></label>
+		<input type="hidden" name="user_id" value="49888356825436160"/>
+		<input type="submit" value="提交">
+	</form>
+	<h1>上传文件表单美化——来自EasyUI</h1>
+	<form method="post" action="http://47.95.115.143/upload" enctype="multipart/form-data">
+	<!-- <div class="easyui-panel" title="Upload File" style="width:400px;padding:30px 70px 50px 70px"> -->
+		<!-- <div style="margin-bottom:20px">
+			<div>Name:</div>
+			<input class="easyui-textbox" style="width:100%">
+		</div> -->
+		<div style="margin-bottom:20px">
+			<!-- <div>文件:</div> -->
+			<input class="easyui-filebox" name="play" data-options="prompt:'选择文件...'" style="width:500px">
+		</div>
+		<input type="hidden" name="user_id" value="49888356825436160"/>
+		<input type="submit" value="提交">
+		<!-- <div style="margin-bottom:20px">
+			<div>File2:</div>
+			<input class="easyui-filebox" name="file2" data-options="prompt:'Choose another file...'" style="width:100%">
+		</div> -->
+		<!-- <div>
+			<a href="#" class="easyui-linkbutton" style="width:100%">确定</a>
+		</div> -->
+	<!-- </div> -->
+	</form>
+	<h1>局部表单提交</h1>
+	<div class="form">
+		<form method="post" action="">
+			<div class="section">
+				<a class="save" href="javascript:void(0);" data-url="formAction.php">保存</a>
+				<p><input type="text" name="username" placeholder="用户名"></p>
+				<p><input type="text" name="email" placeholder="Email"></p>
+			</div>
+			<div class="section">
+				<a class="save" href="javascript:void(0);" data-url="formAction.php">保存</a>
+				<p><input type="text" name="age" placeholder="年龄"></p>
+				<p>
+					<select name="gender">
+						<option value="m">男</option>
+						<option value="f">女</option>
+					</select>
+				</p>
+			</div>
+			<div class="section">
+				<input type="submit" value="提交">
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+	$(function(){
+		$('.save').click(function(){
+			var a = $(this);
+			var section = a.closest('.section');
+			var f = $('<form></form>'),
+            	newForm = section.clone();
+	        f.append(newForm);
+	        var sectionData = f.serialize();
+
+			$.ajax({
+	            url: a.attr('data-url'),
+	            type: "POST",
+	            dataType: 'json',
+	            data: sectionData,
+	            success: function(data){
+	            	console.log(data);
+	            },
+	            error:function(){
+	            }
+	        });
+		});
+	});
+	</script>
+<h1>使用 FromData 进行 Ajax 请求，并上传文件</h1>
+<form id="uploadForm">
+      指定文件名:<input type="text" name="filename" value="">
+      上传文件:<input type="file" name="file">
+      
+       <input type="button" value="上传" onclick="doUpload()">
 </form>
+<script>
+	function doUpload(){
+	    var formData = new FormData($("#uploadForm")[0]);
+	    $.ajax({
+	          url:"   .php",
+	          type:"POST",
+	          data:formData,
+	          async:false,
+	          cache:false,
+	          contentType:false,
+	          processData:false,
+	          success:function(returndata){
+	                 alert(returndata);
+	          },
+	          error:function(returndata){
+	                 alert("error:"+returndata);
+	          }
+	    });
+	}
+</script>
+<h1>Html5新特性-formData异步表单提交</h1>
+<form method="post" enctype="multipart/form-data">
+	<input id="isSconds" type="file" name="play">
+	<input type="hidden" name="user_id" value="49888356825436160"/>
+	<input type="submit" name="" value="提交">
+</form>
+<script>
+	var formData = new FormData();
+	var ipName= $("#isSconds").files[0];
+	//append三参数：1参数名（如为多文件上传，则不能重复），2文件体（用js获取），3文件名（若不写此项则为本来的文件名）
+	formData.append("file1",fileNow[m],"我是自定义的文件名");
+	//ajax部分
+	if(formData!=null){ 
+	    $.ajax({
+	    url:"http://47.95.115.143/upload", 
+	    type : 'POST', 
+	    data : formData, 
+	    // 告诉jQuery不要去处理发送的数据
+	    processData : false, 
+	    // 告诉jQuery不要去设置Content-Type请求头
+	    contentType : false,
+	    crossDomain: true,  
+	    beforeSend:function(){
+	    console.log("上传中……");
+	    },
+	    success : function(data) { 
+	    if(data==1){
+	    alert("上传成功");
+	    $("input").val("");
+	    $("input[type='button']").attr("value","提  交");
+	    }else{
+	    alert("上传失败，返回信息："+data);
+	    }
+	    }, 
+	    error : function(responseStr) { 
+	    console.log("error");
+	    } 
+	    });
+	}   
+</script>
 </body>
 </html>
