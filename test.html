@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="file" id="play" name="play" />
+<input type="hidden" name="poster_path" id="poster_path"/>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script>
+
+
+    $("#play").on("change", function () {
+        var formdata = new FormData();
+        formdata.append("play", $("#play")[0].files[0]);
+        formdata.append("user_id", "51273761336463360");
+        $.ajax({
+            type: 'post',
+            url: 'http://47.95.115.143/upload',
+            data: formdata,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                console.log(data.data.path);
+                $("#poster_path").val(data.data.path)
+                alert($("#poster_path").val())
+            },
+            error: function () {
+            }
+        })
+    })
+</script>
+</body>
+</html>
