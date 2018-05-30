@@ -393,7 +393,7 @@
 <p>
 	<ol>
 		<li>详情页最左侧图标提示</li>
-		<li>登录注册UI部分<br/>这里的内容包括两部分：弹出框和Tab切换<ul><li>弹出框：<a href="http://www.runoob.com/bootstrap/bootstrap-modal-plugin.html">使用的是Bootstrap的模态框插件</a>，之前的弹出框一个是通过Jquery实现，一个是借鉴慕课网课程中的遮罩层的效果，但是后来发现前一个的确可以做出弹出框效果，但是登录和注册按钮弹出的内容都是A，本质上登录应该弹出A，那么注册就应该弹出B，所以这个方法不行，后一种也可以实现弹出框的效果，点击除框之外的遮罩层也可以关闭弹出框，但是里面的内容都是图片格式，并且内容都是通过JS去生成节点，实现起来比较麻烦</li></ul>最终找到BS的模态框来实现，登录弹出A，注册弹出B，点击遮罩区域也可以关闭弹出框</li>
+		<li>登录注册UI部分<br/>这里的内容包括两部分：弹出框和Tab切换<ul><li>弹出框：<a href="http://www.runoob.com/bootstrap/bootstrap-modal-plugin.html">使用的是Bootstrap的模态框插件</a>，之前的弹出框一个是通过Jquery实现，一个是借鉴慕课网课程中的遮罩层的效果，但是后来发现前一个的确可以做出弹出框效果，但是登录和注册按钮弹出的内容都是A，本质上登录应该弹出A，那么注册就应该弹出B，所以这个方法不行，后一种也可以实现弹出框的效果，点击除框之外的遮罩层也可以关闭弹出框，但是里面的内容都是图片格式，并且内容都是通过JS去生成节点，实现起来比较麻烦.最终找到BS的模态框来实现，登录弹出A，注册弹出B，点击遮罩区域也可以关闭弹出框</li><li>Tab切换采用的是<a href="http://www.runoob.com/bootstrap/bootstrap-tab-plugin.html">Bootstrap 标签页（Tab）插件</a></li><li>登录注册框的关闭按钮。 用的是两个属性data-dismiss="modal" aria-hidden="true"</li></ul></li>
 		<li></li>
 	</ol>
 </p>

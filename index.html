@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<!-- <script type="text/javascript" src="js/bootstrap.js"></script> -->
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -24,6 +24,10 @@
 			background-color:#4b9df5;
 		}
 		.head_top_right a:visited{color: #fff;text-decoration: none;}
+		.guanbi{width: 50px;background-image: url(img/guanbi.png);background-repeat: no-repeat;background-position: 8px 10px;}
+		.guanbi:hover{border:1px solid red;background-image: url(img/guanbi_red.png);cursor:pointer;}
+		.active{color: blue;}
+		#phonezhuce,#emailzhuce:hover{background-color:#fff;}
 	</style>
 </head>
 <body>
@@ -41,78 +45,111 @@
 				</div><!--头部左部分结束-->
 				<div class="col-xs-3"></div>
 				<div class="head_top_right" style="position: absolute;right: 22%;top: 0;margin-left: 50px;">
-					<a href="#" id="example" class="zhuce" style="font-size: 18px;">注册</a>
-					<a href="#" id="denglu" class="denglu" style="font-size: 18px;">登录</a>
+					<a href="#" class="zhuce" style="font-size: 18px;" data-toggle="modal" data-target="#zhuce">注册</a>
+					<a href="#" class="denglu" style="font-size: 18px;" data-toggle="modal" data-target="#denglu">登录</a>
 					<a href="liebiaopage.html" class="head_btn" style="display: inline-block;margin-top: -15px;margin-left: 50px;margin-right: -50px;"><img src="img/kongzhitai.png" style="vertical-align: middle;margin-top: -4px;padding-bottom: 2px;background-color:#3b85f5;"></a>
 					<!-- 注册框板块开始 -->
-					<div id="LoginBox" style="padding-bottom: 66px;padding-top: -30px;height: 390px;">
-				        <div class="row1" style="margin:10px 40px;border-bottom: 1px #ddd solid;height: 50px;">
-				            <a href="#" style="font-size: 14px;color: #333;font-family: 微软雅黑;text-decoration: none;margin-right: 30px;margin-right: -10px;margin-left: 0px;">密码登录</a>
-				            <a href="#" style="font-size: 14px;color: #459df5;font-family: 微软雅黑;text-decoration: none;">注册</a>
-				            <a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn"><img src="img/zhuce_guanbi.png" style="display: inline-block;margin-bottom: 20px;margin-top: 20px;"></a>
-				        </div>
-				        <input type="text" name="" style="background: url(img/zhuce_yonghu.png) no-repeat 20px 12px;border:1px solid #ddd;padding:10px 40px 10px 50px;width: 320px;margin:20px 40px 14px;line-height: 20px;height: 40px;color: #999;font-size: 14px;font-family: 新宋体;background-color: #fff;border-radius: 5px;" placeholder="请输入手机号码"/>
-				        <input type="password" name="" style="background: url(img/zhuce_mima.png) no-repeat 20px 12px;border:1px solid #ddd;padding:10px 40px 10px 50px;width: 212px;margin:10px 0px 14px 40px;line-height: 20px;height: 40px;color: #999;font-size: 14px;font-family: 新宋体;background-color: #fff;display: inline-block;border-top-left-radius: 5px;border-bottom-left-radius: 5px;" placeholder="请输入密码"/>
-				        <button style="width: 108px;display: inline-block;height: 40px;border:1px solid #ddd;background-color: #fff;margin-left: -7px;font-size: 13px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;color: #459df5;">发送验证码</button>
-				        <input type="checkbox" name="单选框" style="margin-left: 40px;position: relative;"><span style="font-size: 11px;margin-top: -5px;margin-left: 10px;padding-bottom: 30px;position: absolute;bottom:79px;">我已认真阅读并接受<a href="#" style="color: #459df5;text-decoration: none;font-size: 11px;font-family: 微软雅黑;line-height: 13px;margin-left: -2px;">《非幕科技注册协议》</a></span></label>
-				        <a href="shezhimima.html" style="text-decoration: none;font-size: 14px;color:#fff;font-family: 微软雅黑;line-height: 40px;"><button id="loginbtn" style="background-image: url(img/zhuce_zhuce.png);width: 320px;height: 40px;border:none;background-color: #f9f9f9;margin-left: 40px;margin-top: 10px;">注册</button></a>
-				        <div id="weixin" class="weixin" style="margin:30px auto;height: 30px;margin-bottom: 30px;font-family: 微软雅黑;font-size: 12px;color: #666;margin-left:40px;">
-				        	其他登录
-				        	<button class="btn" data-toggle="modal" data-target="#myModal" style="width: 29px;height: 29px;margin-left: 60px;display: inline-block;background-image: url(img/weixin_hover.png);border:none;"></button>
-				        	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 200px;margin-bottom: 100px;width: 650px;height: 650px;margin:200px auto 0px;">
-								<div class="modal-dialog"">
-									<div class="modal-content" style="">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
-											</button>
-											<p style="height: 10px;font-family: 微软雅黑;font-size: 16px;margin-top: -4px;">
-												<img src="img/weixin_hover.png" style="width: 29px;margin-right: 10px;">
-												微信登录
-											</p>
+					<div class="modal fade" id="zhuce" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content" style="width: 400px;margin-left: 16%;height: 656px;margin-top: 25%;background-color: #f9f9f9;">
+								<form style="width: 400px;margin:50px auto;margin-top: 0px;">
+									<!-- 注册tab切换框 -->
+									<ul id="myTab" class="nav nav-tabs" style="width: 320px;margin-left: 40px;margin-top: 30px;position: relative;border-bottom:1px solid #ddd;height: 38px;">
+										<li class="active" style="display: inline-block;">
+											<a href="#phone" data-toggle="tab" style="padding-left:15px;font-family: 微软雅黑;font-size: 14px;text-align: center;margin-left: 0px;height: 30px;padding-bottom: 26px;color: black;background-color: #f9f9f9;" id="phonezhuce">手机注册</a>
+										</li>
+										<li style="display: inline-block;margin-left: -2px;">
+											<a href="#email" data-toggle="tab" style="padding-left:15px;font-family: 微软雅黑;font-size: 14px;text-align: center;margin-left: 0px;height: 30px;padding-bottom: 26px;color: black;background-color: #f9f9f9;" id="emailzhuce">邮箱注册</a>
+										</li>
+										<a></a>
+										<a data-dismiss="modal" aria-hidden="true" id="guanbi" class="guanbi" style="position: absolute;top: 5px;right: 0px;border:0px solid red;padding:0px;width: 30px;height: 30px;cursor:pointer;">
+										</a>
+									</ul>
+									<!-- 注册tab切换框结束 -->
+									<!-- 注册弹出div内容 -->
+									<div id="myTabContent" class="tab-content" style="color:red;">
+										<!-- 手机号码注册开始 -->
+										<div class="tab-pane fade in active" id="phone" style="position: relative;">
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 30px;height: 40px;border-radius: 5px;background-color: #fff;">
+												<img src="img/nicheng.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+												<input type="text" name="用户名" placeholder="用户名称/昵称" style=";font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
+												<img src="img/nicheng.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+												<input type="text" name="用户名" placeholder="手机号码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
+												<img src="img/yanzhengma.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+												<input type="text" name="用户名" placeholder="验证码" style="font-size: 12px;width:170px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;padding-right: 20px;border:none;border-right: 1px solid #ddd;color: #646469;"><input type="button" name="" value="获取验证码" style="font-family: 微软雅黑;font-size: 12px;color: #459df5;border:none;background-color: #fff;margin-left: 12px;font-weight: 100;"></label>
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
+												<img src="img/mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+												<input type="text" name="用户名" placeholder="密码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
+												<img src="img/mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+												<input type="text" name="用户名" placeholder="确认密码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+											<input type="checkbox" name="" style="margin-left: 40px;margin-top: 30px;margin-right: 8px;"><span style="position: absolute;top: 292px;font-family: 微软雅黑;font-size: 12px;color: #646469;">同意<a href="#" style="color: #459df5;margin-left: 5px;font-size: 12px;">非幕科技注册协议</a></span>
+											<button style="background-color:#459df5;border:none;width: 320px;height: 40px;margin:60px 40px 0px;border-radius: 30px;"><input type="submit" name="" value="注&nbsp;册" style="border: none;background-color:#459df5;color: #fff;font-size: 14px;height: 30px;font-family: 微软雅黑;"></button>
+											<div style="margin-left: 235px;margin-bottom: 40px;font-size: 12px;font-family: 新宋体;color: #646469;">已有账号,<a href="#" style="margin-left: 5px;color: #459df5;font-size: 12px;font-family: 新宋体;">马上登陆</a></div>
 										</div>
-										<div class="modal-body" style="background-color: black;">
-											<p style="font-size: 16px;font-family: 微软雅黑;text-align: center;margin-bottom: 20px;color: #fff;margin-top: 50px;">微信登录</p>
-											<img src="img/erweima.jpg" style="width: 280px;height: 280px;margin-left: 145px;" />
-											<p style="font-size: 16px;font-family: 微软雅黑;text-align: center;margin-top: 10px;color: #fff;margin-bottom: 50px;">请使用微信扫描二维码登录<br/>“非幕科技”</p>
+										<!-- 手机号码注册结束 -->
+										<!-- 邮箱注册开始 -->
+										<div class="tab-pane fade" id="email">
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 30px;height: 40px;border-radius: 5px;background-color: #fff;">
+												<img src="img/nicheng.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+												<input type="text" name="用户名" placeholder="用户名称/昵称" style=";font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
+												<img src="img/nicheng.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+												<input type="text" name="用户名" placeholder="邮箱账号" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
+												<img src="img/yanzhengma.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+												<input type="text" name="用户名" placeholder="验证码" style="font-size: 12px;width:170px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;padding-right: 20px;border:none;border-right: 1px solid #ddd;color: #646469;"><input type="button" name="" value="获取验证码" style="font-family: 微软雅黑;font-size: 12px;color: #459df5;border:none;background-color: #fff;margin-left: 12px;font-weight: 100;"></label>
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
+												<img src="img/mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+												<input type="text" name="用户名" placeholder="密码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
+												<img src="img/mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+												<input type="text" name="用户名" placeholder="确认密码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+											<input type="checkbox" name="" style="margin-left: 40px;margin-top: 30px;margin-right: 8px;"><span style="position: absolute;top: 390px;font-family: 微软雅黑;font-size: 12px;color: #646469;">同意<a href="#" style="color: #459df5;margin-left: 5px;font-size: 12px;">非幕科技注册协议</a></span>
+											<button style="background-color:#459df5;border:none;width: 320px;height: 40px;margin:60px 40px 0px;border-radius: 30px;"><input type="submit" name="" value="注&nbsp;册" style="border: none;background-color:#459df5;color: #fff;font-size: 14px;height: 30px;font-family: 微软雅黑;"></button>
+											<div style="margin-left: 235px;margin-bottom: 40px;font-size: 12px;font-family: 新宋体;color: #646469;">已有账号,<a href="#" style="margin-left: 5px;color: #459df5;font-size: 12px;font-family: 新宋体;">马上登陆</a></div>
 										</div>
-									</div><!-- /.modal-content -->
-								</div><!-- /.modal-dialog -->
-							</div><!-- /.modal -->
-							<script>
-							   $(function () { $('#myModal').modal('hide')});
-							</script>
-				        </div>
-				    </div>
-					<script type="text/javascript">
-					$(function ($) {
-						// 弹出登录
-						$("#example").hover(function () {
-							$(this).stop().animate({
-								opacity: '1'
-							}, 600);
-						}, function () {
-							$(this).stop().animate({
-								opacity: '0.6'
-							}, 1000);
-						}).on('click', function () {
-							$("body").append("<div id='zhezhaoceng'></div>");
-							$("#zhezhaoceng").addClass("zhezhaoceng").fadeIn("slow");
-							$("#LoginBox").fadeIn("slow");
-						});
-						$(".close_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#999' }) }).on('click', function () {
-							$("#LoginBox").fadeOut("fast");
-							$("#zhezhaoceng").css({ display: 'none' });
-						});
-					});
-					</script>
+										<!-- 邮箱注册结束 -->
+									</div>
+									<!-- 注册弹出div内容结束 -->
+								</form>
+							</div>
+						</div>
+					</div>	
 					<!-- 注册框板块结束 -->
-
-
-
-
-
 					<!-- 登录板块开始 -->
-					
+					<div class="modal fade" id="denglu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content" style="width: 400px;margin-left: 100px;height: 405px;margin-top: 100px;">
+								<form style="width: 400px;margin:50px auto;margin-top: 0px;">
+									<div id="myTabContent" class="tab-content">
+										<ul id="myTab" class="nav nav-tabs" style="width: 320px;margin-left: 40px;margin-top: 30px;position: relative;border-bottom:1px solid #ddd;height: 38px;">
+											<li style="display: inline-block;">
+												<span href="" data-toggle="tab" style="padding-left:15px;font-family: 微软雅黑;font-size: 14px;text-align: center;margin-left: 0px;height: 30px;padding-bottom: 26px;color: black;color: #459df5;">登录</span>
+											</li>
+											<a data-dismiss="modal" aria-hidden="true" id="guanbi" class="guanbi" style="position: absolute;top: 5px;right: 0px;border:0px solid red;padding:0px;width: 30px;height: 30px;cursor:pointer;">
+											</a>
+										</ul>
+										<div class="tab-pane fade in active" id="phone" style="position: relative;">
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 30px;height: 40px;border-radius: 5px;">
+												<img src="img/nicheng.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+												<input type="text" name="用户名" placeholder="用户名称/昵称" style=";font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;">
+												<img src="img/mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
+												<input type="text" name="用户名" placeholder="手机号码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+											<input type="checkbox" name="" style="margin-left: 40px;margin-top: 30px;margin-right: 8px;" checked="checked"><span style="position: absolute;top: 134px;font-family: 微软雅黑;font-size: 12px;color: #646469;">下次自动登录</span>
+											<a href="" style="color: red;margin-left: 189px;display: inline-block;font-family: 微软雅黑;font-size: 12px;color: #646469;height: 30px;">忘记密码</a>
+											<i style="display: inline-block;border-left: 1px solid #ddd;width: 1px;height: 15px;margin-left: 7px;margin-top: 10px;padding-top: 10px;position: absolute;top: 126px;left: 307px;"></i>
+											<a href="" data-toggle="modal" data-target="#zhuce" style="color: blue;font-family: 微软雅黑;font-size: 12px;color: #646469;margin-left: 10px;">注册</a>
+											<button style="background-color:#459df5;border:none;width: 320px;height: 40px;margin:30px 40px 60px;border-radius: 30px;"><input type="submit" name="" value="登&nbsp;录" style="border: none;background-color:#459df5;color: #fff;font-size: 14px;height: 30px;font-family: 微软雅黑;"></button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
 					<!-- 登录板块结束 -->
 				</div>	
 			</div>
