@@ -31,7 +31,7 @@
 <body>
 	<!-- 页面整体开始 -->
 	<!-- 页面头部开始 -->
-	<div id="head" class="head navbar-fixed-top" style="height: 60px;background-color: #f9f9f9;">
+	<div id="head" class="head navbar-fixed-top" style="height: 60px;background-color: #fff;border-bottom: 1px solid #ddd;">
 		<div id="head_content" class="head_content row" style="width: 1200px;margin:0 auto;padding-right: -5px;">
 			<div id="head_left" class="head_left  col-xs-3" style="padding-top: 3px;margin-left: -15px;"><a href="index.html"><img src="img/xiangqing_logo.png"></a></div>
 			<div class="col-xs-7" style="margin-top: 8px;margin-left: 41px;"><img src="img/xiangqing_tongchou.png" style="vertical-align: middle;margin-top: 5px;display: inline-block;"></div>
@@ -63,36 +63,48 @@
 			<!-- 页面左边部分结束 -->
 			<div id="content_right" class="content_right col-xs-10" style="margin-left: 15px;float: right;padding-right: 0px;">
 				<form action="http://47.95.115.143/upload" method="post" enctype="multipart/form-data">
-					<div style="height:auto;border:1px solid #ddd;">
+					<div style="height:auto;border:1px solid #ddd;background-color: #fff;">
 						<div style="margin-left: 20px;margin-top: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">片名</span>
-							<input type="text" name="xinjian[pianming]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 37em;background-color: #f9f9f9;">
+							<input type="text" name="xinjian[pianming]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 37em;background-color: #fff;">
 						</div>
 						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">导演</span>
-							<input type="text" name="xinjian[daoyan]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 37em;background-color: #f9f9f9;">
+							<input type="text" name="xinjian[daoyan]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 37em;background-color: #fff;">
+						</div>
+
+						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
+							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">类型</span>
+							<label style="font-family: 微软雅黑;font-size: 14px;font-weight: 100;margin-right: 10px;"><input type="radio" name="leixing" style="margin-top: -4px;margin-right: 4px;" />电影</label>
+							<label style="font-family: 微软雅黑;font-size: 14px;font-weight: 100;margin-right: 10px;"><input type="radio" name="leixing" style="margin-top: -4px;margin-right: 4px;" />电视剧</label>
+							<label style="font-family: 微软雅黑;font-size: 14px;font-weight: 100;margin-right: 10px;"><input type="radio" name="leixing" style="margin-top: -4px;margin-right: 4px;" />网络电影</label>
+							<label style="font-family: 微软雅黑;font-size: 14px;font-weight: 100;margin-right: 10px;"><input type="radio" name="leixing" style="margin-top: -4px;margin-right: 4px;" />网剧</label>
+							<label style="font-family: 微软雅黑;font-size: 14px;font-weight: 100;margin-right: 10px;"><input type="radio" name="leixing" style="margin-top: -4px;margin-right: 4px;" />剧情短片</label>
+						</div>
+
+						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
+							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;vertical-align: top;margin-top: -20px;display: inline-block;margin-top: -6px;">海报</span>
+							<img src="img/haibao.png" style="width: 170px;height: 120px;vertical-align: top;" align="middle">
+							<input type="submit" name="" value="确认上传" style="border:none;background-color: #fff;color: #459df5;font-weight: 100;font-size: 14px;vertical-align: bottom;margin-bottom: -4px;display: inline-block;">
 						</div>
 
 						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">制片方</span>
-							<input type="text" name="xinjian[daoyan]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 36em;margin-left: 5px;background-color: #f9f9f9;">
+							<input type="text" name="xinjian[daoyan]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 36em;margin-left: 5px;background-color: #fff;">
 						</div>
 						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">制片人</span>
-							<input type="text" name="xinjian[daoyan]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 36em;margin-left: 5px;background-color: #f9f9f9;">
+							<input type="text" name="xinjian[daoyan]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 36em;margin-left: 5px;background-color: #fff;">
 						</div>
 						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">制片主任</span>
-							<input type="text" name="xinjian[daoyan]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 35em;margin-left: 10px;background-color: #f9f9f9;">
+							<input type="text" name="xinjian[daoyan]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 35em;margin-left: 10px;background-color: #fff;">
 						</div>
 						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">统筹</span>
-							<input type="text" name="xinjian[daoyan]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 37em;background-color: #f9f9f9;">
+							<input type="text" name="xinjian[daoyan]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 37em;background-color: #fff;">
 						</div>
-						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
-							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">海报</span>
-							<input type="text" name="xinjian[daoyan]" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 37em;background-color: #f9f9f9;">
-						</div>
+						
 					</div>
 					<div style="margin-bottom: 100px;margin-top: 60px;">
 						<button type="submit" style="width: 120px;height: 40px;border:none;background-color: #459df5;border-radius: 5px;display: inline-block;margin-left: 250px;font-size: 18px;font-family: 微软雅黑;color: #fff;">保存</button>
