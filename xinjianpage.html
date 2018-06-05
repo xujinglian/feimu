@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/liebiaopage.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<script type="text/javascript" src="js/xinjianpage.js"></script>
 
 	<link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
   	<script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
@@ -112,20 +113,6 @@
 						<p style="font-size: 14px;font-family: 微软雅黑;color: #666;margin-top: 20px;margin-left: 9em;">电视剧/网剧剧本需将所有集合并于同一文档中进行上传。</p>
 					</div>
 					<button style="width: 120px;height: 40px;margin: 60px 300px 100px;border:none;display: inline-block;border-radius: 15px;"><input type="submit" value="" style="background-image: url(img/xinjian_queding.png);width: 120px;height: 40px;margin: 60px 300px 100px;border:none;display: inline-block;position: absolute;left: 15px;bottom: 1px;"></button>
-					<script>
-						$.ajax({ 
-							'url':'http://47.95.115.143/upload', 
-							'data':{"play":$('#play').val(),"user_id":$('#user_id').val(),}, 
-							'success':function(data){ 
-								switch(data.type){ 
-									case 0:alert('账户不存在');break; 
-									case 502:alert('fsdf账户不存在');break;
-									 }, 
-							'type':'post',
-							'dataType':'json',
-							'enctype'='multipart/form-data',
-						});
-					</script>
 				</form>
 				
 			</div>
