@@ -19,7 +19,7 @@
         formdata.append("user_id", "51273761336463360");
         $.ajax({
             type: 'post',
-            url: 'http://47.95.115.143/upload',
+            url: 'http://service.filmptn.com/upload',
             data: formdata,
             cache: false,
             processData: false,
@@ -33,6 +33,25 @@
             }
         })
     })
+    // $(function(){
+    //     $('input[name=addimg]').click(function(){
+    //         $('input[name=myfile]').trigger('click');
+    //     });
+    //     $('input[name=myfile]').change(function(){
+    //         var form = new FormData(document.getElementById('myform'));
+    //         $.ajax({
+    //             url:'upload.php',
+    //             type:'post',
+    //             data:form,
+    //             processData:false,
+    //             contentType:false,
+    //             success:function(data){
+    //                 console.log(data);
+    //                 $('#imgfile').attr('src', data);
+    //             }
+    //         });
+    //     });
+    // });
 </script>
 </body>
 </html>
