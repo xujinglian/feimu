@@ -22,6 +22,39 @@
   		#bianji:hover{background-color: red;}
   		.liebiao:hover{background-color:#f6ad3c;}
   		body{background-color: #f9f9f9;}
+
+		.suspension .a .i{float:left;width:44px;height:44px;background-image:url(../images/side_icon.png);background-repeat:no-repeat;}
+		/* .suspension .a-service .i{background-position:0 0;} */
+		.suspension .a-service .i{width:20px;height:20px;margin-top:12px;margin-left:12px;background-image:url(../images/suspension-bg.png);background-repeat:no-repeat;background-position:0 0;}
+		.suspension .a-service-phone .i{width:20px;height:20px;margin-top:12px;margin-left:12px;background-image:url(../images/suspension-bg.png);background-repeat:no-repeat;background-position:-27px 0;}
+		.suspension .a-qrcode .i{background-position:-44px 0;}
+		.suspension .a-cart .i{background-position:-88px 0;}
+		.suspension .a-top .i{background-position:-132px 0;}
+		.suspension .a-top{background:#D2D3D6;display:none;}
+		.suspension .a-top:hover{background:#c0c1c3;}
+		.suspension .d{
+		    display:none;
+		   	width: 50px;
+		   	height: 28px;
+		   	
+		    background:#fff;
+		    position:absolute;
+		    right:0px;
+		    
+		    border:1px solid #E0E1E5;
+		    border-radius:3px;
+		    /*box-shadow:0px 2px 5px 0px rgba(161, 163, 175, 0.11);*/
+		}
+		.suspension .d-service{
+		    top:46px;
+		}
+		.suspension .d-service-xinjian{
+		    top:94px;
+		}
+		.suspension .d-service-yindao{
+		    top:141px;
+		}
+		
   	</style>
 </head>
 <body>
@@ -51,18 +84,66 @@
 	<div id="xiangqing" class="xiangqing" style="width: 1200px;margin:0 auto;">
 		<!-- 页面内容部分 -->
 		<div id="content" class="content" style="margin-top: 60px;">
-			<div id="content_left" class="content_left  col-xs-1" style="height: 160px;background-color:#ddd;width: 50px;">
-				<a href="liebiaopage.html" class="liebiao" style="display: inline-block;width: 26px;height: 27px;margin-top: 20px;border-radius: 5px;padding-left: 5px;padding-top: 3px;margin-left: -2px;" data-toggle="tooltip" data-placement="bottom" title="项&nbsp; 目&nbsp; 列&nbsp; 表">
+			<div id="content_left" class="content_left  col-xs-1 suspension" style="height: 162px;background-color:#ddd;width: 50px;">
+				<a href="liebiaopage.html" class="liebiao a a-service" style="display: inline-block;width: 26px;height: 27px;margin-top: 20px;border-radius: 5px;padding-left: 5px;padding-top: 3px;margin-left: -2px;">
 					<div style="display:inline-block;width: 16px;height:16px;background-image: url(img/list_left_liebiao.png);"></div>
 				</a>
-				<a href="xinjianpage.html" class="liebiao" style="display: inline-block;width: 26px;height: 27px;margin-top: 20px;border-radius: 5px;padding-left: 5px;padding-top: 3px;margin-left: -2px;" data-toggle="tooltip" data-placement="bottom" title="新&nbsp; 建&nbsp; 项&nbsp; 目">
+				
+
+
+				<a href="xinjianpage.html" class="liebiao a a-service" style="display: inline-block;width: 26px;height: 27px;margin-top: 20px;border-radius: 5px;padding-left: 5px;padding-top: 3px;margin-left: -2px;">
 					<div style="display:inline-block;width: 16px;height:14px;background-image: url(img/list_left_zhanghu.png);"></div>
 				</a>
-				<a href="yonghuzhidaopage.html" class="liebiao" style="display: inline-block;width: 26px;height: 27px;margin-top: 20px;border-radius: 5px;padding-left: 5px;padding-top: 3px;margin-left: -2px;" data-toggle="tooltip" data-placement="bottom" title="用&nbsp; 户&nbsp; 指&nbsp; 导">
+				<a href="yonghuzhidaopage.html" class="liebiao a a-service-yindao" style="display: inline-block;width: 26px;height: 27px;margin-top: 20px;border-radius: 5px;padding-left: 5px;padding-top: 3px;margin-left: -2px;">
 					<div style="display:inline-block;width: 16px;height:16px;background-image: url(img/list_left_yonghu.png);"></div>
 				</a>
+				<div class="d d-service" style="border-radius: 2px;padding-top: -10px;text-align: center;height: 20px;vertical-align: middle;line-height: 20px;background-color: #fff;font-size: 10px;color: #999;width: 48px;margin-right: 1px;margin-top: 2px;">
+					项目列表
+				</div>
+				<div class="d d-service-xinjian" style="border-radius: 2px;padding-top: -10px;text-align: center;height: 20px;vertical-align: middle;line-height: 20px;background-color: #fff;font-size: 10px;color: #999;width: 48px;margin-right: 1px;margin-top: 2px;">
+					新建项目
+				</div>
+				<div class="d d-service-yindao" style="border-radius: 2px;padding-top: -10px;text-align: center;height: 20px;vertical-align: middle;line-height: 20px;background-color: #fff;font-size: 10px;color: #999;width: 48px;margin-right: 1px;margin-top: 2px;">
+					新手引导
+				</div>
 			</div>
-			
+			<script type="text/javascript">
+				$(document).ready(function(){
+
+					/* ----- 侧边悬浮 ---- */
+					$(document).on("mouseenter", ".suspension .a", function(){
+						var _this = $(this);
+						var s = $(".suspension");
+						var isService = _this.hasClass("a-service");
+						var isServicePhone = _this.hasClass("a-service-phone");
+						var isQrcode = _this.hasClass("a-qrcode");
+						if(isService){ s.find(".d-service").show().siblings(".d").hide();}
+						if(isServicePhone){ s.find(".d-service-phone").show().siblings(".d").hide();}
+						if(isQrcode){ s.find(".d-qrcode").show().siblings(".d").hide();}
+					});
+					$(document).on("mouseleave", ".suspension, .suspension .a-top", function(){
+						$(".suspension").find(".d").hide();
+					});
+					$(document).on("mouseenter", ".suspension .a-top", function(){
+						$(".suspension").find(".d").hide(); 
+					});
+					$(document).on("click", ".suspension .a-top", function(){
+						$("html,body").animate({scrollTop: 0});
+					});
+					$(window).scroll(function(){
+						var st = $(document).scrollTop();
+						var $top = $(".suspension .a-top");
+						if(st > 400){
+							$top.css({display: 'block'});
+						}else{
+							if ($top.is(":visible")) {
+								$top.hide();
+							}
+						}
+					});
+					
+				});	
+			</script>
 			<div id="content_center" class="content_center col-xs-2" style="height: 360px;border:1px solid #ddd;width: 200px;margin-left: 35px;">
 				<ul style="display: inline-block;margin:0px 0px 40px;">
 					<li><a href="liebiaopage.html"><img src="img/list_fanhui.png" style="display: inline-block;margin-right: 10px;">返回上级</a></li>
