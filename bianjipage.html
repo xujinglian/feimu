@@ -62,19 +62,22 @@
 			</div>
 			<!-- 页面左边部分结束 -->
 			<div id="content_right" class="content_right col-xs-10" style="margin-left: 15px;float: right;padding-right: 0px;">
-				<form action="http://47.95.115.143/upload" method="post" enctype="multipart/form-data">
+				<form enctype="multipart/form-data">
 					<div style="height:auto;border:1px solid #ddd;background-color: #fff;">
+						<input type="hidden" name="play_id" value="57170866739482624" id="play_id" />
+						<input type="hidden" name="user_id" value="56163902970531840" id="user_id" />
 						<div style="margin-left: 20px;margin-top: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 2px;">片名</span>
-							<input type="text" name="name" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 55em;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;">
+							<input type="text" name="name" id="name" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 55em;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;">
 						</div>
 						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 2px;">导演</span>
-							<input type="text" name="director" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 55em;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;">
+							<input type="text" name="director" id="director" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 55em;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;">
 						</div>
 
 						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">类型</span>
+
 							<label style="font-family: 微软雅黑;font-size: 14px;font-weight: 100;margin-right: 10px;"><input type="radio" name="leixing" style="margin-top: -4px;margin-right: 4px;" />电影</label>
 							<label style="font-family: 微软雅黑;font-size: 14px;font-weight: 100;margin-right: 10px;"><input type="radio" name="leixing" style="margin-top: -4px;margin-right: 4px;" />电视剧</label>
 							<label style="font-family: 微软雅黑;font-size: 14px;font-weight: 100;margin-right: 10px;"><input type="radio" name="leixing" style="margin-top: -4px;margin-right: 4px;" />网络电影</label>
@@ -90,48 +93,74 @@
 
 						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">制片方</span>
-							<input type="text" name="production_manager" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 53em;margin-left: 5px;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;">
+							<input type="text" name="production_manager" id="production_manager" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 53em;margin-left: 5px;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;">
 						</div>
 						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">制片人</span>
-							<input type="text" name="producer" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 53em;margin-left: 5px;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;">
+							<input type="text" name="producer" id="producer" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 53em;margin-left: 5px;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;">
 						</div>
 						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">制片主任</span>
-							<input type="text" name="marketing_producer" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 52em;margin-left: 3px;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;">
+							<input type="text" name="marketing_producer" id="marketing_producer" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 52em;margin-left: 3px;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;">
 						</div>
 						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 2px;">统筹</span>
-							<input type="text" name="coordinator" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 55em;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;">
+							<input type="text" name="coordinator" id="coordinator" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 55em;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;">
 						</div>
 						
 					</div>
 					<div style="margin-bottom: 100px;margin-top: 60px;">
 						<button type="submit" id="baocun" style="width: 120px;height: 40px;border:none;background-color: #459df5;border-radius: 5px;display: inline-block;margin-left: 250px;font-size: 18px;font-family: 微软雅黑;color: #fff;">保存</button>
-						<button type="submit" style="width: 120px;height: 40px;border:1px solid #459df5;background-color:#fff;border-radius: 5px;display: inline-block;margin-left: 60px;font-size: 18px;font-family: 微软雅黑;color: #666;">删除项目</button>
+						<button type="submit" id="delete_project" style="width: 120px;height: 40px;border:1px solid #459df5;background-color:#fff;border-radius: 5px;display: inline-block;margin-left: 60px;font-size: 18px;font-family: 微软雅黑;color: #666;">删除项目</button>
 					</div>
+					<div id="nishi"></div>
 				</form>
 				<script type="text/javascript">
-					$("#baocun").on("change", function () {
-				        var formdata = new FormData();
-				        formdata.append("director", $("#play")[0].files[0]);
-				        formdata.append("user_id", "51273761336463360");
-				        $.ajax({
-				            type: 'post',
-				            url: 'http://service.filmptn.com/play/update',
-				            data: formdata,
-				            cache: false,
-				            processData: false,
-				            contentType: false,
-				            success: function (data) {
-				                console.log(data.data.path);
-				                $("#poster_path").val(data.data.path)
-				                alert($("#poster_path").val())
-				            },
-				            error: function () {
-				            }
-				        })
-				    })
+					// document.getElementById("baocun").onclick=function(){
+					// 	var request=new XMLHttpRequest();
+					// 	request.open("POST","http://service.filmptn.com/play/update");
+					// 	var data="name="+document.getElementById("name").value+
+					// 			 "&director="+document.getElementById("director").value+
+					// 			 "&production_manager="+document.getElementById("production_manager").value+
+					// 			 "&producer="+document.getElementById("producer").value+
+					// 			 "&play_id="+document.getElementById("play_id").value+
+					// 			 "&user_id="+document.getElementById("user_id").value;
+								 
+					// 	request.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+					// 	request.send(data);
+					// 	request.onreadystatechange=function(){
+					// 		if(request.readyState===4){
+					// 			if (request.status===200) {
+					// 				document.getElementById("nishi").innerHTML=request.responseText;
+					// 			}else{
+					// 				alert("错误"+request.status);
+					// 			}
+					// 		}
+					// 	}
+					// }
+					$("#baocun").click(function(){
+						$.ajax({
+							type:"POST",
+							url:"http://service.filmptn.com/play/update",
+							dataType:"json",
+							data:{
+								name:$("#name").value(),
+								director:$("#director").value(),
+								production_manager:$("#production_manager").value(),
+								producer:$("#producer").value(),
+								play_id:$("#play_id").value(),
+								user_id:$("#user_id").value(),
+								user_id:$("#user_id").value()
+							},
+							success:function(data){
+								if (data.success) {
+									$("#nishi").html(data.msg);
+								}else{
+									$("#nishi").html("错误"+data.msg);
+								}
+							}
+						})
+					})
 				</script>
 			</div>
 			<!-- 页面右边部分结束 -->
