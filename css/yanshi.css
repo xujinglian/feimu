@@ -62,3 +62,28 @@
     color:#666;
     text-decoration: none;
 }
+
+.fujia li{
+    height: 78px;
+    border-bottom:1px solid #ddd;
+    padding-top: 30px;
+}
+.fujia li a{
+    color: #666;
+    font-size: 16px;
+    font-family: 新宋体;
+    height: 30px;
+    display: inline-block;
+    width: 150px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.fujia li a:hover{
+    text-decoration: none;
+    background-color:#f6ad3c;
+    border-radius: 20px; 
+}
+/*.fujia li:hover{
+    background-color:red;
+    border-radius: 20px; 
+}*/

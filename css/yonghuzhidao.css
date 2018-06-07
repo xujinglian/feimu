@@ -1,3 +1,7 @@
+#head_right ul li ul li a:hover{background-color: #f9f9f9;}
+#haed{height: 60px;background-color: #fff;border-bottom: 1px solid #ddd;}
+#head_content{width: 1200px;margin:0 auto;}
+.yonghuzhidao{width: 1040px;margin:0 auto 118px;margin-top: -50px;}
 #yonghuzhidao h3,#yonghuzhidao span{
 	font-size: 20px;
 	font-family: "微软雅黑";
