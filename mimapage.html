@@ -78,7 +78,7 @@
 				<!-- 项目设置和密码结束 -->
 				<!-- 项目表格开始 -->
 				<div  id="content_right_biaoge" class="content_right_biaoge table-responsive" style="margin-left:-64px;margin-bottom: 100px;padding-left: 50px;margin-right: -88px;">
-					<form>
+					<form id="mimaanquan">
 						
 						 <p style="font-size: 16px;color: #333;font-family: 微软雅黑;margin-bottom: 10px;margin-left: 30px;margin-top: 20px;">修改密码</p>
 						 <input type="hidden" value="56163902970531840" name="user_id" />
@@ -94,11 +94,11 @@
 					</form>
 					<script>
 						$(".btn").click(function (){
-							var data = new FormData($("#gerenshezhi")[0]);
+							var formdata=$("#mimaanquan").serialize();
 					        $.ajax({
 					            type: 'post',
 					            url: 'http://service.filmptn.com/password/update',
-					            data:data,
+					            data:formdata,
 					            cache: false,
 					            processData: false,
 					            contentType: "application/x-www-form-urlencoded",

@@ -3,7 +3,7 @@
 <head>
 	<title>非幕科技——个人设置页</title>
 	<meta charset="utf-8">
-	<meta http-equiv="Access-Control-Allow-Origin" content="http://service.filmptn.com">
+	<!-- <meta http-equiv="Access-Control-Allow-Origin" content="http://service.filmptn.com"> -->
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -78,7 +78,7 @@
 				<div  id="content_right_biaoge" class="content_right_biaoge" style="margin-left:-64px;margin-bottom: 100px;padding-left: 50px;margin-right: -88px;">
 					<form id="gerenshezhi">
 						<p style="font-size: 16px;color: #333;font-family: 微软雅黑;margin-bottom: 10px;margin-left: 30px;">详细信息</p>
-						<input type="hidden" value="56163902970531840" id="user_id" />
+						<input type="hidden" value="56163902970531840" name="user_id" />
 						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">姓名</span><input type="text" class="form-control" name="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;"></label>	
 						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">工作岗位</span><input type="text" class="form-control" name="post" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;"></label>
 						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">个人简介</span><input type="text" class="form-control" name="introduction" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;"></label>
@@ -91,8 +91,10 @@
 						<button style="background-image: url(gerenshezhi_baocun.png);display: inline-block;width: 120px;height: 40px;border:none;background-color: #459df5;font-size: 20px;color: #fff;font-family:微软雅黑;font-size:18px;margin:60px auto -15px;margin-left: 300px;border-radius: 5px;" id="geren123">保存设置</button>
 					</form>
 					<script>
+						// function getFormInfo(){
 						$("#geren123").click(function (){
-							var formdata = new FormData($("#gerenshezhi")[0]);//这句话自动提交的是name属性的值，所以不需要下面的那些append
+							var formdata=$("#gerenshezhi").serialize();
+							// var formdata = new FormData($("#gerenshezhi")[0]);//这句话自动提交的是name属性的值，所以不需要下面的那些append,这里不需要下面的append也是因为里面带了表格的id，也就是选中了这个id表格的所有数据了，所以不用下面的多此一举
 								// formdata.append("user_id", "51273761336463360");
 						  //       formdata.append("name", $("#name").val());
 						  //       formdata.append("post", $("input[name='post']").val());
@@ -100,6 +102,8 @@
 						  //       formdata.append("workplace", $("input[name='workplace']").val());
 						  //       formdata.append("birthday", $("input[name='birthday']").val());
 						  //       formdata.append("city", $("input[name='city']").val());
+						  	// var params=$('#gerenshezhi').serializeJSON();
+						  	//  console.log(params);
 					        $.ajax({
 					            type: 'post',
 					            url: 'http://service.filmptn.com/user/update',
@@ -109,7 +113,7 @@
 					            contentType: "application/x-www-form-urlencoded",
 					            dataType:'json',
 					            success: function (data) {
-					                console.log("传过去了");
+					                console.log(data);
 					                
 					            },
 					            error: function () {
@@ -118,6 +122,7 @@
 					        });
 					        return false;
 					    }) 
+					    // }
 					</script>
 				</div>
 				<!-- 项目表格结束 -->
