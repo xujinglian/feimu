@@ -502,7 +502,7 @@
 		<li>
 			<h1>ajax前后端交互总结篇（在正确之前的错误比正确一定程度上更有价值）</h1>
 			<div>正确的：</div>
-			<div><img src="img_folder/ajax_zhengque.jpg"/>这是正确的ajax部分，注意里面的var formdata=$("#gerenshezhi").serialize();这部分使用了HTML5的最新属性serialize，它可以这样一句话直接把对应id表单中的所有数据一次性提交，不用像之前的那样需要把所有的表单数据进行拼接然后提交。<h2>注意：</h2>这句话是用来提交没有文件上传的表单<div>如果表单中需要提交文件进行上传的话，var formdata = new FormData($("#gerenshezhi")[0];这句话就可以了，随后会有这样的</div></div>
+			<div><img src="img_folder/ajax_zhengque.jpg"/>这是正确的ajax部分，注意里面的var formdata=$("#gerenshezhi").serialize();这部分使用了HTML5的最新属性serialize，它可以这样一句话直接把对应id表单中的所有数据一次性提交，不用像之前的那样需要把所有的表单数据进行拼接然后提交。<strong>注意：</strong>这句话是用来提交没有文件上传的表单<div>如果表单中需要提交文件进行上传的话，var formdata = new FormData($("#gerenshezhi")[0];这句话就可以了，随后会有这样的</div></div>
 			<div><img src="img_folder.ajax_zhengque_form.jpg"/>这是正确的form表单部分，注意在form的开始标签里面只有一个id属性，并没有其他的action等属性。</div>
 			<div><img src="img_folder/ajax_zhengque_wangluo.jpg"/>
 				<img src="img_folder/ajax_zhengque_xiaoxitou.jpg"/>
@@ -511,7 +511,7 @@
 			<div>
 				<img src="img_folder/ajax_cuowu.jpg"/>
 				<div>这是犯过的错。</div>
-				<div><h2>第一个：</h2>写成了带有文件上传formdata的表单ajax提交了，当时感觉奇怪的地方是后面的[0]，不过那句代码后面的注释是正确的，师父也提到了这点form表单提交是按name属性，id属性无所谓,<br/><h2>第二个：</h2>下面的一堆formdata.append是否需要写也纠结了一点时间，现在想应该不用写，，之所以纠结这个问题是看师父给的其中的一个demo里面有这个，随后会验证是否需要写，对于有文件上传的表单。<h2>第三个：</h2>纠结的是dataType的值是json还是jsonp，这个纠结在上面的错误中有写到，师父一直坚持是json，证明json是正确的，因为数据的格式是json格式，<h2>第四个：</h2>消息头需要，当时可能没写，后来看了<a href="https://www.jb51.net/shouce/jquery/cheatsheet.html"> jQuery 1.10.3 速查表</a></div>
+				<div><strong>第一个：</strong>写成了带有文件上传formdata的表单ajax提交了，当时感觉奇怪的地方是后面的[0]，不过那句代码后面的注释是正确的，师父也提到了这点form表单提交是按name属性，id属性无所谓,<br/><strong>第二个：</strong>下面的一堆formdata.append是否需要写也纠结了一点时间，现在想应该不用写，，之所以纠结这个问题是看师父给的其中的一个demo里面有这个，随后会验证是否需要写，对于有文件上传的表单。<strong>第三个：</strong>纠结的是dataType的值是json还是jsonp，这个纠结在上面的错误中有写到，师父一直坚持是json，证明json是正确的，因为数据的格式是json格式，<strong>第四个：</strong>消息头需要，当时可能没写，后来看了<a href="https://www.jb51.net/shouce/jquery/cheatsheet.html"> jQuery 1.10.3 速查表</a></div>
 			</div>
 		</li>
 	</ol>
