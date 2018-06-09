@@ -3,6 +3,7 @@
 <head>
 	<title>非幕科技——个人设置页</title>
 	<meta charset="utf-8">
+	<meta http-equiv="Access-Control-Allow-Origin" content="http://service.filmptn.com">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -48,7 +49,7 @@
 	</div>
 	<!-- 页面头部结束 -->
 	<!-- 页面内容部分 -->
-	<div id="xiangqing" class="xiangqing" style="width: 63%;margin:0 auto;">
+	<div id="xiangqing" class="xiangqing" style="width: 1200px;margin:0 auto;">
 		<!-- 页面内容部分 -->
 		<div id="content" class="content" style="margin-top: 60px;">
 			<div id="content_left" class="content_left col-xs-2" style="min-height: 360px;border:1px solid #ddd;width: 210px;">
@@ -74,21 +75,62 @@
 				</div>
 				<!-- 项目设置和密码结束 -->
 				<!-- 项目表格开始 -->
-				<div  id="content_right_biaoge" class="content_right_biaoge table-responsive" style="margin-left:-64px;margin-bottom: 100px;padding-left: 50px;margin-right: -88px;">
-					<form role="form" class="sui-form form-horizontal sui-validate">
+				<div  id="content_right_biaoge" class="content_right_biaoge" style="margin-left:-64px;margin-bottom: 100px;padding-left: 50px;margin-right: -88px;">
+					<form id="gerenshezhi">
 						<p style="font-size: 16px;color: #333;font-family: 微软雅黑;margin-bottom: 10px;margin-left: 30px;">详细信息</p>
+						<input type="hidden" value="56163902970531840" id="user_id" />
+						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">姓名</span><input type="text" class="form-control" id="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>	
 
-						<label for="name" style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">姓名</span><input type="text" class="form-control" name="name" id="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>	
-
-						<label for="name" style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">工作岗位</span><input type="text" class="form-control" name="name" id="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
-						<label for="name" style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">个人简介</span><input type="text" class="form-control" name="name" id="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
-						<label for="name" style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">绑定手机</span><input type="text" class="form-control" name="name" id="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
-						<label for="name" style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">绑定邮箱</span><input type="text" class="form-control" name="name" id="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
-						<label for="name" style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">公司/学校</span><input type="text" class="form-control" name="name" id="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
-						<label for="name" style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">生日</span><input type="text" class="form-control" name="name" id="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
-						<label for="name" style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">所在城市</span><input type="text" class="form-control" name="name" id="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
-						<input type="submit" style="background-image: url(gerenshezhi_baocun.png);display: inline-block;width: 120px;height: 40px;border:none;background-color: #459df5;font-size: 20px;color: #fff;font-family:微软雅黑;font-size:18px;margin:60px auto -15px;margin-left: 300px;border-radius: 5px;" value="保存设置">
+						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">工作岗位</span><input type="text" class="form-control" id="post" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
+						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">个人简介</span><input type="text" class="form-control" id="introduction" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
+						
+						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;">
+							<span style="display: inline-block;width: 131px;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">公司/学校</span>
+							<input type="text" class="form-control" id="workplace" style="display: inline-block;width: 784px;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" >
+						</label>
+						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">生日</span><input type="text" class="form-control" id="birthday" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
+						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">所在城市</span><input type="text" class="form-control" id="city" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
+						<button style="background-image: url(gerenshezhi_baocun.png);display: inline-block;width: 120px;height: 40px;border:none;background-color: #459df5;font-size: 20px;color: #fff;font-family:微软雅黑;font-size:18px;margin:60px auto -15px;margin-left: 300px;border-radius: 5px;" id="geren123">保存设置</button>
+						
 					</form>
+					<script>
+						// var formdata = new FormData();
+					 //        formdata.append("user_id", "51273761336463360");
+					 //        formdata.append("name", $("#name").val());
+					 //        formdata.append("post", $("#post").val());
+					 //        formdata.append("introduction", $("#introduction").val());
+					 //        formdata.append("workplace", $("#workplace").val());
+					 //        formdata.append("birthday", $("#birthday").val());
+					 //        formdata.append("city", $("#city").val());
+					 		var formdata = $("form").serialize(); 
+						$("#geren123").click(function (){
+					        $.ajax({
+					            type: 'post',
+					            url: 'http://service.filmptn.com/user/update',
+					            data:formdata,
+					            
+					   //          data:{
+								// 	"name":$("#name").val(),
+								// 	"&post":$("#post").val(),
+								// 	"&introduction":$("#introduction").val(),
+								// 	"&workplace":$("#workplace").val(),
+								// 	"&birthday":$("#birthday").val(),
+								// 	"&city":$("#city").val(),
+								// 	"&user_id":$("#user_id").val()
+								// },
+					            cache: false,
+					            processData: false,
+					            contentType: "application/x-www-form-urlencoded",
+					            dataType:'json',
+					            success: function (data) {
+					                console.log(data);
+					            },
+					            error: function () {
+					            	console.log("失败了");
+					            }
+					        })
+					    }) 
+					</script>
 				</div>
 				<!-- 项目表格结束 -->
 
@@ -139,5 +181,23 @@
 		</div><!--版权信息-->
 	<!-- 页面底部结束 -->
 	<!-- 页面整体结束 -->
+	<script>
+	// document.getElementById("geren").onclick=function(){
+						// 	var request=new XMLHttpRequest();
+						// 	var senddata=new FormData(document.querySelector('form'));
+						// 	request.open("POST","http://service.filmptn.com/user/update");
+								 
+						// 	request.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+						// 	request.send(senddata);
+						// 	request.onreadystatechange=function(){
+						// 		if(request.readyState===4){
+						// 			if (request.status===200) {
+						// 				alert("传过去了");
+						// 			}else{
+						// 				alert("错误"+request.status);
+						// 			}
+						// 		}
+						// 	}
+						// }</script>
 </body>
 </html>

@@ -77,19 +77,41 @@
 				</div>
 				<!-- 项目设置和密码结束 -->
 				<!-- 项目表格开始 -->
-				
-
-
 				<div  id="content_right_biaoge" class="content_right_biaoge table-responsive" style="margin-left:-64px;margin-bottom: 100px;padding-left: 50px;margin-right: -88px;">
-					<form role="form">
+					<form>
 						
 						 <p style="font-size: 16px;color: #333;font-family: 微软雅黑;margin-bottom: 10px;margin-left: 30px;margin-top: 20px;">修改密码</p>
-						 <label for="name" style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">初始密码</span><input type="text" class="form-control" data-rules="required" name="name" id="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-weight: 100;font-size: 14px;" ></label>
-						 <label for="name" style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">新密码</span><input type="text" class="form-control" data-rules="required" name="name" id="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-weight: 100;font-size: 14px;" ></label>
-						 <label for="name" style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">再次确认</span><input type="text" class="form-control" data-rules="required" name="name" id="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-weight: 100;font-size: 14px;" ></label>
+						 <input type="hidden" value="56163902970531840" name="user_id" />
+						 <label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;">
+						 	<span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">初始密码</span><input type="text" class="form-control" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-weight: 100;font-size: 14px;" name="password_old"></label>
+						 <label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;">
+						 	<span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">新密码</span><input class="form-control" name="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-weight: 100;font-size: 14px;" name="password_new"></label>
+						 <label for="name" style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;">
+						 	<span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">再次确认</span><input type="text" class="form-control" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-weight: 100;font-size: 14px;" ></label>
 						 
-						  <button type="submit" class="btn" style="margin:60px 320px 100px;background-image: url(img/gerenshezhi_baocun.png);width: 120px;height: 40px;"></button>
+						  <button class="btn" style="margin:60px 320px 100px;background-image: url(img/gerenshezhi_baocun.png);width: 120px;height: 40px;"></button>
+
 					</form>
+					<script>
+						var senddata=new FormData(document.querySelector('form'));
+						$(".btn").click(function () {
+					        $.ajax({
+					            type: 'post',
+					            url: 'http://service.filmptn.com/password/update',
+					            data:senddata,
+					            cache: false,
+					            async:false,
+					            processData: false,
+					            contentType: false,
+					            success: function (data) {
+					                console.log(data);
+					            },
+					            error: function (data) {
+					            	console.log("失败了");
+					            }
+					        })
+					    })
+					</script>
 				</div>
 				<!-- 项目表格结束 -->
 
