@@ -490,6 +490,8 @@
 					<li>origin：null<br/>这个地方的值有些不对</li>
 					<img src="img_folder/geren_xiaoxitou_json.jpg"/>
 					<span>上图是dataType:json的消息头</span>
+					<img src="img_folder/geren_xiaoxitou.jpg">
+					<span>上图是dataType:jsonp的消息头</span>
 				</ol>
 			</div>
 		</li>
