@@ -80,10 +80,8 @@
 						<p style="font-size: 16px;color: #333;font-family: 微软雅黑;margin-bottom: 10px;margin-left: 30px;">详细信息</p>
 						<input type="hidden" value="56163902970531840" id="user_id" />
 						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">姓名</span><input type="text" class="form-control" id="name" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>	
-
 						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">工作岗位</span><input type="text" class="form-control" id="post" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
 						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">个人简介</span><input type="text" class="form-control" id="introduction" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
-						
 						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;">
 							<span style="display: inline-block;width: 131px;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">公司/学校</span>
 							<input type="text" class="form-control" id="workplace" style="display: inline-block;width: 784px;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" >
@@ -91,7 +89,6 @@
 						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">生日</span><input type="text" class="form-control" id="birthday" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
 						<label style="width: 100%;height: 5%;padding-left: 4%;border:1px solid #ddd;margin-bottom: -1px;"><span style="display: inline-block;width: 15%;font-size: 14px;color: #666;font-weight:100;font-family: 新宋体;">所在城市</span><input type="text" class="form-control" id="city" style="display: inline-block;width: 85%;border:none;height: 55px;margin-top: -1px;padding:5px 40px;border-radius: 0;border-left:1px solid #ddd;font-family: 微软雅黑;font-size: 14px;font-weight: 100;" ></label>
 						<button style="background-image: url(gerenshezhi_baocun.png);display: inline-block;width: 120px;height: 40px;border:none;background-color: #459df5;font-size: 20px;color: #fff;font-family:微软雅黑;font-size:18px;margin:60px auto -15px;margin-left: 300px;border-radius: 5px;" id="geren123">保存设置</button>
-						
 					</form>
 					<script>
 						// var formdata = new FormData();
@@ -102,7 +99,7 @@
 					 //        formdata.append("workplace", $("#workplace").val());
 					 //        formdata.append("birthday", $("#birthday").val());
 					 //        formdata.append("city", $("#city").val());
-					 		var formdata = $("form").serialize(); 
+					 	var formdata = $("form").serialize(); 
 						$("#geren123").click(function (){
 					        $.ajax({
 					            type: 'post',

@@ -474,15 +474,28 @@
 </p>
 
 
-<!-- <h2>时间：</h2>
+<h2>时间：2018年6月9日</h2>
 <p>解决bug和完成任务：</p>
 <p>
 	<ol>
-		<li></li>
-		<li></li>
+		<li>服务协议页、联系我们页、用户指导页的用户头像暂时去掉</li>
+		<li>
+			个人设置页接口
+			<img src="img_folder/geren_form.jpg">
+			<span>这是表单部分</span>
+			<img src="img_folder/geren_ajax.jpg">
+			<span>这是ajax部分，其中一开始怀疑data部分的正确性，所以里面写了三种data形式，理想中有一个html5的新属性可以吧任何一个表单的数据全部一次性的提交上去，不用担心数据拼接的问题</span>
+			<div>
+				<ol>
+					<li>origin：null<br/>这个地方的值有些不对</li>
+					<img src="img_folder/geren_xiaoxitou_json.jpg"/>
+					<span>上图是dataType:json的消息头</span>
+				</ol>
+			</div>
+		</li>
 		<li></li>
 	</ol>
-</p> -->
+</p>
  
 
 <!-- <h2>时间：</h2>
