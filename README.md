@@ -503,7 +503,7 @@
 			<h1>ajax前后端交互总结篇（在正确之前的错误比正确一定程度上更有价值）</h1>
 			<div>正确的：</div>
 			<div><img src="img_folder/ajax_zhengque.jpg"/>这是正确的ajax部分，注意里面的var formdata=$("#gerenshezhi").serialize();这部分使用了HTML5的最新属性serialize，它可以这样一句话直接把对应id表单中的所有数据一次性提交，不用像之前的那样需要把所有的表单数据进行拼接然后提交。<strong>注意：</strong>这句话是用来提交没有文件上传的表单<div>如果表单中需要提交文件进行上传的话，var formdata = new FormData($("#gerenshezhi")[0];这句话就可以了，随后会有这样的</div></div>
-			<div><img src="img_folder.ajax_zhengque_form.jpg"/>这是正确的form表单部分，注意在form的开始标签里面只有一个id属性，并没有其他的action等属性。</div>
+			<div><img src="img_folder/ajax_zhengque_form.jpg"/>这是正确的form表单部分，注意在form的开始标签里面只有一个id属性，并没有其他的action等属性。</div>
 			<div><img src="img_folder/ajax_zhengque_wangluo.jpg"/>
 				<img src="img_folder/ajax_zhengque_xiaoxitou.jpg"/>
 			这个是正确的网络提示，包括状态码、远程IP、消息头、参数</div>
