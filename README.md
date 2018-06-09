@@ -479,7 +479,7 @@
 <p>
 	<ol>
 		<li>个人设置接口、密码安全接口可以使用了</li>
-		<li>gitlab账号可以用github账号直接第三方登录</li>
+		<li><h1>gitlab账号可以用github账号直接第三方登录</h1></li>
 		<li>服务协议页、联系我们页、用户指导页的用户头像暂时去掉</li>
 		<li>
 			个人设置页接口
@@ -511,8 +511,19 @@
 			<div>
 				<img src="img_folder/ajax_cuowu.jpg"/>
 				<div>这是犯过的错。</div>
-				<div><strong>第一个：</strong>写成了带有文件上传formdata的表单ajax提交了，当时感觉奇怪的地方是后面的[0]，不过那句代码后面的注释是正确的，师父也提到了这点form表单提交是按name属性，id属性无所谓,<br/><strong>第二个：</strong>下面的一堆formdata.append是否需要写也纠结了一点时间，现在想应该不用写，，之所以纠结这个问题是看师父给的其中的一个demo里面有这个，随后会验证是否需要写，对于有文件上传的表单。<strong>第三个：</strong>纠结的是dataType的值是json还是jsonp，这个纠结在上面的错误中有写到，师父一直坚持是json，证明json是正确的，因为数据的格式是json格式，<strong>第四个：</strong>消息头需要，当时可能没写，后来看了<a href="https://www.jb51.net/shouce/jquery/cheatsheet.html"> jQuery 1.10.3 速查表</a></div>
+				<div><strong>第一个：</strong>写成了带有文件上传formdata的表单ajax提交了，当时感觉奇怪的地方是后面的[0]，不过那句代码后面的注释是正确的，师父也提到了这点form表单提交是按name属性，id属性无所谓,<br/><strong>第二个：</strong>下面的一堆formdata.append是否需要写也纠结了一点时间，现在想应该不用写，，之所以纠结这个问题是看师父给的其中的一个demo里面有这个，随后会验证是否需要写，对于有文件上传的表单。<strong>第三个：</strong>纠结的是dataType的值是json还是jsonp，这个纠结在上面的错误中有写到，师父一直坚持是json，证明json是正确的，因为数据的格式是json格式，<strong>第四个：</strong>消息头需要，当时可能没写，后来看了<a href="https://www.jb51.net/shouce/jquery/cheatsheet.html"> jQuery 1.10.3 速查表</a><strong>第五个：</strong>看中了serializeJSON，json格式数据，这个可能还不能放在错误里，但是在这里是没有正确<strong>第六个：</strong>嗯，看中了，这篇文章里面的<a href="https://www.cnblogs.com/chenwenhua/p/7238622.html">带json数据</a></div>
 			</div>
+			<div>帮助比较大的几个地方</div>
+			<ol>
+				<li><a href="https://www.cnblogs.com/chenwenhua/p/7238622.html">华~静看一季花开花落博客</a></li>
+				<li><a href="https://www.jb51.net/shouce/jquery/cheatsheet.html">jQuery 1.10.3 速查表</a></li>
+				<li><a href="https://blog.csdn.net/hellokitty520123/article/details/49944575">Ajax提交json格式数据</a></li>
+				<li><a href="http://www.cnblogs.com/onlys/articles/jQuery.html">$("input[name='newsletter']")    选择所有的name属性等于'newsletter'的input元素</a></li>
+				<li><a href="https://chuanke.baidu.com/v1867921-239277-1778340.html">ajax从入门到精通视频</a>这是一门课，很不错很不错，后期需要专门花时间看三遍</li>
+				<li><a href="https://blog.csdn.net/dayewandou/article/details/78079940?fps=1&locationNum=2">jquery中用$.ajax实现注册（html、jquery、php、接口文档）、ajax验证用户提交数据</a></li>
+				<li><a href="https://www.cnblogs.com/lyr1213/p/6238026.html">H5 FormData对象的使用——进行Ajax请求并上传文件</a><strong>这篇文章还需要看</strong></li>
+				<li><a href="https://www.imooc.com/learn/250">Ajax全接触</a>这个课很不错很不错</li>
+			</ol>
 		</li>
 	</ol>
 </p>
