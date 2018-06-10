@@ -91,19 +91,8 @@
 						<button style="background-image: url(gerenshezhi_baocun.png);display: inline-block;width: 120px;height: 40px;border:none;background-color: #459df5;font-size: 20px;color: #fff;font-family:微软雅黑;font-size:18px;margin:60px auto -15px;margin-left: 300px;border-radius: 5px;" id="geren123">保存设置</button>
 					</form>
 					<script>
-						// function getFormInfo(){
 						$("#geren123").click(function (){
 							var formdata=$("#gerenshezhi").serialize();
-							// var formdata = new FormData($("#gerenshezhi")[0]);//这句话自动提交的是name属性的值，所以不需要下面的那些append,这里不需要下面的append也是因为里面带了表格的id，也就是选中了这个id表格的所有数据了，所以不用下面的多此一举
-								// formdata.append("user_id", "51273761336463360");
-						  //       formdata.append("name", $("#name").val());
-						  //       formdata.append("post", $("input[name='post']").val());
-						  //       formdata.append("introduction", $("input[name='introduction']").val());
-						  //       formdata.append("workplace", $("input[name='workplace']").val());
-						  //       formdata.append("birthday", $("input[name='birthday']").val());
-						  //       formdata.append("city", $("input[name='city']").val());
-						  	// var params=$('#gerenshezhi').serializeJSON();
-						  	//  console.log(params);
 					        $.ajax({
 					            type: 'post',
 					            url: 'http://service.filmptn.com/user/update',
@@ -122,7 +111,6 @@
 					        });
 					        return false;
 					    }) 
-					    // }
 					</script>
 				</div>
 				<!-- 项目表格结束 -->
