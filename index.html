@@ -52,7 +52,7 @@
 					<div class="modal fade" id="zhuce" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content" style="width: 400px;margin-left: 16%;height: 656px;margin-top: 25%;background-color: #f9f9f9;">
-								<form style="width: 400px;margin:50px auto;margin-top: 0px;">
+								<div style="width: 400px;margin:50px auto;margin-top: 0px;">
 									<!-- 注册tab切换框 -->
 									<ul id="myTab" class="nav nav-tabs" style="width: 320px;margin-left: 40px;margin-top: 30px;position: relative;border-bottom:1px solid #ddd;height: 38px;">
 										<li class="active" style="display: inline-block;">
@@ -69,26 +69,74 @@
 									<!-- 注册弹出div内容 -->
 									<div id="myTabContent" class="tab-content" style="color:red;">
 										<!-- 手机号码注册开始 -->
-										<div class="tab-pane fade in active" id="phone" style="position: relative;">
+										<form class="tab-pane fade in active" id="phone" style="position: relative;">
 											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
 												<img src="img/nicheng.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
-												<input type="text" name="用户名" placeholder="手机号码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+												<input type="text" name="phone" placeholder="手机号码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
 											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
 												<img src="img/yanzhengma.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
-												<input type="text" name="用户名" placeholder="验证码" style="font-size: 12px;width:170px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;padding-right: 20px;border:none;border-right: 1px solid #ddd;color: #646469;"><input type="button" name="" value="获取验证码" style="font-family: 微软雅黑;font-size: 12px;color: #459df5;border:none;background-color: #fff;margin-left: 12px;font-weight: 100;"></label>
+												<input type="text" name="code" id="code" placeholder="验证码" style="font-size: 12px;width:170px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;padding-right: 20px;border:none;border-right: 1px solid #ddd;color: #646469;"><button type="button" style="font-family: 微软雅黑;font-size: 12px;color: #459df5;border:none;background-color: red;margin-left: 12px;font-weight: 100;" id="yanzhengma_btn">获取验证码</button></label>
 											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
 												<img src="img/mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
-												<input type="text" name="用户名" placeholder="密码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+												<input type="password" name="password" id="pass" placeholder="密码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
 											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
 												<img src="img/mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
-												<input type="text" name="用户名" placeholder="确认密码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
-											<input type="checkbox" name="" style="margin-left: 40px;margin-top: 30px;margin-right: 8px;"><span style="position: absolute;top: 292px;font-family: 微软雅黑;font-size: 12px;color: #646469;">同意<a href="#" style="color: #459df5;margin-left: 5px;font-size: 12px;">非幕科技注册协议</a></span>
-											<button style="background-color:#459df5;border:none;width: 320px;height: 40px;margin:60px 40px 0px;border-radius: 30px;"><input type="submit" name="" value="注&nbsp;册" style="border: none;background-color:#459df5;color: #fff;font-size: 14px;height: 39px;font-family: 微软雅黑;"></button>
+												<input type="password" name="password" placeholder="确认密码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+											<input type="checkbox" style="margin-left: 40px;margin-top: 30px;margin-right: 8px;"><span style="position: absolute;top: 292px;font-family: 微软雅黑;font-size: 12px;color: #646469;">同意<a href="#" style="color: #459df5;margin-left: 5px;font-size: 12px;">非幕科技注册协议</a></span>
+											<button style="background-color:#459df5;border:none;width: 320px;height: 40px;margin:60px 40px 0px;border-radius: 30px;" id="phone_btn"><input type="submit" name="" value="注&nbsp;册" style="border: none;background-color:#459df5;color: #fff;font-size: 14px;height: 39px;font-family: 微软雅黑;"></button>
 											<div style="margin-left: 235px;margin-bottom: 40px;font-size: 12px;font-family: 新宋体;color: #646469;">已有账号,<a href="#" style="margin-left: 5px;color: #459df5;font-size: 12px;font-family: 新宋体;">马上登录</a></div>
-										</div>
+										</form>
+										<script>
+											// 手机号注册接口数据交互部分
+											$("#phone_btn").click(function (){
+												var formdata=$("#phone").serialize();
+										        $.ajax({
+										            type: 'post',
+										            url: 'http://service.filmptn.com/regist',
+										            data:formdata,
+										            cache: false,
+										            processData: false,
+										            contentType: "application/x-www-form-urlencoded",
+										            dataType:'json',
+										            success: function (data) {
+										                console.log(data);
+										                
+										            },
+										            error: function () {
+										            	console.log("失败了");
+										            }
+										        });
+										        return false;
+										    }) ;
+										    // 验证码数据交互部分
+										    $("#yanzhengma_btn").click(function (){
+										    	alert("获取验证码");
+												// var formdata=$("#phone").serialize();
+												var $code=$('#code').val();
+										        $.ajax({
+										            type: 'post',
+										            url: 'http://service.filmptn.com/regist/code',
+										            data:{
+                        								name:$code,
+                        							},
+										            cache: false,
+										            processData: false,
+										            contentType: "application/x-www-form-urlencoded",
+										            dataType:'json',
+										            success: function (data) {
+										                console.log(data.data);
+										                
+										            },
+										            error: function () {
+										            	console.log("失败了");
+										            }
+										        });
+										        return false;
+										    }) 
+										</script>
 										<!-- 手机号码注册结束 -->
 										<!-- 邮箱注册开始 -->
-										<div class="tab-pane fade" id="email">
+										<form class="tab-pane fade" id="email">
 											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
 												<img src="img/nicheng.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
 												<input type="text" name="用户名" placeholder="邮箱账号" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
@@ -102,35 +150,36 @@
 												<img src="img/mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
 												<input type="text" name="用户名" placeholder="确认密码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
 											<input type="checkbox" name="" style="margin-left: 40px;margin-top: 30px;margin-right: 8px;"><span style="position: absolute;top: 390px;font-family: 微软雅黑;font-size: 12px;color: #646469;">同意<a href="#" style="color: #459df5;margin-left: 5px;font-size: 12px;">非幕科技注册协议</a></span>
-											<button style="background-color:#459df5;border:none;width: 320px;height: 40px;margin:60px 40px 0px;border-radius: 30px;"><input type="submit" name="" value="注&nbsp;册" style="border: none;background-color:#459df5;color: #fff;font-size: 14px;height: 39px;font-family: 微软雅黑;"></button>
+											<button style="background-color:#459df5;border:none;width: 320px;height: 40px;margin:60px 40px 0px;border-radius: 30px;" id="email_btn"><input type="submit" name="" value="注&nbsp;册" style="border: none;background-color:#459df5;color: #fff;font-size: 14px;height: 39px;font-family: 微软雅黑;"></button>
 											<div style="margin-left: 235px;margin-bottom: 40px;font-size: 12px;font-family: 新宋体;color: #646469;">已有账号,<a href="#" style="margin-left: 5px;color: #459df5;font-size: 12px;font-family: 新宋体;">马上登录</a></div>
-										</div>
+										</form>
+										<script>
+											$("#email_btn").click(function (){
+												var formdata=$("#email").serialize();
+										        $.ajax({
+										            type: 'post',
+										            url: 'http://service.filmptn.com/regist',
+										            data:formdata,
+										            cache: false,
+										            processData: false,
+										            contentType: "application/x-www-form-urlencoded",
+										            dataType:'json',
+										            success: function (data) {
+										                console.log(data);
+										                
+										            },
+										            error: function () {
+										            	console.log("失败了");
+										            }
+										        });
+										        return false;
+										    }) 
+										</script>
 										<!-- 邮箱注册结束 -->
 									</div>
 									<!-- 注册弹出div内容结束 -->
-								</form>
-								<script>
-									$("#login_btn").click(function (){
-										var formdata=$("#login").serialize();
-								        $.ajax({
-								            type: 'post',
-								            url: 'http://service.filmptn.com/login',
-								            data:formdata,
-								            cache: false,
-								            processData: false,
-								            contentType: "application/x-www-form-urlencoded",
-								            dataType:'json',
-								            success: function (data) {
-								                console.log(data);
-								                
-								            },
-								            error: function () {
-								            	console.log("失败了");
-								            }
-								        });
-								        return false;
-								    }) 
-								</script>
+								</div>
+								
 							</div>
 						</div>
 					</div>	
