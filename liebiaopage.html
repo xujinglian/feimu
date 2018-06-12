@@ -77,10 +77,11 @@
 				            success: function(data){ 
 				             	// var res = JSON.parse(data);
 				                var str="<div class='content_right'>"; 
+				                var liebiao_haibao="http://service.filmptn.com/files/";
 				                $.each(data.data,function(i,n){ 
-				                	str="<div class='col-xs-1 bianji_body'>"; 
-				                	str+="<a href='http://service.filmptn.com/play/update' class='bianji_bianji' style='color: #459df5;'>"+"编辑"+"</a>"; 
-				                	str+="<a href='xiangqingpage.html'>"+"<img src='"+n.poster_path +"' width='100' class='bianji_haibao'>" +"</a>";
+				                	// str=; 
+				                	str+="<div class='col-xs-1 bianji_body'>" + "<a href='bianjipage.html' class='bianji_bianji' style='color: #459df5;'>"+"编辑"+"</a>"; 
+				                	str+="<a href='xiangqingpage.html'>"+"<img src='"+liebiao_haibao+n.poster_path +"' width='100' class='bianji_haibao'>" +"</a>";
 				                    str+="<h1 class='bianji_pianming'>"+"片名："+n.name+"</h1>"; 
 				                    str+="<h2 class='bianji_daoyan'>"+"导演："+n.director+"</h2>"; 
 				                    str+="<h2 class='bianji_leixing'>"+"类型："+n.type_name+"</h2>"; 
@@ -88,6 +89,7 @@
 				                    str+="</div>";
 				                });  
 				                str+="<a href='xinjianpage.html' class='col-xs-1 bianji_xinjian' style='width: 175px;height: 175px;padding-top:54px;text-align:center;margin:88px 65px 50px 0px;btext-decoration:none;border:1px solid #eee;font-size:18px;'>"+"新建<br><br>项目"+"</a>";
+				                // str+="<a href='xinjianpage.html' class='col-xs-1 bianji_xinjian' style='width: 175px;height: 175px;padding-top:54px;text-align:center;margin:88px 65px 50px 0px;btext-decoration:none;border:1px solid #eee;font-size:18px;'>"+"新建<br><br>项目"+"</a>";
 				                str+="</div>";    
 				                $("#liebiao").append(str);  
 
@@ -261,7 +263,7 @@
 					</a>
 					<p style="font-family: 新宋体;font-size: 12px;margin-top:12px;display:inline-block;color: #666;margin-left: 3%;line-height: 24px;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 6px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
 				</div> -->
-				<div style="height:500px;border:1px solid #ddd;width: 981px;margin-left: 217px;padding-left: 30px;" id="liebiao">
+				<div style="height:auto;border:1px solid #ddd;width: 981px;margin-left: 217px;padding-left: 30px;" id="liebiao">
 					<!-- <div class="col-xs-1" style="width: 200px;height: 270px;margin:30px 65px 50px 0px;">
 						<a href="xinjianpage.html"><img src="img/xiangqing_tianjia.png" style="margin-top: 50px;"></a>
 					</div> -->

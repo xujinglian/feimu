@@ -49,9 +49,9 @@
 					<a href="#" class="denglu" style="font-size: 18px;" data-toggle="modal" data-target="#denglu">登录</a>
 					<a href="liebiaopage.html" class="head_btn" style="display: inline-block;margin-top: -15px;margin-left: 50px;margin-right: -50px;"><img src="img/kongzhitai.png" style="vertical-align: middle;margin-top: -4px;padding-bottom: 2px;background-color:#3b85f5;"></a>
 					<!-- 注册框板块开始 -->
-					<div class="modal fade" id="zhuce" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal fade" id="zhuce" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="opacity: 1;display: block;">
 						<div class="modal-dialog">
-							<div class="modal-content" style="width: 400px;margin-left: 16%;height: 656px;margin-top: 25%;background-color: #f9f9f9;">
+							<div class="modal-content" style="width: 400px;margin-left: 16%;height: 512px;margin-top: 25%;background-color: #f9f9f9;">
 								<div style="width: 400px;margin:50px auto;margin-top: 0px;">
 									<!-- 注册tab切换框 -->
 									<ul id="myTab" class="nav nav-tabs" style="width: 320px;margin-left: 40px;margin-top: 30px;position: relative;border-bottom:1px solid #ddd;height: 38px;">
@@ -72,22 +72,23 @@
 										<form class="tab-pane fade in active" id="phone" style="position: relative;">
 											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
 												<img src="img/nicheng.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
-												<input type="text" name="phone" id="mobile" placeholder="手机号码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
+												<input type="text" name="account" id="mobile" placeholder="手机号码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
 											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
 												<img src="img/yanzhengma.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
-												<input type="text" name="code" id="code" placeholder="验证码" style="font-size: 12px;width:170px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;padding-right: 20px;border:none;border-right: 1px solid #ddd;color: #646469;"><button type="button" style="font-family: 微软雅黑;font-size: 12px;color: #459df5;border:none;background-color: red;margin-left: 12px;font-weight: 100;" id="yanzhengma_btn">获取验证码</button></label>
+												<input type="text" name="code" id="code" placeholder="验证码" style="font-size: 12px;width:170px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;padding-right: 20px;border:none;border-right: 1px solid #ddd;color: #646469;">
+												<button type="button" style="font-family: 微软雅黑;font-size: 12px;color: #459df5;background-color:#fff;margin-left: 12px;font-weight: 100;height: 38px;margin-top: -15px;position: absolute;top: 76px;right: 41px;width: 101px;border-left: 1px solid #eee;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-bottom: none;border-right: none;border-top: none;" id="yanzhengma_btn"  onclick="settime(this);">获取验证码</button></label>
 											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
 												<img src="img/mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
 												<input type="password" name="password" id="phone_pass" placeholder="密码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
-											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;margin-bottom: 0px;">
 												<img src="img/mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
 												<input type="password" name="password" id="phone_repass" placeholder="确认密码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
-											<input type="checkbox" style="margin-left: 40px;margin-top: 30px;margin-right: 8px;"><span style="position: absolute;top: 292px;font-family: 微软雅黑;font-size: 12px;color: #646469;">同意<a href="#" style="color: #459df5;margin-left: 5px;font-size: 12px;">非幕科技注册协议</a></span>
-											<button style="background-color:#459df5;border:none;width: 320px;height: 40px;margin:60px 40px 0px;border-radius: 30px;" id="phone_btn"><input type="submit" name="" value="注&nbsp;册" style="border: none;background-color:#459df5;color: #fff;font-size: 14px;height: 39px;font-family: 微软雅黑;"></button>
+											<input type="checkbox" style="margin-left: 40px;margin-top: 0px;margin-right: 8px;"><span style="position: absolute;top: 211px;font-family: 微软雅黑;font-size: 12px;color: #646469;">同意<a href="#" style="color: #459df5;margin-left: 5px;font-size: 12px;">非幕科技注册协议</a></span>
+											<button style="background-color:#459df5;border:none;width: 320px;height: 40px;margin:25px 40px 0px;border-radius: 30px;" id="phone_btn"><input type="submit" name="" value="注&nbsp;册" style="border: none;background-color:#459df5;color: #fff;font-size: 14px;height: 38px;font-family: 微软雅黑;"></button>
 											<div style="margin-left: 235px;margin-bottom: 40px;font-size: 12px;font-family: 新宋体;color: #646469;">已有账号,<a href="#" style="margin-left: 5px;color: #459df5;font-size: 12px;font-family: 新宋体;">马上登录</a></div>
-											<div class="tips">
+											<!-- <div class="tips">
 											    <p>请输入手机号</p>
-											</div>
+											</div> -->
 										</form>
 										<script>
 											$function(){
@@ -98,40 +99,40 @@
                 								var $verity=$('#verity');
 											// 手机号注册接口数据交互部分
 												$("#phone_btn").click(function (){
-													var formdata=$("#phone").serialize();
+													// var formdata=$("#phone").serialize();
 											        $.ajax({
 											            type: 'post',
 											            url: 'http://service.filmptn.com/regist',
-											            data:formdata,
+											            data:{account:$("#mobile").val()},
 											            cache: false,
 											            processData: false,
 											            contentType: "application/x-www-form-urlencoded",
 											            dataType:'json',
-											            beforeSend:function(){
-									                        // 如果手机号为空，弹出提示信息
-									                        if($mobile==''){
-									                            $tips.html('请输入手机号123').fadeIn(500).delay(1500).fadeOut(500);
-									                            return false;
-									                        }
-									                        // 手机号为11位，以1开头，第二位为3,5,7,8，后9位都是数字
-									                        if(!/^1[3,5,7,8]\d{9}$/.test($mobile)){
-									                            $tips.html('请输入正确的手机号456').fadeIn(500).delay(1500).fadeOut(500);
-									                            return false;
-									                        }
-									                        // 判断$verity是否有disabled属性，如果有结束执行，相当于禁用按钮
-									                        if($verity.hasClass('disabled')){
-									                            return false;
-									                        }
-									                        // 手机号没有问题，改变$verity颜色，并且修改内部文字
-									                        $verity.val('正在发送').addClass('disabled');
-									                    },
+											            // beforeSend:function(){
+									              //           // // 如果手机号为空，弹出提示信息
+									              //           // if($mobile==''){
+									              //           //     $tips.html('请输入手机号123').fadeIn(500).delay(1500).fadeOut(500);
+									              //           //     return false;
+									              //           // }
+									              //           // // 手机号为11位，以1开头，第二位为3,5,7,8，后9位都是数字
+									              //           // if(!/^1[3,5,7,8]\d{9}$/.test($mobile)){
+									              //           //     $tips.html('请输入正确的手机号456').fadeIn(500).delay(1500).fadeOut(500);
+									              //           //     return false;
+									              //           // }
+									              //           // // 判断$verity是否有disabled属性，如果有结束执行，相当于禁用按钮
+									              //           // if($verity.hasClass('disabled')){
+									              //           //     return false;
+									              //           // }
+									              //           // // 手机号没有问题，改变$verity颜色，并且修改内部文字
+									              //           // $verity.val('正在发送').addClass('disabled');
+									              //       },
 											            success: function (data) {
 											                console.log(data);
-											                
+											                settime();
 											            },
-											            error: function () {
-											            	console.log("失败了");
-											            }
+											            error:function(err){  
+												          console.log(err);  
+												        }
 											        });
 											        return false;
 											    }) ;
@@ -159,7 +160,26 @@
 											            }
 											        });
 											        return false;
-											    }) 
+											    });
+											    //倒计时  
+												var countdown=60;  
+												alert(1);
+												function settime(val) {  
+													alert(2);
+												    if (countdown == 0) {  
+												        val.removeAttribute("disabled");  
+												        val.value="获取验证码";  
+												        countdown = 60;  
+												        return false;  
+												    } else {  
+												        val.setAttribute("disabled", true);  
+												        val.value="重新发送(" + countdown + ")";  
+												        countdown--;  
+												    }  
+												    setTimeout(function() {  
+												        settime(val);  
+												    },1000);  
+												}
 										    }
 										</script>
 										<!-- 手机号码注册结束 -->
@@ -170,15 +190,17 @@
 												<input type="text" name="用户名" placeholder="邮箱账号" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
 											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
 												<img src="img/yanzhengma.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
-												<input type="text" name="用户名" placeholder="验证码" style="font-size: 12px;width:170px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;padding-right: 20px;border:none;border-right: 1px solid #ddd;color: #646469;"><input type="button" name="" value="获取验证码" style="font-family: 微软雅黑;font-size: 12px;color: #459df5;border:none;background-color: #fff;margin-left: 12px;font-weight: 100;"></label>
+												<input type="text" name="用户名" placeholder="验证码" style="font-size: 12px;width:170px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;padding-right: 20px;border:none;border-right: 1px solid #ddd;color: #646469;">
+												<button type="button" style="font-family: 微软雅黑;font-size: 12px;color: #459df5;background-color:#fff;margin-left: 12px;font-weight: 100;height: 38px;margin-top: -15px;position: absolute;top: 164px;right: 41px;width: 101px;border-left: 1px solid #eee;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-bottom: none;border-right: none;border-top: none;" id="yanzhengma_btn">获取验证码</button>
+											</label>
 											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
 												<img src="img/mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
 												<input type="text" name="用户名" placeholder="密码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
-											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;">
+											<label style="display: block;border: 1px solid #ddd;width: 320px;margin-left: 40px;margin-top: 20px;height: 40px;border-radius: 5px;background-color: #fff;margin-bottom: 0px;">
 												<img src="img/mima.png" style="display: inline-block;margin-left: 20px;margin-right: 10px;">
 												<input type="password" name="用户名" placeholder="确认密码" style="font-size: 12px;width:240px;border-top:none;border-bottom: none;font-family: 微软雅黑;line-height: 30px;border:none;color: #646469;"></label>
-											<input type="checkbox" name="" style="margin-left: 40px;margin-top: 30px;margin-right: 8px;"><span style="position: absolute;top: 390px;font-family: 微软雅黑;font-size: 12px;color: #646469;">同意<a href="#" style="color: #459df5;margin-left: 5px;font-size: 12px;">非幕科技注册协议</a></span>
-											<button style="background-color:#459df5;border:none;width: 320px;height: 40px;margin:60px 40px 0px;border-radius: 30px;" id="email_btn"><input type="submit" name="" value="注&nbsp;册" style="border: none;background-color:#459df5;color: #fff;font-size: 14px;height: 39px;font-family: 微软雅黑;"></button>
+											<input type="checkbox" name="" style="margin-left: 40px;margin-top: 0px;margin-right: 8px;"><span style="position: absolute;top: 299px;font-family: 微软雅黑;font-size: 12px;color: #646469;">同意<a href="#" style="color: #459df5;margin-left: 5px;font-size: 12px;">非幕科技注册协议</a></span>
+											<button style="background-color:#459df5;border:none;width: 320px;height: 40px;margin:25px 40px 0px;border-radius: 30px;" id="email_btn"><input type="submit" name="" value="注&nbsp;册" style="border: none;background-color:#459df5;color: #fff;font-size: 14px;height: 38px;font-family: 微软雅黑;"></button>
 											<div style="margin-left: 235px;margin-bottom: 40px;font-size: 12px;font-family: 新宋体;color: #646469;">已有账号,<a href="#" style="margin-left: 5px;color: #459df5;font-size: 12px;font-family: 新宋体;">马上登录</a></div>
 										</form>
 										<script>
