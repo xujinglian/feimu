@@ -26,6 +26,78 @@ body{
 .content_left ul li a:active,.content_left ul li a:visited{
 	text-decoration: none;
 }
-.content_right a:hover{
+
+/*页面右边部分的ajax样式*/
+.content_right{
+height:auto;
+border:1px solid #ddd;
+margin-bottom: 100px;
+padding-right: 0px;
+margin-left: 35px;
+padding-left: 33px;
+width: 981px;
+height: 500px;
+}
+.bianji_body{
+width: 200px;
+height:auto;
+background-color:#fff;
+border:1px solid #999;
+margin:30px 37px 50px 0px;
+}
+.bianji_bianji{
+font-family: 新宋体;
+font-size: 12px;
+color: #459df5;
+display:inline-block;
+border-bottom:1px solid #459df5;
+margin-top: 8px;
+margin-bottom: 6px;
+margin-left: 140px;
+}
+.bianji_bianji:hover{
+text-decoration: none;
+}
+.bianji_haibao{
+width: 170px;
+height: 120px;
+
+}
+
+.bianji_pianming{
+font-family: 微软雅黑;
+font-size: 18px;
+height:18px;
+color: #333;
+}
+.bianji_daoyan{
+font-family: 微软雅黑;
+font-size: 12px;
+height:12px;
+color: #666;
+}
+.bianji_leixing{
+font-family: 微软雅黑;
+font-size: 12px;
+height:12px;
+color: #666;
+}
+.bianji_changegengxin{
+font-family: 新宋体;
+font-size: 12px;
+margin-top:12px;
+display:inline-block;
+color: #666;
+line-height: 24px;
+}
+.bianji_changetime{
+font-family: 新宋体;
+font-size: 12px;
+color: #666;
+display: inline-block;
+margin-right: 6px;
+}
+.bianji_xinjian:hover{
 	text-decoration: none;
+color: #459df5;
 }
