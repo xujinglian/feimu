@@ -21,7 +21,7 @@
   	<link href="css/海报上传css/bootstrap.min.css" rel="stylesheet">
   	<link href="css/海报上传css/bootstrap-fileinput.css" rel="stylesheet">
   	<script src="js/海报上传js/jquery.min.js"></script>
-<script src="js/海报上传js/bootstrap-fileinput.js"></script>
+	<script src="js/海报上传js/bootstrap-fileinput.js"></script>
   	<style type="text/css">
   		#head_right ul li ul li a:hover{background-color: #f9f9f9;}
   		#shanchu:hover{background-color: red;color: red;}
@@ -62,18 +62,18 @@
 				</ul>
 			</div>
 			<!-- 页面左边部分结束 -->
-			<div id="content_right" class="content_right col-xs-10" style="margin-left: 20px;padding-right: 0px;width: 998px;">
+			<div id="content_right" class="content_right col-xs-10" style="margin-left: 20px;padding-right: 0px;width: 998px;height: 800px;">
 				<form id="bianjijiekou" enctype="multipart/form-data">
 					<div style="height:auto;border:1px solid #ddd;background-color: #fff;">
-						<input type="hidden" name="play_id" value="57241515294068736"/>
+						<input type="hidden" name="play_id" value="" id="bianji_play_id" />
 						<input type="hidden" name="user_id" value="56163902970531840"/>
 						<div style="margin-left: 20px;margin-top: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 2px;">片名</span>
-							<input type="text" name="name" id="name" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 55em;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;color: #666;">
+							<input type="text" name="name" id="bianji_name" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 55em;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;color: #666;" disabled="disabled">
 						</div>
 						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 2px;">导演</span>
-							<input type="text" name="director"  style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 55em;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;color: #666;">
+							<input type="text" name="director" id="bianji_director" style="border-top:none;border-left: none;border-right: none;border-bottom:1px solid #ddd;width: 55em;background-color: #fff;font-size: 16px;font-family: 微软雅黑;padding-left: 10px;padding-right: 10px;color: #666;" value="" disabled="disabled">
 						</div>
 						<div style="margin-left: 20px;margin-top: 30px;margin-bottom: 30px;">
 							<span style="font-size: 18px;color: #333;font-family: 微软雅黑;margin-right: 10px;">类型</span>
@@ -111,6 +111,35 @@
 					</div>
 				</form>
 				<script>
+					// js解析url，抽出url中？后面的参数的值
+					function GetQueryString(name)
+					{
+					    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+					    var r = window.location.search.substr(1).match(reg);
+					    if(r!=null)return  unescape(r[2]); return null;
+					}
+					var bianji_play_id=GetQueryString("play_id");
+					// 项目列表接口，获取项目片名和项目导演
+					$(document).ready(function(){
+						$.ajax({    
+				            type:"GET",       
+				            url:"http://service.filmptn.com/play/list?user_id=56163902970531840",    
+				            dataType: "json",  
+				            contentType: false,  
+				            success: function(data){ 
+				                $.each(data.data,function(i,n){ 
+						            if (n.play_id == bianji_play_id)
+						                {
+						                 $("#bianji_name").val(n.name);
+						                 $("#bianji_director").val(n.director);
+						                 // $("#bianji_director").val(n.director);
+						                }
+						            });
+				        }});
+					});
+
+					// 之前写的项目编辑接口
+					$("#bianji_play_id").val(bianji_play_id);
 					$("#baocun").click(function (){
 						var form=document.getElementById("bianjijiekou");
 						var formdata=new FormData(form);
@@ -130,7 +159,7 @@
 					           }
 					       });
 					       return false;
-					   }) 
+					   })
 				</script>
 			</div>
 			<!-- 页面右边部分结束 -->

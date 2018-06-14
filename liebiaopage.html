@@ -22,8 +22,58 @@
   		.list{
   			line-height: 30px;
   		}
-
 	</style>
+	<script>
+		// js解析url，抽出url中？后面的参数的值
+					function GetQueryString(name)
+					{
+					    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+					    var r = window.location.search.substr(1).match(reg);
+					    if(r!=null)return  unescape(r[2]); return null;
+					}
+					var bianji_play_id=GetQueryString("play_id");
+					// 项目列表接口，获取项目片名和项目导演
+					$(document).ready(function(){
+						$.ajax({    
+				            type:"GET",       
+				            url:"http://service.filmptn.com/play/list?user_id=56163902970531840",    
+				            dataType: "json",  
+				            contentType: false,  
+				            success: function(data){ 
+				                $.each(data.data,function(i,n){ 
+						            if (n.play_id == bianji_play_id)
+						                {
+						                 $("#bianji_name").val(n.name);
+						                 $("#bianji_director").val(n.director);
+						                 // $("#bianji_director").val(n.director);
+						                }
+						            });
+				        }});
+					});
+
+					// 之前写的项目编辑接口
+					$("#bianji_play_id").val(bianji_play_id);
+					$("#baocun").click(function (){
+						var form=document.getElementById("bianjijiekou");
+						var formdata=new FormData(form);
+					       $.ajax({
+					           type: 'post',
+					           url: 'http://service.filmptn.com/play/update',
+					           data:formdata,
+					           cache: false,
+					           processData: false,
+					           contentType: false,
+					           dataType:'json',
+					           success: function (data) {
+					               console.log(data);  
+					           },
+					           error: function () {
+					            console.log("失败了");
+					           }
+					       });
+					       return false;
+					   })
+	</script>
 </head>
 <body>
 	<!-- 页面整体开始 -->
@@ -59,219 +109,34 @@
 				</ul>
 			</div>
 			<!-- 页面左边部分结束 -->
-			
-			<!-- <div id="content_right" class="content_right col-xs-9" style="height:auto;border:1px solid #ddd;margin-bottom: 100px;padding-right: 0px;margin-left: 35px;padding-left: 33px;width: 983px;height: 500px;"> -->
+			<div style="height:auto;border:1px solid #ddd;width: 981px;margin-left: 217px;padding-left: 30px;" id="liebiao"></div>
+			<script>
+				$(function(){ 
+				       $.ajax({     
+				           type:"GET",     
+				           url:"http://service.filmptn.com/play/list?user_id=56163902970531840",  
+				           dataType: "json",  
+				           contentType: false,  
+				           success: function(data){ 
+				               var str="<div style='height:auto;'>"; 
+				               // var liebiao_haibao="http://service.filmptn.com/files/";
+				               $.each(data.data,function(i,n){ 
+				                str+="<div class='col-xs-1 bianji_body'>" + "<a class='bianji_bianji' style='color: #459df5;' href='bianjipage.html?play_id="+n.play_id+"'>"+"编辑"+"</a>"; 
+				                str+="<a href='xiangqingpage.html'>"+"<img src='"+n.poster_path +"' style='width:172px;height115px;display:inline-block;border:1px solid #red;' class='bianji_haibao'>" +"</a>";
+				                   str+="<h1 class='bianji_pianming'>"+"片名："+n.name+"</h1>"; 
+				                   str+="<h2 class='bianji_daoyan'>"+"导演："+n.director+"</h2>"; 
+				                   str+="<h2 class='bianji_leixing'>"+"类型："+n.type_name+"</h2>"; 
+				                   str+="<p class='bianji_changegengxin'>"+"最近更新："+"<span class='bianji_changetime'>"+n.changed_at+"</span>"+"</p>";
+				                   str+="</div>";
+				               });  
+				               str+="<a href='xinjianpage.html?user_id=56163902970531840' class='col-xs-1 bianji_xinjian' style='width: 175px;height: 175px;padding-top:54px;text-align:center;margin:88px 65px 50px 0px;btext-decoration:none;border:1px solid #eee;font-size:18px;'>"+"新建<br><br>项目"+"</a>";
+				               str+="</div>";    
+				               $("#liebiao").append(str);  
+				           }    
+				       });    
+				   });  
+			</script>
 				
-				<script>
-					$(function(){ 
-
-				        $.ajax({    
-				            //请求方式    
-				            type:"GET",    
-				            //文件位置    
-				            url:"http://service.filmptn.com/play/list?user_id=56163902970531840",  
-				            //返回数据格式为json,也可以是其他格式如    
-				            dataType: "json",  
-				            contentType: false,  
-				            //请求成功后要执行的函数，拼接html 
-				            success: function(data){ 
-				             	// var res = JSON.parse(data);
-				                var str="<div class='content_right'>"; 
-				                var liebiao_haibao="http://service.filmptn.com/files/";
-				                $.each(data.data,function(i,n){ 
-				                	// str=; 
-				                	str+="<div class='col-xs-1 bianji_body'>" + "<a href='bianjipage.html' class='bianji_bianji' style='color: #459df5;'>"+"编辑"+"</a>"; 
-				                	str+="<a href='xiangqingpage.html'>"+"<img src='"+liebiao_haibao+n.poster_path +"' width='100' class='bianji_haibao'>" +"</a>";
-				                    str+="<h1 class='bianji_pianming'>"+"片名："+n.name+"</h1>"; 
-				                    str+="<h2 class='bianji_daoyan'>"+"导演："+n.director+"</h2>"; 
-				                    str+="<h2 class='bianji_leixing'>"+"类型："+n.type_name+"</h2>"; 
-				                    str+="<p class='bianji_changegengxin'>"+"最近更新："+"<span class='bianji_changetime'>"+n.changed_at+"</span>"+"</p>";
-				                    str+="</div>";
-				                });  
-				                str+="<a href='xinjianpage.html' class='col-xs-1 bianji_xinjian' style='width: 175px;height: 175px;padding-top:54px;text-align:center;margin:88px 65px 50px 0px;btext-decoration:none;border:1px solid #eee;font-size:18px;'>"+"新建<br><br>项目"+"</a>";
-				                // str+="<a href='xinjianpage.html' class='col-xs-1 bianji_xinjian' style='width: 175px;height: 175px;padding-top:54px;text-align:center;margin:88px 65px 50px 0px;btext-decoration:none;border:1px solid #eee;font-size:18px;'>"+"新建<br><br>项目"+"</a>";
-				                str+="</div>";    
-				                $("#liebiao").append(str);  
-
-				            }    
-				        });    
-				    });  
-			// 		$(function(){
-			//             $.ajax({
-			//                 type: "POST",//请求方式
-			//                 url: "http://service.filmptn.com/play/list",//地址，就是json文件的请求路径
-			//                 dataType: "json",//数据类型可以为 text xml json  script  jsonp
-			// 　　　　　　　　　 success: function(result){//返回的参数就是 action里面所有的有get和set方法的参数
-			//                     addBox(result);
-			//                 }
-			//             });
-			//             /*$.get("item.json",function(result){
-			//                 //result数据添加到box容器中;
-			//                 addBox(result);
-			//             });*/
-			//         });
-			//         function addBox(result){
-			//             //result是一个集合,所以需要先遍历
-			//             $.each(result,function(index,obj){
-			//                 $("#box").append("<div class='product'>"+//获得图片地址
-			//                     "<div><img class='img' src="+obj['created_at']+"/></div>"+
-			//                     //获得名字
-			//                     "<div class='p1 p'>"+obj['created_at']+"</div>"+
-			//                     //获得性别
-			//                     "<div class='p2 p'>"+obj['created_at']+"</div>"+
-			//                     //获得邮箱地址
-			//                     "<div class='p3 p'>"+obj['created_at']+"</div>"+
-			//                     "</div>");
-			//             });
-			//         }
-						// $("#geren123").click(function (){
-
-						// 	// var formdata=$("#liebiao").serialize();
-					 //        $.ajax({
-					 //            type: 'get',
-					 //            url: 'http://service.filmptn.com/play/list',
-					 //            // data:formdata,
-					 //            cache: false,
-					 //            processData: false,
-					 //            contentType: "application/x-www-form-urlencoded",
-					 //            dataType:'json',
-					 //            // beforeSend: LoadFunction, //加载执行方法  
-					 //            success: function (data) {
-					 //               // var htmlNodes = '';  
-					 //               //  for(var i = 0; i < user.length; i ++){  
-					 //               //      htmlNodes += '<div>' + user[i].created_at  + user[i].changed_at + user[i].director + user[i].coordinator + user[i].file_id+ user[i].marketing_producer+ user[i].name+ '</div>';  
-					 //               //  }  
-					  
-					 //                // $('#liebiao').append(htmlNodes);
-					 //                $("#liebiao").innerHTML==console.log(data);
-					 //            }
-					 //        })
-					 //        // function LoadFunction() {
-				  //        //        $("#list").html('加载中...');
-				  //        //    }
-					 //    })   
-					</script>
-				<!-- <div class="col-xs-1" style="width: 200px;height:auto;background-color:#fff;border:1px solid #999;margin:30px 37px 50px 0px;">
-					<a style="font-family: 新宋体;font-size: 12px;color: #459df5;display:inline-block;border-bottom:1px solid #459df5;margin-top: 8px;margin-bottom: 6px;margin-left: 140px;" href="bianjipage.html">编辑</a>
-					<a href="xiangqingpage.html">
-						<div>
-							<img src="img/xiangqing_1.png">
-							<h1 style="font-family: 微软雅黑;font-size: 18px;height:18px;color: #333;">片名:</h1>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">导演:</h2>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">类别:</h2>
-						</div>
-					</a>
-					<p style="font-family: 新宋体;font-size: 12px;margin-top:12px;display:inline-block;color: #666;margin-left: 3%;line-height: 24px;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 6px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
-					
-				</div> -->
-				<!-- 一个版块结束 -->
-				<!-- <div class="col-xs-1" style="width: 200px;height: auto;background-color:#fff;border:1px solid #999;margin:30px 37px 50px 0px;">
-					<a style="font-family: 新宋体;font-size: 12px;color: #459df5;display:inline-block;border-bottom:1px solid #459df5;margin-top: 8px;margin-bottom: 6px;margin-left: 140px;" href="bianjipage.html">编辑</a>
-					<a href="xiangqingpage.html">
-						<div>
-							<img src="img/xiangqing_2.png">
-							<h1 style="font-family: 微软雅黑;font-size: 18px;height:18px;color: #333;">片名:</h1>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">导演:</h2>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">类别:</h2>
-						</div>
-					</a>
-					<p style="font-family: 新宋体;font-size: 12px;margin-top:12px;display:inline-block;color: #666;margin-left: 3%;line-height: 24px;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 6px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
-				</div> -->
-
-
-				<!-- <div class="col-xs-1" style="width: 200px;height: auto;background-color:#fff;border:1px solid #999;margin:30px 37px 50px 0px;">
-					<a style="font-family: 新宋体;font-size: 12px;color: #459df5;display:inline-block;border-bottom:1px solid #459df5;margin-top: 8px;margin-bottom: 6px;margin-left: 140px;" href="bianjipage.html">编辑</a>
-					<a href="xiangqingpage.html">
-						<div>
-							<img src="img/xiangqing_2.png">
-							<h1 style="font-family: 微软雅黑;font-size: 18px;height:18px;color: #333;">片名:</h1>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">导演:</h2>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">类别:</h2>
-						</div>
-					</a>
-					<p style="font-family: 新宋体;font-size: 12px;margin-top:12px;display:inline-block;color: #666;margin-left: 3%;line-height: 24px;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 6px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
-				</div> -->
-				<!-- <div class="col-xs-1" style="width: 200px;height: auto;background-color:#fff;border:1px solid #999;margin:30px 37px 50px 0px;">
-					<a style="font-family: 新宋体;font-size: 12px;color: #459df5;display:inline-block;border-bottom:1px solid #459df5;margin-top: 8px;margin-bottom: 6px;margin-left: 140px;" href="bianjipage.html">编辑</a>
-					<a href="xiangqingpage.html">
-						<div>
-							<img src="img/xiangqing_2.png">
-							<h1 style="font-family: 微软雅黑;font-size: 18px;height:18px;color: #333;">片名:</h1>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">导演:</h2>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">类别:</h2>
-						</div>
-					</a>
-					<p style="font-family: 新宋体;font-size: 12px;margin-top:12px;display:inline-block;color: #666;margin-left: 3%;line-height: 24px;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 6px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
-				</div>
-				<div class="col-xs-1" style="width: 200px;height: auto;background-color:#fff;border:1px solid #999;margin:30px 37px 50px 0px;">
-					<a style="font-family: 新宋体;font-size: 12px;color: #459df5;display:inline-block;border-bottom:1px solid #459df5;margin-top: 8px;margin-bottom: 6px;margin-left: 140px;" href="bianjipage.html">编辑</a>
-					<a href="xiangqingpage.html">
-						<div>
-							<img src="img/xiangqing_2.png">
-							<h1 style="font-family: 微软雅黑;font-size: 18px;height:18px;color: #333;">片名:</h1>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">导演:</h2>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">类别:</h2>
-						</div>
-					</a>
-					<p style="font-family: 新宋体;font-size: 12px;margin-top:12px;display:inline-block;color: #666;margin-left: 3%;line-height: 24px;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 6px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
-				</div> -->
-				<!-- <div class="col-xs-1" style="width: 200px;height: auto;background-color:#fff;border:1px solid #999;margin:30px 37px 50px 0px;">
-					<a style="font-family: 新宋体;font-size: 12px;color: #459df5;display:inline-block;border-bottom:1px solid #459df5;margin-top: 8px;margin-bottom: 6px;margin-left: 140px;" href="bianjipage.html">编辑</a>
-					<a href="xiangqingpage.html">
-						<div>
-							<img src="img/xiangqing_2.png">
-							<h1 style="font-family: 微软雅黑;font-size: 18px;height:18px;color: #333;">片名:</h1>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">导演:</h2>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">类别:</h2>
-						</div>
-					</a>
-					<p style="font-family: 新宋体;font-size: 12px;margin-top:12px;display:inline-block;color: #666;margin-left: 3%;line-height: 24px;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 6px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
-				</div>
-				<div class="col-xs-1" style="width: 200px;height: auto;background-color:#fff;border:1px solid #999;margin:30px 37px 50px 0px;">
-					<a style="font-family: 新宋体;font-size: 12px;color: #459df5;display:inline-block;border-bottom:1px solid #459df5;margin-top: 8px;margin-bottom: 6px;margin-left: 140px;" href="bianjipage.html">编辑</a>
-					<a href="xiangqingpage.html">
-						<div>
-							<img src="img/xiangqing_2.png">
-							<h1 style="font-family: 微软雅黑;font-size: 18px;height:18px;color: #333;">片名:</h1>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">导演:</h2>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">类别:</h2>
-						</div>
-					</a>
-					<p style="font-family: 新宋体;font-size: 12px;margin-top:12px;display:inline-block;color: #666;margin-left: 3%;line-height: 24px;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 6px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
-				</div> -->
-				<!-- <div class="col-xs-1" style="width: 200px;height: auto;background-color:#fff;border:1px solid #999;margin:30px 37px 50px 0px;">
-					<a style="font-family: 新宋体;font-size: 12px;color: #459df5;display:inline-block;border-bottom:1px solid #459df5;margin-top: 8px;margin-bottom: 6px;margin-left: 140px;" href="bianjipage.html">编辑</a>
-					<a href="xiangqingpage.html">
-						<div>
-							<img src="img/xiangqing_2.png">
-							<h1 style="font-family: 微软雅黑;font-size: 18px;height:18px;color: #333;">片名:</h1>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">导演:</h2>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">类别:</h2>
-						</div>
-					</a>
-					<p style="font-family: 新宋体;font-size: 12px;margin-top:12px;display:inline-block;color: #666;margin-left: 3%;line-height: 24px;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 6px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
-				</div>
-				<div class="col-xs-1" style="width: 200px;height: auto;background-color:#fff;border:1px solid #999;margin:30px 37px 50px 0px;">
-					<a style="font-family: 新宋体;font-size: 12px;color: #459df5;display:inline-block;border-bottom:1px solid #459df5;margin-top: 8px;margin-bottom: 6px;margin-left: 140px;" href="bianjipage.html">编辑</a>
-					<a href="xiangqingpage.html">
-						<div>
-							<img src="img/xiangqing_2.png">
-							<h1 style="font-family: 微软雅黑;font-size: 18px;height:18px;color: #333;">片名:</h1>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">导演:</h2>
-							<h2 style="font-family: 微软雅黑;font-size: 12px;height:12px;color: #666;">类别:</h2>
-						</div>
-					</a>
-					<p style="font-family: 新宋体;font-size: 12px;margin-top:12px;display:inline-block;color: #666;margin-left: 3%;line-height: 24px;">最近更新：<span style="font-family: 新宋体;font-size: 12px;color: #666;display: inline-block;margin-right: 6px;">2013-8-9</span><span style="font-family: 新宋体;font-size: 12px;color: #666;">13:00</span></p>
-				</div> -->
-				<div style="height:auto;border:1px solid #ddd;width: 981px;margin-left: 217px;padding-left: 30px;" id="liebiao">
-					<!-- <div class="col-xs-1" style="width: 200px;height: 270px;margin:30px 65px 50px 0px;">
-						<a href="xinjianpage.html"><img src="img/xiangqing_tianjia.png" style="margin-top: 50px;"></a>
-					</div> -->
-				</div>
-				
-				
-			<!-- </div> -->
-			
 			<!-- 页面右边部分结束 -->
 		</div>
 		<!-- 页面内容部分结束 -->
